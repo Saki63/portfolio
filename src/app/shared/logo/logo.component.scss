@@ -1,0 +1,24 @@
+@import '../scss/fonts.scss';
+@import '../../../styles.scss';
+
+.logo_wrapper {
+    @include flex-box($fd: column);
+
+    .name{
+        font-family: 'Anata';
+        font-size: 16px;
+        color: $secondary-color;
+    }
+
+    .profession_primary{
+        font-family: 'Josefin_Sans_Light';
+        font-size: 16px;
+        color: $primary-color;
+    }
+
+    .profession_background{
+        font-family: 'Josefin_Sans_Light';
+        font-size: 16px;
+        color: $background;
+    }
+}

@@ -1,0 +1,53 @@
+@import '../shared/scss/fonts.scss';
+@import '../../styles.scss';
+
+
+section{
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    @include flex-box($fd: column, $ai: center);
+
+    background-color: $background;
+}
+
+.content{
+    @include flex-box($ai: normal, $g: 16px);
+    max-width: $content-limit;
+    padding: 41px 0px 0px px;
+}
+
+.photo_content{
+    @include flex-box($fd: column);
+}
+
+.introduction_content{
+    @include flex-box($fd: column, $g: 24px);
+
+    span{
+        font-family: 'Josefin_Sans';
+        font-size: 40px;
+        color: $secondary-color;
+    }
+}
+
+.logo_social_media_wrapper{
+    width: 100%;
+    position: relative;
+
+    .social_media_links{
+        list-style-type: none;
+        position: absolute;
+        padding: 0;
+        right: 0;
+        bottom: 0;
+
+    }
+
+
+}
+
+.title_wrapper{
+    text-align: center;
+    margin-bottom: 100px;
+}

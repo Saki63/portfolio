@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+@mixin flex-box($fd: row, $ai: center, $jc: center, $g: 0px){
+    display: flex;
+    flex-direction: $fd;
+    align-items: $ai;
+    justify-content: $jc;
+    gap: $g;
+}
+
+$background: #262E34;
+$primary-color: #89BCD9;
+$secondary-color: #F8F5EC; //#F28A62 #F9CB71
+$inactive: #262E341F;
+$error: #E44C36;
+$done: #97E163;
+
+
+$content-limit: 1200px;
+
+h1{
+    font-family: 'Anata';
+    font-size: 88px;
+    font-weight: 400;
+    color: $secondary-color;
+}
+
+h2 {
+    font-family: 'Anata';
+    font-size: 60px;
+    font-weight: 400;
+    color: $primary-color;
+}

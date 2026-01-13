@@ -1,0 +1,47 @@
+@import '../../shared/scss/fonts.scss';
+@import '../../../styles.scss';
+
+@mixin font($family: 'Josefin_Sans', $size: 26px, $color: $background){
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}
+
+nav{
+    width: 100%;
+    background-color: $primary-color; 
+    position: absolute;
+    bottom: 0;
+    height: 104px;
+    @include flex-box($jc: center);
+
+    ul{
+        list-style-type: none;
+        @include flex-box($jc: space-between, $g: 24px);
+        @include font();
+        flex: 1;
+        max-width: 680px;
+        padding: 0 64px;
+    }
+}
+
+.content_limit{
+    max-width: $content-limit;
+    padding: 0 24px;
+}
+
+.navigation_wrapper{
+    @include flex-box($jc: space-between, $g: 24px);
+    width: 100%;
+}
+
+.language_selection{
+    @include font($size: 18px);
+    @include flex-box($g: 8px);
+
+    button{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+}
