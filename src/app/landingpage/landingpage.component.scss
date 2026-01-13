@@ -19,6 +19,33 @@ section{
 
 .photo_content{
     @include flex-box($fd: column);
+    position: relative;
+    width: 590px;
+    display: inline-block;
+
+    .background{
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .background_hover {
+        opacity: 0;
+        position: absolute;
+        inset: 0;
+        transform: scale(0.96);
+    }
+    &:hover .background_hover {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .background_default {
+        opacity: 1;
+        transform: scale(1);
+    }
+    &:hover .background_default {
+        opacity: 0;
+        transform: scale(0.96);
+    }
 }
 
 .introduction_content{
@@ -42,12 +69,62 @@ section{
         right: 0;
         bottom: 0;
 
+        li{
+            margin: 10px 0;
+            position: relative;
+            
+            &:hover *{
+                cursor: pointer;
+            }
+            
+            .logo_social_media_default {
+                opacity: 1;
+            }
+            &:hover .logo_social_media_default {
+                opacity: 0;
+            }
+
+            .logo_social_media_hover {
+                opacity: 0;
+                position: absolute;
+                inset: 0;
+            }
+            &:hover .logo_social_media_hover {
+                opacity: 1;
+            }
+
+
+        }
     }
-
-
 }
 
 .title_wrapper{
     text-align: center;
     margin-bottom: 100px;
+}
+
+.arrow_wrapper{
+    position: relative;
+
+    &:hover * {
+        cursor: pointer;
+    }
+
+    .arrow_default{
+        opacity: 1;
+    }
+
+    &:hover .arrow_default{
+        opacity: 0;
+    }
+
+    .arraow_hover{
+        opacity: 0;
+        position: absolute;
+        inset: 0;
+    }
+    
+    &:hover .arraow_hover{
+        opacity: 1;
+    }
 }

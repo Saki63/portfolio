@@ -21,4 +21,13 @@
         font-size: 16px;
         color: $background;
     }
+
+    .infinity_sign{
+        transform-origin: center; //Skaliert vom Mittelpunkt aus
+        transition: transform 0.25s ease-in-out;
+    }
+
+    svg:hover .infinity_sign{
+        transform: scaleX(1.15);
+    }
 }

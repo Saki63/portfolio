@@ -22,6 +22,29 @@ nav{
         flex: 1;
         max-width: 680px;
         padding: 0 64px;
+
+        li{
+            position: relative;
+
+            &:hover *{
+                cursor: pointer;
+                color: $secondary-color;
+            }
+
+            .ellipse{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                opacity: 0;
+                transform: translate(-50%, -50%);
+            }
+
+            &:hover .ellipse{
+                opacity: 1;
+            }
+        }
+
     }
 }
 
@@ -37,11 +60,31 @@ nav{
 
 .language_selection{
     @include font($size: 18px);
-    @include flex-box($g: 8px);
+    @include flex-box($g: 24px);
 
     button{
         background-color: transparent;
         border: none;
         padding: 0;
+        position: relative;
+
+        &:hover *{
+            cursor: pointer;
+            color: $secondary_color;
+        }
+
+        .language_ellipse{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            opacity: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover .language_ellipse{
+            opacity: 1;
+        }
+
     }
 }
