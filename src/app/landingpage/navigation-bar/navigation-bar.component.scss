@@ -26,6 +26,10 @@ nav{
         li{
             position: relative;
 
+            span {
+                position: relative;
+            }
+
             &:hover *{
                 cursor: pointer;
                 color: $secondary-color;
