@@ -92,3 +92,11 @@ nav{
 
     }
 }
+
+@media (max-width: 950px){
+    li {
+        span{
+            font-size: 22px;
+        }
+    }
+}
