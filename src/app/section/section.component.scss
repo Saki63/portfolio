@@ -1,0 +1,13 @@
+@import '../shared/scss/fonts.scss';
+@import '../../styles.scss';
+
+section {
+    width: 100vw;
+    max-width: 100%;
+    height: 'fit-content';
+    background-color: $primary-dark-color;
+    @include flex-box($fd: column, $g: 32px);
+    padding: 80px 16px;
+    color: $secondary-color;
+    font-family: 'Josefin_Sans_Regular';
+}

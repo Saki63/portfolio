@@ -1,0 +1,34 @@
+@import '../shared/scss/fonts.scss';
+@import '../shared/scss/button.scss';
+@import '../../styles.scss';
+
+.content_limit{
+    max-width: 900px;
+}
+
+.content{
+    @include flex-box($g: 44px, $ai: start);
+    flex-wrap: wrap;
+
+    .content_left{
+        @include flex-box($g: 8px);
+
+        p{
+            font-size: 30px;
+
+            span{
+                color: $primary-color;
+            }
+        }
+
+        
+    }
+
+    .content_right{
+        flex:1;
+        @include flex-box($fd: column, $ai: end, $g: 16px);
+        font-size: 18px;
+        line-height: 120%;
+        
+    }
+}
