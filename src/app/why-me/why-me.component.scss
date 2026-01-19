@@ -49,19 +49,17 @@
 
         .content_right{
             align-items: center;
+
             p{
                 align-items: center;
                 gap: 16px;
+                
                 span{
                     text-align: center;
                 }
-                
             }
         }
-
     }
-
-    
 }
 
 @media (max-width: 480px){

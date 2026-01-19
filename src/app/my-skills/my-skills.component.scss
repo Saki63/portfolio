@@ -32,7 +32,6 @@
     }
 
     .content_right{
-        // @include flex-box($fd: column, $ai: end, $g: 16px);
         position: relative;
 
         .current_learning{
@@ -43,39 +42,128 @@
             transform: translate(-50%, -50%);
             width: 70%;
 
-            .current_skills{
-                @include flex-box($g: 16px);
-
-                .skill_box{
-                    @include flex-box($fd: column, $g: 10px);
-
-                    svg{
-                        height: 32px;
-                        width: 32px;
-                    }
-                } 
-            }
-
-            p {
+            .title,
+            .resp_title {
+                font-size: 18px;
+                font-family: 'Josefin_Sans_Regular';
                 text-align: center;
+                font-weight: 400;
             }
 
-           
+            .resp_title {
+                display: none;
+            }
+
+            .current_learning_content {
+                @include flex-box($fd: column, $g: 24px);
+
+                .current_skills{
+                    @include flex-box($g: 16px);
+                    .resp_background{
+                        display: none;
+                    }
+                    .skill_box{
+                        @include flex-box($fd: column, $g: 10px);
+
+                        svg{
+                            height: 32px;
+                            width: 32px;
+                        }
+
+                        span{
+                            font-size: 14px;
+                        }
+                    } 
+                }
+
+                p {
+                    font-size: 18px;
+                    font-family: 'Josefin_Sans_Regular';
+                    text-align: center;
+                }
+
+            }
+
+          
         }
-
-
     }
 }
 
 @media (max-width: 850px){
 
+    .content{
+        flex-direction: column;
+        align-items: center;
 
-
-    
+        .content_left{
+            justify-content: center;
+        }
+    }
 }
 
 @media (max-width: 480px){
+    .content{
 
-    
+        .content_left{
+
+            .skill_box{
+                max-width: 46px;
+
+                svg{
+                    height: 45px;
+                    width: 45px;
+                }
+
+                span{
+                    display: none
+                }
+            }
+        }
+
+        .content_right{
+            position: relative;
+
+            .background{
+                display: none;
+            }
+
+            .current_learning{
+                position: static;
+                transform: none;
+                width: 100%;
+                gap: 40px;
+                
+                .resp_title {
+                    display: block;
+                    font-size: 16px;
+                    color: $primary-color;
+                }
+                .title {
+                    display: none;
+                }
+
+                .current_learning_content {
+                    flex-direction: row-reverse;
+
+                    .current_skills{
+                        position: relative;
+
+                        .resp_background{
+                            display: block;
+                            position: absolute;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                        text-align: start;
+                    }
+
+                }
+
+            
+            }
+        }
+    }
 }
 
