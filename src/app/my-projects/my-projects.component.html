@@ -1,0 +1,34 @@
+
+<div class="content">
+    <menu class="tabs">
+        @for (project of projects; let idx = $index; track project){
+            <button [ngClass]="getTabClass(idx)">{{getTabTitle(idx, project.title)}}</button>
+        }
+    </menu>
+    <div class="tab_content">
+        <div class="content_limit">
+            <ul class="content_left">
+                @for (descriptionPoint of projects[activeTabIdx].description; let idx = $index; track descriptionPoint){
+                    <li class="description_container">
+                        <svg class="bullet_point" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29 13C29 20.1797 23.1797 26 16 26C8.8203 26 0 17.6797 0 10.5C0 3.3203 8.8203 0 16 0C23.1797 0 29 5.8203 29 13Z" fill="#89BCD9"/>
+                        </svg>
+                        <div class="description">
+                            <div class="first_line">
+                                <h4>{{descriptionPoint.title}}</h4>
+                                @if (idx === 0){
+                                    <span>{{getProjectDuration(projects[activeTabIdx].duration)}}</span>
+                                }
+                            </div>
+                            
+                            <p>{{descriptionPoint.text}}</p>
+                        </div>
+                    </li>
+                }
+            </ul>
+            <div>
+
+            </div>            
+        </div>
+    </div>
+</div>

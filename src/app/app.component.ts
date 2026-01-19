@@ -5,11 +5,12 @@ import { LandingpageComponent } from "./landingpage/landingpage.component";
 import { SectionComponent } from "./section/section.component";
 import { WhyMeComponent } from "./why-me/why-me.component";
 import { MySkillsComponent } from './my-skills/my-skills.component';
+import { MyProjectsComponent } from './my-projects/my-projects.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, LandingpageComponent, SectionComponent, WhyMeComponent, MySkillsComponent],
+  imports: [CommonModule, RouterOutlet, LandingpageComponent, SectionComponent, WhyMeComponent, MySkillsComponent, MyProjectsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
