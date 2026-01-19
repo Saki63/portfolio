@@ -5,7 +5,7 @@ section {
     width: 100vw;
     max-width: 100%;
     background-color: $primary-dark-color;
-    @include flex-box($fd: column, $g: 32px);
+    @include flex-box($fd: column, $g: 56px);
     padding: 80px 16px;
     color: $secondary-color;
     font-family: 'Josefin_Sans_Regular';

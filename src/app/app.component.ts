@@ -4,11 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { LandingpageComponent } from "./landingpage/landingpage.component";
 import { SectionComponent } from "./section/section.component";
 import { WhyMeComponent } from "./why-me/why-me.component";
+import { MySkillsComponent } from './my-skills/my-skills.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, LandingpageComponent, SectionComponent, WhyMeComponent],
+  imports: [CommonModule, RouterOutlet, LandingpageComponent, SectionComponent, WhyMeComponent, MySkillsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
