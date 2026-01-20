@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -68,6 +68,13 @@ export class MyProjectsComponent {
     serverUrl: "",
     githubUrl: "",
   }];
+
+  isSmallScreen = window.innerWidth <= 1000;
+
+  @HostListener('window:resize')
+  onResize() {
+    this.isSmallScreen = window.innerWidth <= 1000;
+  }
 
   getTabTitle(index: number, title: string){
     const number = index + 1;

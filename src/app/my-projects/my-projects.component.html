@@ -2,7 +2,14 @@
 <div class="content">
     <menu class="tabs content_limit">
         @for (project of projects; let idx = $index; track project){
-            <button [ngClass]="getTabClass(idx)">{{getTabTitle(idx, project.title)}}</button>
+            <button [ngClass]="getTabClass(idx)">
+                @if (isSmallScreen) {
+                    {{getTabTitle(idx, "Project")}}
+                }
+                @else{
+                    {{getTabTitle(idx, project.title)}}
+                }
+            </button>
         }
     </menu>
     <div class="tab_content">
@@ -47,6 +54,38 @@
                     <button class="secondary">GitHub</button>
                 </div>
             </div>            
+        </div>
+        <div class="resp_content_wrapper">
+            <h3>{{projects[activeTabIdx].title}}</h3>
+            <div class="resp_project_info">
+                <div>
+                    Technologies: xxx
+                </div>
+                <div>
+                    {{getProjectDuration(projects[activeTabIdx].duration)}}
+                </div>
+            </div>
+            <div class="resp_img_wrapper">
+                <img src="../../assets/img/project-placeholder.png" alt="">
+            </div>
+            <ul class="resp_description_container">
+                @for (descriptionPoint of projects[activeTabIdx].description; let idx = $index; track descriptionPoint){
+                    <li class="resp_description">
+                        <div class="resp_first_line">
+                            <svg class="bullet_point" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M29 13C29 20.1797 23.1797 26 16 26C8.8203 26 0 17.6797 0 10.5C0 3.3203 8.8203 0 16 0C23.1797 0 29 5.8203 29 13Z" fill="#89BCD9"/>
+                            </svg>                                
+                            <h4>{{descriptionPoint.title}}</h4>
+                        </div>
+                        
+                        <p>{{descriptionPoint.text}}</p>
+                    </li>
+                }
+            </ul>   
+            <div class="button_wrapper">
+                <button class="primary">Live Test</button>
+                <button class="secondary">GitHub</button>
+            </div>
         </div>
     </div>
 </div>

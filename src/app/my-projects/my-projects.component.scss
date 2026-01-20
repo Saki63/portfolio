@@ -8,75 +8,83 @@
 
 .content {
     @include flex-box($fd: column);
+    max-width: 100%;
+    width: 100vw;
+}
 
-    .tabs{
-        @include flex-box($g: 24px, $jc: start);
-        width: 100%;
-        button {
-            border: none;
-            background-color: transparent;
-            color: $primary-color;
-            border-radius: 30px 30px 0 0;
-            font-size: 30px;
-            font-family: 'Josefin_Sans_Medium';
-            line-height: 120%;
-        }
+.tabs{
+    @include flex-box($g: 24px, $jc: start);
+    width: 100%;
 
-        .active {
-            background-color: $secondary-dark-color;
-            color: $secondary-color;
-        }
+    button {
+        border: none;
+        background-color: transparent;
+        color: $primary-color;
+        border-radius: 30px 30px 0 0;
+        font-size: 30px;
+        font-family: 'Josefin_Sans_Medium';
+        line-height: 120%;
     }
 
-    .tab_content{
-        @include flex-box($ai: start, $g: 24px);
-        padding: 32px;
-        width: 100vw;
-        max-width: 100%;
+    .active {
         background-color: $secondary-dark-color;
         color: $secondary-color;
+    }
+}
 
-        .content_wrapper {
-            @include flex-box($g: 32px);
+.resp_content_wrapper {
+    display: none;
+}
 
-            .content_left{
-                padding: 0;
-                flex: 1;
-            }
+.tab_content{
+    @include flex-box($ai: start, $g: 24px);
+    padding: 32px;
+    width: 100vw;
+    max-width: 100%;
+    background-color: $secondary-dark-color;
+    color: $secondary-color;
 
-            .content_right{
+
+
+    .content_wrapper {
+        @include flex-box($g: 32px);
+
+        .content_left{
+            padding: 0;
+            flex: 1;
+        }
+
+        .content_right{
+            @include flex-box($fd: column, $g: 24px);
+
+            .technologies_wrapper{
                 @include flex-box($fd: column, $g: 24px);
 
-                .technologies_wrapper{
-                    @include flex-box($fd: column, $g: 24px);
-
-                    .technologies_box{
-                        @include flex-box($g: 24px);
-                        svg{
-                            height: 36px;
-                            width: 36px;
-                        }
-                    }
-                }
-
-                .button_wrapper{
+                .technologies_box{
                     @include flex-box($g: 24px);
+                    svg{
+                        height: 36px;
+                        width: 36px;
+                    }
                 }
             }
         }
-
-
     }
+}
+
+.button_wrapper{
+    @include flex-box($g: 24px);
+}
+
+.bullet_point{
+    width: 29px;
+    min-width: 29px;
+    height: 26px;
 }
 
 .description_container {
     @include flex-box($ai: start, $g: 24px);
     margin: 32px 0;
-    .bullet_point{
-        width: 29px;
-        min-width: 29px;
-        height: 26px;
-    }
 
     .description{
         @include flex-box($fd: column, $ai: start, $g: 8px);
@@ -103,3 +111,139 @@
     }
 }
 
+@media (max-width: 1000px){
+
+    .tabs{
+        button {
+            color: $secondary-color;
+            font-family: 'Josefin_Sans_Regular';
+            font-weight: 400;
+        }
+
+        .active {
+            background-color: $secondary-dark-color;
+            color: $primary-color;
+        }
+    }
+
+    .resp_content_wrapper {
+        display: flex !important;
+        flex-direction: column;
+        gap: 16px;
+
+        h3{
+            font-size: 30px;
+            color: $primary-color;
+            font-family: 'Josefin_Sans_Regular';
+            font-weight: 400;
+        }
+
+        .resp_project_info {
+            @include flex-box($fd: column, $ai:start, $g: 8px);
+            font-size: 16px;
+            color: $secondary-color;
+            font-family: 'Josefin_Sans_Regular';
+            font-weight: 400;
+            line-height: 120%;
+        }
+
+        .resp_img_wrapper{
+            @include flex-box();
+            width: 100%;   
+        }
+    }
+
+    .resp_description_container{
+        @include flex-box($fd: column, $ai: start, $g: 24px);
+        padding: 0;
+        margin: 16px 0;
+
+        .resp_description {
+            @include flex-box($fd: column, $ai: start, $g: 16px);
+
+            .resp_first_line{
+                @include flex-box($ai: start, $g: 8px);
+
+                h4{
+                    font-size: 28px;
+                    font-weight: 400;
+                    line-height: 120%;
+                    color: $primary-color;
+                }            
+            }
+
+            p{
+                font-size: 20px;
+            }
+        }        
+    }
+
+    .content_wrapper{
+        display: none !important;
+    }
+}
+
+@media (max-width: 850px){
+
+    .tabs{
+        gap: 0px;
+        padding: 0 16px;
+
+        button {
+            padding: 10px 18px;
+            border-radius: 20px 20px 0 0;
+            font-size: 24px;
+        }
+    }
+
+    .resp_content_wrapper {
+        .resp_img_wrapper{
+            img{
+                width: 350px;
+            }            
+        }
+    }
+}
+
+@media (max-width: 480px){
+
+    .tabs{
+        padding: 0 0px;
+
+        button {
+            padding: 8px 12px;
+            font-size: 18px;
+        }
+    }
+
+    .resp_content_wrapper {
+        h3{
+            font-size: 24px;
+        }
+
+        .resp_project_info {
+            font-size: 14px;
+        }
+
+        .resp_img_wrapper{
+            img{
+                width: 270px;
+            }            
+        }
+    }
+
+    .resp_description_container{
+        .resp_description {
+            .resp_first_line{
+                align-items: end;
+
+                h4{
+                    font-size: 18px;
+                }            
+                p{
+                    font-size: 16px;
+                }
+            }
+        }        
+    }
+}
