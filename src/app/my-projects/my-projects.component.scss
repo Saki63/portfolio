@@ -3,11 +3,15 @@
 @import '../../styles.scss';
 
 .content_limit{
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 .content {
+    @include flex-box($fd: column);
+
     .tabs{
+        @include flex-box($g: 24px, $jc: start);
+        width: 100%;
         button {
             border: none;
             background-color: transparent;
@@ -32,10 +36,36 @@
         background-color: $secondary-dark-color;
         color: $secondary-color;
 
-        .content_left{
-            padding: 0;
+        .content_wrapper {
+            @include flex-box($g: 32px);
 
+            .content_left{
+                padding: 0;
+                flex: 1;
+            }
+
+            .content_right{
+                @include flex-box($fd: column, $g: 24px);
+
+                .technologies_wrapper{
+                    @include flex-box($fd: column, $g: 24px);
+
+                    .technologies_box{
+                        @include flex-box($g: 24px);
+                        svg{
+                            height: 36px;
+                            width: 36px;
+                        }
+                    }
+                }
+
+                .button_wrapper{
+                    @include flex-box($g: 24px);
+                }
+            }
         }
+
+
     }
 }
 
