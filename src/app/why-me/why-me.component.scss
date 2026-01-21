@@ -8,6 +8,7 @@
 
 .content{
     @include flex-box($g: 44px, $ai: start);
+    padding: 0 16px;
 
     .content_left{
         @include flex-box($g: 8px);
