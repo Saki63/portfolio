@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IconAngular, IconCSS, IconFirebase, IconHTML, IconJavaScript, IconMaterialDesign, IconRestApi, IconScrum, IconTypeScript } from './technologies/technologies.component';
 import { IconEmail, IconGitHub, IconLinkedIn } from './links/links.component';
+import { ImgEllips1 } from './backgrounds/backgrounds.component';
+import { ImgArrow, ImgBurgerMenu } from './other/other.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import { IconEmail, IconGitHub, IconLinkedIn } from './links/links.component';
     IconRestApi,
     IconEmail,
     IconGitHub,
-    IconLinkedIn
+    IconLinkedIn,
+    ImgEllips1,
+    ImgArrow,
+    ImgBurgerMenu
   ],
   imports: [CommonModule],
   exports: [
@@ -31,7 +36,10 @@ import { IconEmail, IconGitHub, IconLinkedIn } from './links/links.component';
     IconRestApi,
     IconEmail,
     IconGitHub,
-    IconLinkedIn
+    IconLinkedIn,
+    ImgEllips1,
+    ImgArrow,
+    ImgBurgerMenu
   ]
 })
 export class SvgImageModule {}

@@ -6,7 +6,15 @@ button{
     padding: 14px 26px;
     font-family: 'Josefin_Sans_Regular';
     font-size: 18px;
+    cursor: pointer; 
+}
+
+button * {
     cursor: pointer;
+}
+
+.button_transposed{
+    padding: 26px 14px !important;
 }
 
 .primary {
