@@ -5,6 +5,8 @@ export abstract class BaseImageComponent {
   @Input() size = 50;
   @Input() color = 'currentColor';
 
+  hover = false;
+
   @HostBinding('style.display') display = 'inline-flex';
   @HostBinding('style.width.px') get width() {
     return this.size;

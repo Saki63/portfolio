@@ -6,7 +6,7 @@ import { BaseImageComponent } from '../base-image.component';
   templateUrl: './svgs/angular-icon.component.html',
   styleUrl: './technologies.component.scss'
 })
-export class IconAngularComponent extends BaseImageComponent {}
+export class IconAngular extends BaseImageComponent {}
 
 @Component({
   selector: 'app-icon-typescript',

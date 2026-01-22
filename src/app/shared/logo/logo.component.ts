@@ -13,7 +13,6 @@ export class LogoComponent {
   @Input() color: "primary" | "background" = "primary";
 
   isPrimary(): boolean{
-    console.log(this.color);
     if (this.color === "primary"){
       return true;
     }
