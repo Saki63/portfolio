@@ -23,22 +23,46 @@ section {
 }
 
 h3{
-    font-size: 32px;
-    color: $primary-color;
+    font-size: 32px;  
+    color: $primary-color;  
+    
+}
+
+.title{
+    text-align: center;
+    font-family: 'Josefin_Sans_Regular';
+}
+
+.resp_title{
+    display: none;
 }
 
 @media (max-width: 850px){
 
-    h3{
-        font-size: 28px;
-    }
+
 
 }
 
 @media (max-width: 480px){
 
-    h3{
-        font-size: 24px;
+    .title{
+        display: none;
+    }
+
+    .resp_title{
+        display:block;
+        width: 100%;
+        padding: 0 16px;
+
+        h3{
+            font-family: 'Anta';
+            font-weight: 400;
+        }
+        p{
+            font-family: 'Josefin_Sans_Regular';
+            font-size: 18px;  
+            color: $secondary-color;  
+        }
     }
 
 }
