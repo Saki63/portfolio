@@ -1,0 +1,60 @@
+@import '../../shared/scss/fonts.scss';
+@import '../../../styles.scss';
+
+.bubble{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    @include flex-box();
+    
+    .background{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.content {
+    @include flex-box($fd: column, $g: 20px);
+    max-width: 300px;
+
+    .header{
+        @include flex-box($fd: column);
+        h4{
+            font-size: 'Josefin_Sans_SemiBold';
+            font-size: 26px;
+            line-height: 120%;
+            color: $secondary-color;
+        }
+
+        .primary{
+            color: $primary-color;
+        }
+        
+    }
+
+    p{
+        font-size: 'Josefin_Sans_Regular';
+        font-size: 18px;
+        line-height: 120%;
+        color: $secondary-color;
+        text-align: center;
+    }
+
+    a{
+        margin-top: 20px;
+        font-size: 'Josefin_Sans_Regular';
+        font-size: 16px;
+        line-height: 120%;
+        color: $primary-color;
+        text-align: center;
+        text-decoration: underline;
+
+        &:hover{
+            cursor: pointer !important;
+        }
+    }
+
+
+}
+

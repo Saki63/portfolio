@@ -6,11 +6,12 @@ import { SectionComponent } from "./section/section.component";
 import { WhyMeComponent } from "./why-me/why-me.component";
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
+import { ReferencesComponent } from './references/references.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, LandingpageComponent, SectionComponent, WhyMeComponent, MySkillsComponent, MyProjectsComponent],
+  imports: [CommonModule, RouterOutlet, LandingpageComponent, SectionComponent, WhyMeComponent, MySkillsComponent, MyProjectsComponent, ReferencesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
