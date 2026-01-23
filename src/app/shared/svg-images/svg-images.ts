@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IconAngular, IconCSS, IconFirebase, IconHTML, IconJavaScript, IconMaterialDesign, IconRestApi, IconScrum, IconTypeScript } from './technologies/technologies.component';
 import { IconEmail, IconGitHub, IconLinkedIn } from './links/links.component';
 import { ImgEllips1, ImgEllips2 } from './backgrounds/backgrounds.component';
-import { ImgArrow, ImgBurgerMenu } from './other/other.component';
+import { IconPortfolio, ImgArrow, ImgBurgerMenu } from './other/other.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { ImgArrow, ImgBurgerMenu } from './other/other.component';
     ImgEllips1,
     ImgArrow,
     ImgBurgerMenu,
-    ImgEllips2
+    ImgEllips2,
+    IconPortfolio
   ],
   imports: [CommonModule],
   exports: [
@@ -41,7 +42,8 @@ import { ImgArrow, ImgBurgerMenu } from './other/other.component';
     ImgEllips1,
     ImgArrow,
     ImgBurgerMenu,
-    ImgEllips2
+    ImgEllips2,
+    IconPortfolio
   ]
 })
 export class SvgImageModule {}

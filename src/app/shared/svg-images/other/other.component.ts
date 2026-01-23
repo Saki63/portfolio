@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BaseImageComponent } from '../base-image.component';
 
 @Component({
@@ -14,3 +14,12 @@ export class ImgArrow extends BaseImageComponent {}
   styleUrl: './other.component.scss'
 })
 export class ImgBurgerMenu extends BaseImageComponent {}
+
+@Component({
+  selector: 'app-img-logo',
+  templateUrl: './svgs/logo-img.component.html',
+  styleUrls: ['./other.component.scss', './svgs/logo-img.component.scss']
+})
+export class IconPortfolio extends BaseImageComponent {
+  @Input() animation = false;
+}

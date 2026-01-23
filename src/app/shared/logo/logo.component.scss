@@ -10,24 +10,9 @@
         color: $secondary-color;
     }
 
-    .profession_primary{
+    span{
         font-family: 'Josefin_Sans_Medium';
         font-size: 16px;
-        color: $primary-color;
     }
 
-    .profession_background{
-        font-family: 'Josefin_Sans_Medium';
-        font-size: 16px;
-        color: $primary-dark-color;
-    }
-
-    .infinity_sign{
-        transform-origin: center; //Skaliert vom Mittelpunkt aus
-        transition: transform 0.25s ease-in-out;
-    }
-
-    svg:hover .infinity_sign{
-        transform: scaleX(1.15);
-    }
 }
