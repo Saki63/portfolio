@@ -1,8 +1,8 @@
 import { Component, HostListener } from '@angular/core';
-import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { LogoComponent } from '../shared/logo/logo.component';
 import { SvgImageModule } from '../shared/svg-images/svg-images';
 import { colorPalette } from '../shared/color-palette';
+import { NavigationBarComponent } from '../shared/components/navigation-bar/navigation-bar.component';
 
 @Component({
   selector: 'app-landingpage',

@@ -1,5 +1,5 @@
-@import '../../shared/scss/fonts.scss';
-@import '../../../styles.scss';
+@import '../../../shared/scss/fonts.scss';
+@import '../../../../styles.scss';
 
 @mixin font($family: 'Josefin_Sans_Regular', $size: 26px, $color: $primary-dark-color){
     font-family: $family;

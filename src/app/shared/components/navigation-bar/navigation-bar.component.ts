@@ -1,6 +1,6 @@
+import { colorPalette } from '../../../shared/color-palette';
 import { Component } from '@angular/core';
-import { LogoComponent } from '../../shared/logo/logo.component';
-import { colorPalette } from '../../shared/color-palette';
+import { LogoComponent } from '../../logo/logo.component';
 
 @Component({
   selector: 'app-navigation-bar',

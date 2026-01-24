@@ -1,0 +1,43 @@
+@import '../../scss/fonts.scss';
+@import '../../../../styles.scss';
+
+footer {    
+    @include flex-box();
+    background-color: $primary-color;
+    height: 214px;
+
+    .content{
+        @include flex-box($jc: space-between);
+        padding: 16px;
+        width: 100%;
+
+        .left_side{
+            @include flex-box($fd: column, $ai:start, $g: 8px);
+            font-family: 'Josefin_Sans_Regular';
+            font-size: 18px;
+            line-height: 120%;
+            color: #262E34;
+            a{
+                text-decoration: none;
+                color:inherit;
+                cursor: pointer;
+
+                &:hover{
+                    color: #F8F5EC;
+                    opacity: 70%;
+                }
+
+                &:focus{
+                    color: #F8F5EC;
+                }
+            }
+        }
+
+        ul{
+            @include flex-box($g: 8px);
+            padding: 0;
+            list-style: none;
+        }
+    }
+
+}
