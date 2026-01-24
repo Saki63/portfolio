@@ -32,4 +32,11 @@ button * {
     &:hover {
         background-color: #F8F5EC1F;
     }
+
+    &:disabled{
+        border-color: $secondary-color;
+        color: $secondary-color;
+        background-color: transparent;
+        cursor: default;
+    }
 }

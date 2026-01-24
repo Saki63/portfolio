@@ -23,3 +23,17 @@ export class ImgBurgerMenu extends BaseImageComponent {}
 export class IconPortfolio extends BaseImageComponent {
   @Input() animation = false;
 }
+
+@Component({
+  selector: 'app-icon-email1',
+  templateUrl: './svgs/email-icon.component.html',
+  styleUrls: ['./other.component.scss']
+})
+export class IconEmail1 extends BaseImageComponent {}
+
+@Component({
+  selector: 'app-icon-phone',
+  templateUrl: './svgs/phone-icon.component.html',
+  styleUrls: ['./other.component.scss']
+})
+export class IconPhone extends BaseImageComponent {}
