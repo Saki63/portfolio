@@ -8,11 +8,16 @@
         font-family: 'Anta';
         font-size: 16px;
         color: $secondary-color;
+        line-height: 120%;
+        font-weight: 400;
     }
 
-    span{
-        font-family: 'Josefin_Sans_Medium';
+    .title{
+        font-family: 'Josefin_Sans_Light';
         font-size: 16px;
+        color: $primary-color;
+        line-height: 120%;
+        font-weight: 400;
     }
 
 }

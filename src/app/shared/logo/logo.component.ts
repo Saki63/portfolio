@@ -13,11 +13,4 @@ import { SvgImageModule } from '../svg-images/svg-images';
 export class LogoComponent {
   @Input() color = "currentColor";
   @Input() animation = false;
-
-  // isPrimary(): boolean{
-  //   if (this.color === "primary"){
-  //     return true;
-  //   }
-  //   return false;
-  // }
 }
