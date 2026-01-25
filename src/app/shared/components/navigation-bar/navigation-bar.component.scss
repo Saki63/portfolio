@@ -1,69 +1,69 @@
 @import '../../../shared/scss/fonts.scss';
 @import '../../../../styles.scss';
 
-@mixin font($family: 'Josefin_Sans_Regular', $size: 26px, $color: $primary-dark-color){
+@mixin font($family: 'Josefin_Sans_Medium', $size: 26px, $color: $primary-dark-color){
     font-family: $family;
     font-size: $size;
     color: $color;
+    line-height: 120%;
 }
 
 nav{
+    @include flex-box();
     width: 100%;
+    max-width: 100vw;
+    
     background-color: $primary-color; 
     position: absolute;
+    left: 0;
     bottom: 0;
     height: 104px;
-    @include flex-box($jc: center);
-
-    ul{
-        list-style-type: none;
-        @include flex-box($jc: space-between, $g: 24px);
-        @include font();
-        flex: 1;
-        max-width: 680px;
-        padding: 0 64px;
-
-        li{
-            position: relative;
-
-            span {
-                position: relative;
-            }
-
-            &:hover *{
-                cursor: pointer;
-                color: $secondary-color;
-            }
-
-            .ellipse{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-
-                opacity: 0;
-                transform: translate(-50%, -50%);
-            }
-
-            &:hover .ellipse{
-                opacity: 1;
-            }
-        }
-
-    }
-}
-
-.content_limit{
-    max-width: $content-limit;
-    padding: 0 24px;
 }
 
 .navigation_wrapper{
     @include flex-box($jc: space-between, $g: 24px);
     width: 100%;
+    max-width: $content-limit;
+    padding: 0 16px;
+}
+
+ul{
+    list-style-type: none;
+    @include flex-box($jc: space-between, $g: 24px);
+    @include font();
+    flex: 1;
+    max-width: 680px;
+    padding: 0 64px;
+
+    li{
+        position: relative;
+
+        span {
+            position: relative;
+        }
+
+        &:hover *{
+            cursor: pointer;
+            color: $secondary-color;
+        }
+
+        .ellipse{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            opacity: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover .ellipse{
+            opacity: 1;
+        }
+    }
 }
 
 .language_selection{
-    @include font($size: 18px);
+    @include font($family: 'Josefin_Sans_Regular', $size: 18px);
     @include flex-box($g: 24px);
 
     button{
@@ -89,7 +89,6 @@ nav{
         &:hover .language_ellipse{
             opacity: 1;
         }
-
     }
 }
 
@@ -98,5 +97,29 @@ nav{
         span{
             font-size: 22px;
         }
+    }
+}
+
+@media ((max-height: 700px) and (max-width: 480px)){
+    nav{
+        position: static;
+    }
+}
+
+@media ((max-height: 920px) and (min-width: 480px) and (max-width: 850px)){
+    nav{
+        position: static;
+    }
+}
+
+@media ((max-height: 740px) and (min-width: 850px) and (max-width: 1000px)){
+    nav{
+        position: static;
+    }
+}
+
+@media ((max-height: 890px) and (min-width: 1000px)){
+    nav{
+        position: static;
     }
 }

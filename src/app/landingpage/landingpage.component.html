@@ -7,10 +7,12 @@
 <section>
     <div class="content">
         <div class="photo_content">
-            <app-img-ellips1 [size]="ellips1Size" [color]="colorPalette.primaryColor"/>
+            <app-img-ellipse1 [height]="ellipse1Height" [width]="ellipse1Width" [color]="colorPalette.primaryColor"/>
         </div>
         <div class="introduction_content">
             <div class="logo_social_media_wrapper">
+                <div class="placeholder"></div>
+                <app-logo [color]="colorPalette.primaryColor" [animation]="true"></app-logo>
                 <ul class="social_media_links">
                     <li>
                         <app-icon-email [size]="30" [color]="colorPalette.primaryColor"/>
@@ -22,17 +24,19 @@
                         <app-icon-linkedin [size]="30" [color]="colorPalette.primaryColor"/>
                     </li>
                 </ul>
-                <app-logo [color]="colorPalette.primaryColor" [animation]="true"></app-logo>
             </div>
 
             <div class="title_wrapper">
                 <h1>Claudia Fohrer</h1>
                 <span>FRONTEND DEVELOPER</span>                
             </div>
+            
+            <div class="button_wrapper">
+                <button class="secondary button_transposed">
+                    <app-img-arrow [height]="50" [width]="22" [color]="colorPalette.primaryColor"/>
+                </button>                
+            </div>
 
-            <button class="secondary button_transposed">
-                <app-img-arrow [height]="50" [width]="22" [color]="colorPalette.primaryColor"/>
-            </button>
         </div>
     </div>    
 </section>

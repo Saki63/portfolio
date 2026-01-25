@@ -13,15 +13,15 @@ import { NavigationBarComponent } from '../shared/components/navigation-bar/navi
 })
 export class LandingpageComponent {
   colorPalette = colorPalette;
-  ellips1Size = 600;
   isSmallScreen = window.innerWidth <= 480 ? 'smallest' : (window.innerWidth <= 1000 ? 'small' : 'normal');
-
+  ellipse1Height = this.isSmallScreen === 'smallest' ? 320 : (this.isSmallScreen === 'small' ? 513 : 641);
+  ellipse1Width = this.isSmallScreen === 'smallest' ? 290 : (this.isSmallScreen === 'small' ? 464 : 580);
+  
   @HostListener('window:resize')
   onResize() {
     this.isSmallScreen = window.innerWidth <= 480 ? 'smallest' : (window.innerWidth <= 1000 ? 'small' : 'normal');
 
-    this.ellips1Size = this.isSmallScreen === 'smallest' ? 300 : (this.isSmallScreen === 'small' ? 500 : 600);
+    this.ellipse1Height = this.isSmallScreen === 'smallest' ? 320 : (this.isSmallScreen === 'small' ? 513 : 641);
+    this.ellipse1Width = this.isSmallScreen === 'smallest' ? 290 : (this.isSmallScreen === 'small' ? 464 : 580);
   }
-
-
 }
