@@ -37,3 +37,17 @@ export class IconEmail1 extends BaseImageComponent {}
   styleUrls: ['./other.component.scss']
 })
 export class IconPhone extends BaseImageComponent {}
+
+@Component({
+  selector: 'app-img-location',
+  templateUrl: './svgs/location-img.component.html',
+  styleUrls: ['./other.component.scss']
+})
+export class ImgLocation extends BaseImageComponent {}
+
+@Component({
+  selector: 'app-img-location1',
+  templateUrl: './svgs/location1-img.component.html',
+  styleUrls: ['./other.component.scss']
+})
+export class ImgLocation1 extends BaseImageComponent {}

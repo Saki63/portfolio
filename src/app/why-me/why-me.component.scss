@@ -11,11 +11,21 @@
     padding: 0 16px;
 
     .content_left{
+        flex: 1;
         @include flex-box($g: 8px);
 
-        div{
+        .default_location_img{
+            display: inline-flex !important;
+        }
+
+        .resp_location_img{
+            display: none !important;
+        }
+
+        p{
             font-size: 30px;
-            max-width: fit-content;
+            @include font($family: 'Josefin_Sans_Bold', $size: 20px, $color: $secondary-color);
+
             .heighlight{
                 color: $primary-color;
             }
@@ -24,10 +34,11 @@
 
     .content_right{
         flex:1;
-        @include flex-box($fd: column, $ai: end, $g: 16px);
+        @include flex-box($fd: column, $ai: end, $g: 24px);
+        @include font($family: 'Josefin_Sans_Regular', $size: 18px, $color: $secondary-color);
+
         p{
             @include flex-box($fd: column, $ai:start);
-            font-size: 18px;
 
             span{
                 line-height: 120%;
@@ -43,6 +54,16 @@
         align-items: center;
 
         .content_left{
+            gap: 20px;
+
+            .default_location_img{
+                display: none !important;
+            }
+
+            .resp_location_img{
+                display: inline-flex !important;
+            }
+
             p{
                 font-size: 24px;
             }
@@ -67,23 +88,21 @@
     .resp_hide{
         display: none;
     }
+    .content{
+        .content_left{
+            max-width: 200px;
 
-    .content_left{
-        svg{
-            max-width: 50px;
+            p{
+                text-align: center;
+                font-size: 18px;
+            }
+        }        
+        .content_right{
+            p{
+                font-size: 16px;    
+            }
+            
         }
-        p{
-            font-size: 18px;
-            text-align: center;
-        }
-    }
-
-    .content_right{
-        p{
-            font-size: 16px;    
-        }
-          
-    }
-    
+    }    
 }
 

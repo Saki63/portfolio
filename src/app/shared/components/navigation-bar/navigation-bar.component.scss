@@ -1,13 +1,6 @@
 @import '../../../shared/scss/fonts.scss';
 @import '../../../../styles.scss';
 
-@mixin font($family: 'Josefin_Sans_Medium', $size: 26px, $color: $primary-dark-color){
-    font-family: $family;
-    font-size: $size;
-    color: $color;
-    line-height: 120%;
-}
-
 nav{
     @include flex-box();
     width: 100%;

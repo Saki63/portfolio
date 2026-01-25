@@ -14,6 +14,13 @@
     gap: $g;
 }
 
+@mixin font($family: 'Josefin_Sans_Medium', $size: 26px, $color: $primary-dark-color){
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+    line-height: 120%;
+}
+
 //option 1
 $primary-dark-color: #262E34;
 $primary-color: #89BCD9;
