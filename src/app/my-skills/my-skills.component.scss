@@ -47,6 +47,10 @@
             }
         }
     }
+
+    .resp_hide{
+        display: none;
+    }
 }
 
 .skill_box{
@@ -127,6 +131,9 @@
                     }
                 }
             }
+        }
+        .resp_hide{
+            display: block;
         }
     }
 
