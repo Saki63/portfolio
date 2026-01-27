@@ -51,3 +51,10 @@ export class ImgLocation extends BaseImageComponent {}
   styleUrls: ['./other.component.scss']
 })
 export class ImgLocation1 extends BaseImageComponent {}
+
+@Component({
+  selector: 'app-img-bullet-point',
+  templateUrl: './svgs/bullet-point-img.component.html',
+  styleUrls: ['./other.component.scss']
+})
+export class ImgBulletPoint extends BaseImageComponent {}

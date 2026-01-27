@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IconAngular, IconCSS, IconFirebase, IconGit, IconHTML, IconJavaScript, IconMaterialDesign, IconReact, IconRestApi, IconScrum, IconTypeScript, IconVue } from './technologies/technologies.component';
 import { IconEmail, IconGitHub, IconLinkedIn } from './links/links.component';
 import { ImgEllipse1, ImgEllipse2, ImgEllipse3, ImgEllipse4, ImgEllipse5, ImgEllipse6 } from './backgrounds/backgrounds.component';
-import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBurgerMenu, ImgLocation, ImgLocation1 } from './other/other.component';
+import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBulletPoint, ImgBurgerMenu, ImgLocation, ImgLocation1 } from './other/other.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,8 @@ import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBurgerMenu, ImgLocat
     IconVue,
     ImgEllipse5,
     ImgEllipse6,
-    IconGit
+    IconGit,
+    ImgBulletPoint
   ],
   imports: [CommonModule],
   exports: [
@@ -65,7 +66,8 @@ import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBurgerMenu, ImgLocat
     IconVue,
     ImgEllipse5,
     ImgEllipse6,
-    IconGit
+    IconGit,
+    ImgBulletPoint
   ]
 })
 export class SvgImageModule {}

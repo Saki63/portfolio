@@ -1,10 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SvgImageModule } from '../shared/svg-images/svg-images';
+import { colorPalette } from '../shared/color-palette';
 
 @Component({
   selector: 'app-my-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SvgImageModule],
   templateUrl: './my-projects.component.html',
   styleUrl: './my-projects.component.scss'
 })
@@ -68,6 +70,8 @@ export class MyProjectsComponent {
     serverUrl: "",
     githubUrl: "",
   }];
+
+  colorPalette = colorPalette;
 
   isSmallScreen = window.innerWidth <= 1000;
 
