@@ -2,13 +2,10 @@
 @import '../shared/scss/button.scss';
 @import '../../styles.scss';
 
-.content_limit{
-    max-width: 900px;
-}
-
 .content{
     @include flex-box($g: 44px, $ai: start);
     padding: 0 16px;
+    max-width: $section-limit;
 
     .content_left{
         flex: 1;

@@ -2,37 +2,20 @@
 @import '../shared/scss/button.scss';
 @import '../../styles.scss';
 
-.content_limit{
-    max-width: 900px;
-}
-
 .content{
     @include flex-box($g: 44px, $ai: start);
     padding: 0 16px;
+    max-width: $section-limit;
 
     .content_left{
+        flex: 1;
         @include flex-box($g: 40px, $jc: start);
         flex-wrap: wrap;
-
-        .skill_box{
-            @include flex-box($fd: column, $g: 10px);
-            max-width: 80px;
-
-            svg{
-                height: 60px;
-                width: 60px;
-            }
-
-            span{
-                font-size: 16px;
-                font-family: 'Josefin_Sans_Regular';
-                color: $primary-color;
-                text-align: center;
-            }
-        }
     }
 
     .content_right{
+        flex:1;
+        @include flex-box();
         position: relative;
 
         .current_learning{
@@ -42,14 +25,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 70%;
-
-            .title,
-            .resp_title {
-                font-size: 18px;
-                font-family: 'Josefin_Sans_Regular';
-                text-align: center;
-                font-weight: 400;
-            }
+            
+            @include font($family: 'Josefin_Sans_Regular', $size: 18px, $color: $secondary-color);
+            text-align: center;
 
             .resp_title {
                 display: none;
@@ -58,35 +36,33 @@
             .current_learning_content {
                 @include flex-box($fd: column, $g: 24px);
 
-                .current_skills{
-                    @include flex-box($g: 16px);
-                    .resp_background{
-                        display: none;
-                    }
-                    .skill_box{
-                        @include flex-box($fd: column, $g: 10px);
-
-                        svg{
-                            height: 32px;
-                            width: 32px;
-                        }
-
-                        span{
-                            font-size: 14px;
-                        }
-                    } 
+                .resp_background{
+                    display: none !important;
                 }
 
-                p {
-                    font-size: 18px;
-                    font-family: 'Josefin_Sans_Regular';
-                    text-align: center;
+                .current_skills{
+                    @include flex-box($g: 16px);
                 }
 
             }
-
-          
         }
+    }
+}
+
+.skill_box{
+    @include flex-box($fd: column, $g: 10px);
+    max-width: 80px;
+
+    span{
+        @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $primary-color);
+        text-align: center;
+    }
+}
+
+.skill_box_right{
+    span{
+        color: $secondary-color;
+        font-size: 14px;
     }
 }
 
@@ -105,27 +81,11 @@
 @media (max-width: 480px){
     .content{
 
-        .content_left{
-
-            .skill_box{
-                max-width: 46px;
-
-                svg{
-                    height: 45px;
-                    width: 45px;
-                }
-
-                span{
-                    display: none
-                }
-            }
-        }
-
         .content_right{
             position: relative;
 
-            .background{
-                display: none;
+            .default_background{
+                display: none !important;
             }
 
             .current_learning{
@@ -133,10 +93,12 @@
                 transform: none;
                 width: 100%;
                 gap: 40px;
+
+                font-size: 16px;
+
                 
                 .resp_title {
                     display: block;
-                    font-size: 16px;
                     color: $primary-color;
                 }
                 .title {
@@ -144,27 +106,43 @@
                 }
 
                 .current_learning_content {
+                    
                     flex-direction: row-reverse;
 
-                    .current_skills{
-                        position: relative;
+                    .resp_wrapper{
+                       position: relative; 
+                       @include flex-box();
+                    }
+                    
+                    .resp_background{
+                        display: block !important;
+                    }
 
-                        .resp_background{
-                            display: block;
-                            position: absolute;
-                        }
+                    .current_skills{
+                        position: absolute;
                     }
 
                     p {
-                        font-size: 16px;
                         text-align: start;
                     }
-
                 }
-
-            
             }
         }
     }
+
+    .skill_box{
+        max-width: 46px;
+
+        span{
+            display: none
+        }
+    }
+
+    .skill_box_right{
+        span{
+            display: contents;
+        }
+    }
+
 }
 

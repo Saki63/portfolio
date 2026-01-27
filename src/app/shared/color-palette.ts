@@ -19,4 +19,4 @@ const colorPaletteOp3: ColorPalette = {
     primaryColor: "#F9CB71",
 }
 
-export const colorPalette: ColorPalette = colorPaletteOp1;
+export const colorPalette: ColorPalette = colorPaletteOp2;

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IconAngular, IconCSS, IconFirebase, IconHTML, IconJavaScript, IconMaterialDesign, IconRestApi, IconScrum, IconTypeScript } from './technologies/technologies.component';
+import { IconAngular, IconCSS, IconFirebase, IconGit, IconHTML, IconJavaScript, IconMaterialDesign, IconReact, IconRestApi, IconScrum, IconTypeScript, IconVue } from './technologies/technologies.component';
 import { IconEmail, IconGitHub, IconLinkedIn } from './links/links.component';
-import { ImgEllipse1, ImgEllipse2, ImgEllipse3, ImgEllipse4 } from './backgrounds/backgrounds.component';
+import { ImgEllipse1, ImgEllipse2, ImgEllipse3, ImgEllipse4, ImgEllipse5, ImgEllipse6 } from './backgrounds/backgrounds.component';
 import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBurgerMenu, ImgLocation, ImgLocation1 } from './other/other.component';
 
 @NgModule({
@@ -29,7 +29,12 @@ import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBurgerMenu, ImgLocat
     ImgEllipse3,
     ImgEllipse4,
     ImgLocation,
-    ImgLocation1
+    ImgLocation1,
+    IconReact,
+    IconVue,
+    ImgEllipse5,
+    ImgEllipse6,
+    IconGit
   ],
   imports: [CommonModule],
   exports: [
@@ -55,7 +60,12 @@ import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBurgerMenu, ImgLocat
     ImgEllipse3,
     ImgEllipse4,
     ImgLocation,
-    ImgLocation1
+    ImgLocation1,
+    IconReact,
+    IconVue,
+    ImgEllipse5,
+    ImgEllipse6,
+    IconGit
   ]
 })
 export class SvgImageModule {}

@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { SvgImageModule } from '../shared/svg-images/svg-images';
+import { colorPalette } from '../shared/color-palette';
 
 @Component({
   selector: 'app-my-skills',
@@ -12,6 +13,8 @@ export class MySkillsComponent {
   isSmallScreen = window.innerWidth <= 480;
   iconSize = 60;
 
+  colorPalette = colorPalette;
+  
   @HostListener('window:resize')
   onResize() {
     this.isSmallScreen = window.innerWidth <= 480;

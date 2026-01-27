@@ -63,3 +63,24 @@ export class IconScrum extends BaseImageComponent {}
   styleUrl: './technologies.component.scss'
 })
 export class IconRestApi extends BaseImageComponent {}
+
+@Component({
+  selector: 'app-icon-react',
+  templateUrl: './svgs/react-icon.component.html',
+  styleUrl: './technologies.component.scss'
+})
+export class IconReact extends BaseImageComponent {}
+
+@Component({
+  selector: 'app-icon-vue',
+  templateUrl: './svgs/vue-icon.component.html',
+  styleUrl: './technologies.component.scss'
+})
+export class IconVue extends BaseImageComponent {}
+
+@Component({
+  selector: 'app-icon-git',
+  templateUrl: './svgs/git-icon.component.html',
+  styleUrl: './technologies.component.scss'
+})
+export class IconGit extends BaseImageComponent {}

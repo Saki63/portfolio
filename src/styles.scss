@@ -22,11 +22,11 @@
 }
 
 //option 1
-$primary-dark-color: #262E34;
-$primary-color: #89BCD9;
+// $primary-dark-color: #262E34;
+// $primary-color: #89BCD9;
 //option 2
-// $primary-dark-color: #042639;
-// $primary-color: #F28A62;
+$primary-dark-color: #042639;
+$primary-color: #F28A62;
 //option 3
 // $primary-dark-color: #0A383F;
 // $primary-color: #F9CB71;
@@ -37,7 +37,9 @@ $inactive: #262E341F;
 $error: #E44C36;
 $done: #97E163;
 $secondary-dark-color: #2D383F;
+
 $content-limit: 1200px;
+$section-limit: 860px;
 
 h2 {
     font-family: 'Anta';
