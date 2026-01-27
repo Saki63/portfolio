@@ -11,6 +11,20 @@ import { colorPalette } from '../shared/color-palette';
   styleUrl: './my-projects.component.scss'
 })
 export class MyProjectsComponent {
+  technologies: Record<string, string> = {
+    'angular': "Angular", 
+    'css': "CSS",
+    'firebase': "Firebase",
+    'git': "Git",
+    'html': "HTML",
+    'javascript': "JavaScript",
+    'material-design': "Material Design",
+    'react': "React",
+    'rest-api': "REST-API",
+    'scrum': "Scrum",
+    'typescript': "TypeScript",
+    'vue': "Vue.js"
+  };
   activeTabIdx = 0;
   projects = [{
     title: "El Pollo Loco",
@@ -29,7 +43,7 @@ export class MyProjectsComponent {
         text: "As someone who is always trying to learn new technologies, you may have enjoyed working on this project because it allowed you to delve deep into a particular technology. Give details, such as the name of the framework or language you mean.",
       }
     ],
-    picture: "",
+    picture: "../../assets/img/project-placeholder.png",
     technologies: ['html', 'javascript', 'css'],
     serverUrl: "",
     githubUrl: "",
@@ -96,7 +110,21 @@ export class MyProjectsComponent {
     return `Duration:  ${duration}`;
   }
 
-  changeTab(){
-    this.activeTabIdx = 1;
+  changeTab(index: number){
+    this.activeTabIdx = index;
   }
+
+  getTechnologiesTitles(){
+    let tecList = "Technologies: ";
+    const project = this.projects[this.activeTabIdx];
+    const tecLength = project.technologies.length;
+    for (let tecIdx = 0; tecIdx < tecLength; tecIdx++) {
+      const technology = project.technologies[tecIdx];
+      tecList += tecIdx === tecLength - 1 ? this.technologies[technology] : this.technologies[technology] + ", ";
+    }
+
+    return tecList;
+  }
+
+
 }

@@ -1,8 +1,8 @@
 
 <div class="content">
     <menu class="tabs content_limit">
-        @for (project of projects; let idx = $index; track project){
-            <button [ngClass]="getTabClass(idx)">
+        @for (project of projects; let idx = $index; track project.title){
+            <button [ngClass]="getTabClass(idx)" (click)="changeTab(idx)">
                 @if (isSmallScreen) {
                     {{getTabTitle(idx, "Project")}}
                 }
@@ -35,12 +35,46 @@
                 <div class="technologies_wrapper">
                     <h4>Technologies</h4>
                     <div class="technologies_box">
-                        <app-icon-angular [size]="36" [color]="colorPalette.primaryColor"/>
-                        <app-icon-typescript [size]="36" [color]="colorPalette.primaryColor"/>
-                        <app-icon-html [size]="36" [color]="colorPalette.primaryColor"/>
+                        @for (tec of projects[activeTabIdx].technologies; track tec){
+                            @switch (tec) {
+                                @case ("angular"){
+                                    <app-icon-angular [size]="36" [color]="colorPalette.primaryColor"/>
+                                }
+                                @case ("css"){
+                                    <app-icon-css [size]="36" [color]="colorPalette.primaryColor"/>
+                                }                                
+                                @case ("firebase"){
+                                    <app-icon-firebase [size]="36" [color]="colorPalette.primaryColor"/>
+                                }                                
+                                @case ("git"){
+                                    <app-icon-git [size]="36" [color]="colorPalette.primaryColor"/>
+                                }                               
+                                 @case ("html"){
+                                    <app-icon-html [size]="36" [color]="colorPalette.primaryColor"/>
+                                }                               
+                                 @case ("javascript"){
+                                    <app-icon-javascript [size]="36" [color]="colorPalette.primaryColor"/>
+                                }                                
+                                @case ("material-design"){
+                                    <app-icon-material-design [size]="36" [color]="colorPalette.primaryColor"/>
+                                }                                
+                                @case ("react"){
+                                    <app-icon-react [size]="36" [color]="colorPalette.primaryColor"/>
+                                }                                
+                                @case ("scrum"){
+                                    <app-icon-scrum [size]="36" [color]="colorPalette.primaryColor"/>
+                                }
+                                @case ("typescript"){
+                                    <app-icon-typescript [size]="36" [color]="colorPalette.primaryColor"/>
+                                }
+                                @case ("vue"){
+                                    <app-icon-vue [size]="36" [color]="colorPalette.primaryColor"/>
+                                }
+                            }
+                        }
                     </div>
                 </div>
-                <img src="../../assets/img/project-placeholder.png" alt="">
+                <img src={{projects[activeTabIdx].picture}} alt="">
                 <div class="button_wrapper">
                     <button class="primary">Live Test</button>
                     <button class="secondary">GitHub</button>
@@ -51,14 +85,14 @@
             <h3>{{projects[activeTabIdx].title}}</h3>
             <div class="resp_project_info">
                 <span>
-                    Technologies: xxx
+                    {{getTechnologiesTitles()}}
                 </span>
                 <span>
                     {{getProjectDuration(projects[activeTabIdx].duration)}}
                 </span>
             </div>
             <div class="resp_img_wrapper">
-                <img src="../../assets/img/project-placeholder.png" alt="">
+                <img src={{projects[activeTabIdx].picture}} alt="">
             </div>
             <ul class="resp_description_container">
                 @for (descriptionPoint of projects[activeTabIdx].description; let idx = $index; track descriptionPoint){
