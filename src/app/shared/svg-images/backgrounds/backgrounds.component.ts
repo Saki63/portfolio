@@ -42,3 +42,10 @@ export class ImgEllipse5 extends BaseImageComponent {}
   styleUrl: './backgrounds.component.scss'
 })
 export class ImgEllipse6 extends BaseImageComponent {}
+
+@Component({
+  selector: 'app-img-ellipse7',
+  templateUrl: './svgs/ellipse7-img.component.html',
+  styleUrl: './backgrounds.component.scss'
+})
+export class ImgEllipse7 extends BaseImageComponent {}
