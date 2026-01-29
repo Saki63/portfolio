@@ -13,4 +13,18 @@ export class ContactMeComponent {
   colorPalette = colorPalette;
   hoverEmail = false;
   hoverPhone = false;
+  checkboxState = 'default';
+
+  checkboxEventHandler(event: string){
+    if(event === 'over' && this.checkboxState !== 'checked' && this.checkboxState !== 'error'){
+      console.log('over');
+      this.checkboxState = 'hover';
+    } else if (event === 'leave' && this.checkboxState !== 'checked' && this.checkboxState !== 'error'){
+      console.log('leave');
+      this.checkboxState = 'default';
+    } else if (event === 'click'){
+      console.log('check');
+      this.checkboxState = this.checkboxState ==='checked' ? 'default' : 'checked';
+    }
+  }
 }

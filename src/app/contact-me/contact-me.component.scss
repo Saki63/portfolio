@@ -43,7 +43,6 @@
     }
 }   
 
-
 form{
     @include flex-box($g: 24px, $fd: column);
     width: 100%;
@@ -100,6 +99,7 @@ form{
     } 
 
     .checkbox_wrapper{
+        @include flex-box($jc: start, $g: 8px);
         width: 100%;
 
         a{

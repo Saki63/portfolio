@@ -58,3 +58,12 @@ export class ImgLocation1 extends BaseImageComponent {}
   styleUrls: ['./other.component.scss']
 })
 export class ImgBulletPoint extends BaseImageComponent {}
+
+@Component({
+  selector: 'app-img-checkbox',
+  templateUrl: './svgs/checkbox-img.component.html',
+  styleUrls: ['./other.component.scss']
+})
+export class ImgCheckbox extends BaseImageComponent {
+  @Input() state = 'default';
+}

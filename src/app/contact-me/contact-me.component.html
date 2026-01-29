@@ -33,7 +33,7 @@
         </div>
 
         <div class="checkbox_wrapper">
-            <img src="" alt="">
+            <app-img-checkbox [size]="24" (click)="checkboxEventHandler('click')" (mouseover)="checkboxEventHandler('over')" (mouseleave)="checkboxEventHandler('leave')" [state]="checkboxState" [color]="colorPalette.primaryColor"/>
             <span>I've read the <a>privacy policy</a> and agree to the processing of my data as outlined.</span>
         </div>
         <div class="send_btn_wrapper">
