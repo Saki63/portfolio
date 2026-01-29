@@ -46,7 +46,7 @@
     color: $secondary-color;
 
     width: 100%;
-    height: 548px;
+    min-height: 548px;
 
 
     @include font($family: 'Josefin_Sans_Regular', $size: 18px, $color: $secondary-color);
