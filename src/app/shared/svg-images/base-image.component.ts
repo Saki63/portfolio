@@ -6,6 +6,7 @@ export abstract class BaseImageComponent {
   @Input() width: number | undefined = undefined;
   @Input() height: number | undefined = undefined;
   @Input() color = 'currentColor';
+  @Input() hoverInput = false;
 
   hover = false;
 
@@ -19,4 +20,5 @@ export abstract class BaseImageComponent {
   @HostBinding('style.color') get iconColor() {
     return this.color;
   }
+
 }

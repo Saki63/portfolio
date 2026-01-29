@@ -3,46 +3,45 @@
 @import '../../styles.scss';
 
 
-
-.content_limit{
-    max-width: 900px;
-}
-
 .content{
     @include flex-box($fd: column, $ai: start, $g: 32px);
+    max-width: $section-limit;
 }
 
 .content_top{
     @include flex-box($g: 44px, $ai: start);
 
     .content_left{
-        @include flex-box();
         flex: 1;
-        line-height: 120%;
+        @include flex-box();
+
+        @include font($family: 'Josefin_Sans_Regular', $size: 18px, $color: $secondary-color);
+        hyphens: auto; 
+        text-align: justify;
     }
 
     .content_right{
-        @include flex-box($fd: column, $ai: start, $g: 16px);
         flex: 1;
-
+        @include flex-box($fd: column, $ai: start, $g: 16px);
+        
         a {
             text-decoration: none;
-            color: $secondary-color;
-            @include flex-box($g: 16px);
+            @include flex-box($g: 12px);
+            @include font($family: 'Josefin_Sans_Regular', $size: 20px, $color: $secondary-color);
+
+            span {
+                margin-top: 2px;
+            }
 
             &:hover{
                 color: $primary-color;
             }
-            * {
-                cursor: pointer;
-            }
         }    
         a * {
-            cursor: pointer;
+            cursor: pointer !important;
         }
     }
-}    
-
+}   
 
 
 form{
