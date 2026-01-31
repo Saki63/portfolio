@@ -16,20 +16,21 @@
         </div>        
     </div>
     <form action="submit">
+        <h4 class="resp_title">Let us work together!</h4>
         <div class="first_inputs">
             <div class="input_wrapper">
                 <label for="name">Your Name</label>
-                <input id="name" type="text">                
+                <input id="name" type="text" [placeholder]="isSmallScreen ? 'Your Name' : ''">                
             </div>
             <div class="input_wrapper">
                 <label for="mail">Your E-mail</label>
-                <input id="mail" type="email">                
+                <input id="mail" type="email" [placeholder]="isSmallScreen ? 'Your E-mail' : ''">                
             </div>
 
         </div>
         <div class="input_wrapper">
             <label for="message">Your Message</label>
-            <textarea name="" id="message"></textarea>            
+            <textarea name="" id="message" [placeholder]="isSmallScreen ? 'Your Message' : ''"></textarea>            
         </div>
 
         <div class="checkbox_wrapper">

@@ -6,6 +6,7 @@
 .content{
     @include flex-box($fd: column, $ai: start, $g: 32px);
     max-width: $section-limit;
+    padding: 0 16px;
 }
 
 .content_top{
@@ -47,6 +48,10 @@ form{
     @include flex-box($g: 24px, $fd: column);
     width: 100%;
 
+    .resp_title{
+        display: none;
+    }
+
     .first_inputs{
         @include flex-box($g: 24px);
         width: 100%;
@@ -70,9 +75,7 @@ form{
     }
 
     label{
-        font-size: 14px;
-        font-family: 'Josefin_Sans_Regular';
-        color: $primary-color;
+        @include font($family: 'Josefin_Sans_Regular', $size: 14px, $color: $primary-color);
         padding-left: 30px;
     }
 
@@ -101,6 +104,7 @@ form{
     .checkbox_wrapper{
         @include flex-box($jc: start, $g: 8px);
         width: 100%;
+        @include font($family: 'Josefin_Sans_Regular', $size: 14px, $color: $secondary-color);
 
         a{
             color: $primary-color;
@@ -115,9 +119,52 @@ form{
     .send_btn_wrapper{
         @include flex-box($jc: end);
         width: 100%;
-
     }
 
 }
 
-   
+
+@media (max-width: 850px){
+    .content_top{
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px){
+
+
+    form{
+
+        .resp_title{
+            @include font($family: 'Josefin_Sans_Regular', $size: 20px, $color: $primary-color);
+            display: inline;
+        }
+
+        .first_inputs{
+            flex-direction: column;
+
+            input{
+                &::placeholder{
+                    @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
+                    opacity: 40%;
+                }
+            }
+        }
+
+        label{
+            display: none;
+        }
+
+        textarea{
+            &::placeholder{
+                @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
+                opacity: 40%;
+            }
+        }    
+
+        .checkbox_wrapper{
+            align-items: start;
+        }
+    }
+}

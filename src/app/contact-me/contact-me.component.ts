@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { SvgImageModule } from '../shared/svg-images/svg-images';
 import { colorPalette } from '../shared/color-palette';
 
@@ -14,6 +14,13 @@ export class ContactMeComponent {
   hoverEmail = false;
   hoverPhone = false;
   checkboxState = 'default';
+
+  isSmallScreen = window.innerWidth <= 480;
+
+  @HostListener('window:resize')
+  onResize() {
+    this.isSmallScreen = window.innerWidth <= 480;
+  }
 
   checkboxEventHandler(event: string){
     if(event === 'over' && this.checkboxState !== 'checked' && this.checkboxState !== 'error'){
