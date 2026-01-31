@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IconAngular, IconCSS, IconFirebase, IconGit, IconHTML, IconJavaScript, IconMaterialDesign, IconReact, IconRestApi, IconScrum, IconTypeScript, IconVue } from './technologies/technologies.component';
-import { IconEmail, IconGitHub, IconLinkedIn } from './links/links.component';
+import { IconEmail, IconEmailLight, IconGitHub, IconGitHubLight, IconLinkedIn, IconLinkedInLight } from './links/links.component';
 import { ImgEllipse1, ImgEllipse2, ImgEllipse3, ImgEllipse4, ImgEllipse5, ImgEllipse6, ImgEllipse7 } from './backgrounds/backgrounds.component';
 import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBulletPoint, ImgBurgerMenu, ImgCheckbox, ImgLocation, ImgLocation1 } from './other/other.component';
 
@@ -37,7 +37,10 @@ import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBulletPoint, ImgBurg
     IconGit,
     ImgBulletPoint,
     ImgEllipse7,
-    ImgCheckbox
+    ImgCheckbox,
+    IconEmailLight,
+    IconGitHubLight,
+    IconLinkedInLight
   ],
   imports: [CommonModule],
   exports: [
@@ -71,7 +74,10 @@ import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBulletPoint, ImgBurg
     IconGit,
     ImgBulletPoint,
     ImgEllipse7,
-    ImgCheckbox
+    ImgCheckbox,
+    IconEmailLight,
+    IconGitHubLight,
+    IconLinkedInLight
   ]
 })
 export class SvgImageModule {}

@@ -6,38 +6,136 @@ footer {
     background-color: $primary-color;
     height: 214px;
 
+    .resp_logo_wrapper{
+        display: none;
+    }
+
     .content{
         @include flex-box($jc: space-between);
         padding: 16px;
         width: 100%;
+        height: 100%;
+        max-width: $content-limit;
+
+
 
         .left_side{
-            @include flex-box($fd: column, $ai:start, $g: 8px);
-            font-family: 'Josefin_Sans_Regular';
-            font-size: 18px;
-            line-height: 120%;
-            color: #262E34;
+            flex: 1;
+            @include flex-box($fd: column, $jc: end, $ai:start, $g: 8px);
+            @include font($family: 'Josefin_Sans_Regular', $color: $primary-dark-grey, $size: 18px);
+            margin-top: 24px;
+            opacity: 80%;
+
             a{
                 text-decoration: none;
-                color:inherit;
+                color: inherit;
                 cursor: pointer;
 
                 &:hover{
-                    color: #F8F5EC;
+                    color: $secondary-color;
                     opacity: 70%;
                 }
 
                 &:focus{
-                    color: #F8F5EC;
+                    color: $secondary-color;
+                    opacity: 1;
                 }
             }
         }
 
-        ul{
-            @include flex-box($g: 8px);
-            padding: 0;
-            list-style: none;
+        .right_side{
+            flex: 1;    
+            @include flex-box($jc: end);
+            width: 100%; 
+             
+            ul{
+                @include flex-box($g: 8px); 
+                padding: 0;
+                list-style: none;
+
+                li{
+                    opacity: 60%;
+
+                    &:hover{
+                        opacity: 1;
+                    }
+
+                .default_icon{
+                    display: block !important;
+                }
+
+                .resp_icon{
+                    display: none !important;
+                }
+                }
+            }                  
         }
     }
-
 }
+
+@media (max-width: 480px){
+    footer {    
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        height: 243px;
+
+        .resp_logo_wrapper{
+            margin-top: 24px;
+            display: block;
+            opacity: 60%;
+        }
+
+        .content{
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            height:fit-content;
+
+            .left_side{
+                flex: none;
+                justify-content: space-around;
+                flex-direction: row;
+                width: 100%;
+                font-size: 14px;
+                // @include flex-box($fd: column, $jc: end, $ai:start, $g: 8px);
+                // @include font($family: 'Josefin_Sans_Regular', $color: $primary-dark-grey, $size: 18px);
+                margin-top: 0px;
+            }
+
+            .logo_wrapper{
+                display: none;
+            }
+
+            .right_side{
+                flex: none;
+                justify-content: center;
+                
+                ul{
+                    @include flex-box($g: 8px); 
+                    padding: 0;
+                    list-style: none;
+
+                    li{
+                        opacity: 1;
+
+                        &:hover{
+                            opacity: 1;
+                        }
+
+                        .default_icon{
+                            display: none !important;
+                        }
+
+                        .resp_icon{
+                            display: block !important;
+                        }
+                    }
+                }                  
+            }
+        }
+    }
+}
+

@@ -1,14 +1,31 @@
 <footer>
-    <div class="content content_limit">
+    <div class="resp_logo_wrapper">
+        <app-logo [color]="'#262E34'"></app-logo>
+    </div>
+    <div class="content">
         <div class="left_side">
             <a href="">Legal notice</a>
-            <span>Claudia Fohrer 2026</span>
+            <span>(C) Claudia Fohrer 2026</span>
         </div>
-        <app-logo [color]="'#262E34'"></app-logo>
-        <ul>
-            <li><app-icon-github [size]="30" [color]="'#262E34'"></app-icon-github></li>
-            <li><app-icon-email [size]="30" [color]="'#262E34'"></app-icon-email></li>
-            <li><app-icon-linkedin [size]="30" [color]="'#262E34'"></app-icon-linkedin></li>
-        </ul>        
+        <div class="logo_wrapper">
+            <app-logo [color]="'#262E34'"></app-logo>
+        </div>
+        <div class="right_side">
+            <ul>
+                <li>
+                    <app-icon-github class="default_icon" [size]="30" [color]="colorPalette.primaryDarkColor" [hoverColor]="colorPalette.secondaryColor" [opacity]="0.6"/>
+                    <app-icon-github-light class="resp_icon" [size]="30" [color]="colorPalette.primaryColor"/>
+                </li>
+                <li>
+                    <app-icon-email class="default_icon" [size]="30" [color]="colorPalette.primaryDarkColor" [hoverColor]="colorPalette.secondaryColor" [opacity]="0.6"/>
+                    <app-icon-email-light class="resp_icon" [size]="30" [color]="colorPalette.primaryColor"/>
+                </li>
+                <li>
+                    <app-icon-linkedin class="default_icon" [size]="30" [color]="colorPalette.primaryDarkColor" [hoverColor]="colorPalette.secondaryColor" [opacity]="0.6"/>
+                    <app-icon-linkedin-light class="resp_icon" [size]="30" [color]="colorPalette.primaryColor"/>
+                </li>
+            </ul>              
+        </div>
+      
     </div>
 </footer>
