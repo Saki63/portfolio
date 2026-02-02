@@ -1,6 +1,11 @@
 @import '../shared/scss/fonts.scss';
 @import '../../styles.scss';
 
+:host {
+  display: block;
+  height: calc(100vh - 104px); /* oder z. B. 80vh */
+}
+
 .header_resp{
     display: none;
 }
@@ -50,7 +55,7 @@ section{
 
     .title_wrapper{
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 80px;
 
         h1{
             font-family: 'Anta';
@@ -89,6 +94,14 @@ section{
 }
 
 @media (max-width: 850px){
+    :host{
+        height: fit-content;
+    }
+
+    section{
+        height: fit-content;
+    }
+
     .header_resp{
         display: flex;
         padding: 24px;
@@ -100,9 +113,13 @@ section{
         max-width: 100%;
     }
 
+    .photo_content{
+        margin-top: 94px;
+    }
+
     .content{
-        padding-top: 80px;
         flex-direction: column;
+        height: fit-content;
     }
 
     .introduction_content {
@@ -120,60 +137,81 @@ section{
         }
     }
 
-    .navigation_bar{
-        display: none;
-    }
-
-
     .burger {
         background: none;
         border: none;
     }
 }
 
-@media (max-width: 480px){
 
-    .introduction_content{
+
+// @media (max-width: 480px){
+
+//     .introduction_content{
+//         .title_wrapper{
+//             h1{
+//                 font-size: 40px;
+//             }
+
+//             span{
+//                 font-size: 18px;
+//             }
+//         }
+//     }
+// }
+
+// @media ((max-height: 700px) and (max-width: 480px)){
+//     section{
+//         justify-content: start;
+//         height: 100%;
+//         min-height: 100vh;
+//     }
+// }
+
+// @media ((max-height: 920px) and (min-width: 480px) and (max-width: 850px)){
+//     section{
+//         justify-content: start;
+//         height: 100%;
+//         min-height: 100vh;
+//     }
+// }
+
+// @media ((max-height: 740px) and (min-width: 850px) and (max-width: 1000px)){
+//     section{
+//         justify-content: start;
+//         height: 100%;
+//         min-height: 100vh;
+//     }
+// }
+
+@media ((max-height: 710px) and (min-width: 850px)){
+    :host {
+        height: calc(860px - 104px); /* oder z. B. 80vh */
+    }
+
+    section{
+        height: calc(860px - 104px);
+    }
+
+    .introduction_content {
         .title_wrapper{
-            h1{
-                font-size: 40px;
-            }
-
-            span{
-                font-size: 18px;
-            }
+            margin-bottom: 0px;
         }
     }
 }
 
-@media ((max-height: 700px) and (max-width: 480px)){
-    section{
-        justify-content: start;
-        height: 100%;
-        min-height: 100vh;
+@media ((max-height: 790px) and (min-width: 850px)){
+    .introduction_content {
+        .title_wrapper{
+            margin-bottom: 0px;
+        }
     }
 }
 
-@media ((max-height: 920px) and (min-width: 480px) and (max-width: 850px)){
-    section{
-        justify-content: start;
-        height: 100%;
-        min-height: 100vh;
-    }
-}
-
-@media ((max-height: 740px) and (min-width: 850px) and (max-width: 1000px)){
-    section{
-        justify-content: start;
-        height: 100%;
-        min-height: 100vh;
-    }
-}
-
-@media ((max-height: 890px) and (min-width: 1000px)){
-    section{
-        justify-content: start;
-        height: 100%;
-        min-height: 100vh;
-    }
-}
+// @media ((max-height: 890px) and (min-width: 1000px)){
+//     section{
+//         justify-content: start;
+//         height: 100%;
+//         min-height: 100vh;
+//     }
+// }

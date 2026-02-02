@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { LogoComponent } from '../shared/logo/logo.component';
 import { SvgImageModule } from '../shared/svg-images/svg-images';
 import { colorPalette } from '../shared/color-palette';
@@ -24,4 +24,16 @@ export class LandingpageComponent {
     this.ellipse1Height = this.isSmallScreen === 'smallest' ? 320 : (this.isSmallScreen === 'small' ? 513 : 641);
     this.ellipse1Width = this.isSmallScreen === 'smallest' ? 290 : (this.isSmallScreen === 'small' ? 464 : 580);
   }
+
+  // @ViewChild('hero') hero!: ElementRef;
+  // isSticky = false;
+
+  // @HostListener('window:scroll')
+  // onScroll() {
+  //   console.log(this.hero);
+    // const heroBottom =
+    //   this.hero.nativeElement.getBoundingClientRect().bottom;
+
+    // this.isSticky = heroBottom <= 0;
+  // }
 }

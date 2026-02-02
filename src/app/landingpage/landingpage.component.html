@@ -7,7 +7,7 @@
 <section>
     <div class="content">
         <div class="photo_content">
-            <app-img-ellipse1 [height]="ellipse1Height" [width]="ellipse1Width" [color]="colorPalette.primaryColor"/>
+            <app-img-ellipse1 [height]="ellipse1Height" [width]="ellipse1Width" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.ellipse1Color"/>
         </div>
         <div class="introduction_content">
             <div class="logo_social_media_wrapper">
@@ -15,13 +15,13 @@
                 <app-logo [color]="colorPalette.primaryColor" [animation]="true"></app-logo>
                 <ul class="social_media_links">
                     <li>
-                        <app-icon-email [size]="30" [color]="colorPalette.primaryColor"/>
+                        <app-icon-email [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
                     </li>
                     <li>
-                        <app-icon-github [size]="30" [color]="colorPalette.primaryColor"/>
+                        <app-icon-github [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
                     </li>
                     <li>
-                        <app-icon-linkedin [size]="30" [color]="colorPalette.primaryColor"/>
+                        <app-icon-linkedin [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
                     </li>
                 </ul>
             </div>
@@ -40,4 +40,4 @@
         </div>
     </div>    
 </section>
-<app-navigation-bar class="navigation_bar"></app-navigation-bar>
+<!-- <app-navigation-bar class="navbar" [class.sticky]="isSticky"></app-navigation-bar> -->
