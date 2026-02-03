@@ -26,6 +26,13 @@ section{
 
 .photo_content{
     @include flex-box();
+    position: relative;
+
+    .my_pic{
+        height: 680px;
+        margin-right: 26px;
+        position: absolute;
+    }
 }
 
 .introduction_content{
@@ -80,6 +87,13 @@ section{
 
 
 @media (max-width: 1000px){
+
+    .photo_content{
+        .my_pic{
+            height: 534px;
+        }
+    }
+
     .introduction_content{
         .title_wrapper{
             h1{
@@ -145,20 +159,18 @@ section{
 
 
 
-// @media (max-width: 480px){
+@media (max-width: 480px){
 
-//     .introduction_content{
-//         .title_wrapper{
-//             h1{
-//                 font-size: 40px;
-//             }
+    .photo_content{
+        .my_pic{
+            height: 330px;
+        }
+    }
 
-//             span{
-//                 font-size: 18px;
-//             }
-//         }
-//     }
-// }
+    .content{
+        padding: 0px;
+    }
+}
 
 // @media ((max-height: 700px) and (max-width: 480px)){
 //     section{
