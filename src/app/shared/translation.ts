@@ -1,0 +1,61 @@
+export let language: 'en' | 'de' = 'de';
+
+export function switchLanguage(selected: 'en' | 'de'){
+    console.log(language);
+    
+    language = selected;
+}
+
+
+export const translation = {
+    'short-title': {
+        en: "developer",
+        de: "Entwicklerin"
+    },
+    'long-title': {
+        en: "frontend developer",
+        de: "Frontend-Entwicklerin"
+    },
+    'sections': {
+        '1': {
+            en: "Why me",
+            de: "Warum ich"
+        },
+        '2': {
+            en: "Skills",
+            de: "Fähigkeiten"
+        },
+        '3': {
+            en: "Projects",
+            de: "Projekte"
+        },
+        '4': {
+            en: "Contact",
+            de: "Kontakt"
+        }
+    },
+    'location': {
+        en: "I am located in Rosenheim",
+        de: "Ich wohne in Rosenheim"
+    },
+    'motivation': {
+        en: "I love programming because it's like a puzzle that requires analytical thinking and the use of algorithms. Seeing concrete results is particularly motivating. I also appreciate the teamwork, the insight into different industries, and the opportunity to put myself in the user's shoes and support people through software.",
+        de: "Programmieren begeistert mich, weil es für mich wie ein Rätsel ist, das analytisches Denken und den Umgang mit Algorithmen erfordert. Besonders motivierend ist es, ein konkretes Ergebnis zu sehen. Zudem schätze ich die Teamarbeit, den Einblick in verschiedene Branchen sowie die Möglichkeit, mich in Nutzer hineinzuversetzen und Menschen durch Software zu unterstützen."
+    },
+    // 'long-title': {
+    //     en: "frontend developer",
+    //     de: "Frontend-Entwicklerin"
+    // },
+    // 'long-title': {
+    //     en: "frontend developer",
+    //     de: "Frontend-Entwicklerin"
+    // },
+    // 'long-title': {
+    //     en: "frontend developer",
+    //     de: "Frontend-Entwicklerin"
+    // },
+    // 'long-title': {
+    //     en: "frontend developer",
+    //     de: "Frontend-Entwicklerin"
+    // }
+}

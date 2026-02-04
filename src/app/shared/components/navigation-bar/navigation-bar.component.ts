@@ -2,6 +2,7 @@ import { colorPalette } from '../../../shared/color-palette';
 import { Component } from '@angular/core';
 import { LogoComponent } from '../../logo/logo.component';
 import { SvgImageModule } from '../../svg-images/svg-images';
+import {translation, language, switchLanguage} from '../../translation';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -12,4 +13,7 @@ import { SvgImageModule } from '../../svg-images/svg-images';
 })
 export class NavigationBarComponent {  
   colorPalette = colorPalette;
+  translation = translation;
+  language = language;
+  switchLanguage = switchLanguage;
 }

@@ -3,6 +3,7 @@ import { LogoComponent } from '../shared/logo/logo.component';
 import { SvgImageModule } from '../shared/svg-images/svg-images';
 import { colorPalette } from '../shared/color-palette';
 import { NavigationBarComponent } from '../shared/components/navigation-bar/navigation-bar.component';
+import { translation, language } from '../shared/translation';
 
 @Component({
   selector: 'app-landingpage',
@@ -13,6 +14,8 @@ import { NavigationBarComponent } from '../shared/components/navigation-bar/navi
 })
 export class LandingpageComponent {
   colorPalette = colorPalette;
+  translation = translation;
+  language = language;
   isSmallScreen = window.innerWidth <= 480 ? 'smallest' : (window.innerWidth <= 1000 ? 'small' : 'normal');
   ellipse1Height = this.isSmallScreen === 'smallest' ? 320 : (this.isSmallScreen === 'small' ? 513 : 641);
   ellipse1Width = this.isSmallScreen === 'smallest' ? 290 : (this.isSmallScreen === 'small' ? 464 : 580);

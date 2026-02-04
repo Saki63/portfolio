@@ -4,27 +4,27 @@
         <ul>
             <li>
                 <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
-                <span>Why me</span>
+                <span>{{language === 'en' ? translation['sections']['1'].en : translation['sections']['1'].de}}</span>
             </li>
             <li>
                 <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
-                <span>Skills</span>
+                <span>{{language === 'en' ? translation['sections']['2'].en : translation['sections']['2'].de}}</span>
             </li>
             <li>
                 <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
-                <span>Projects</span>
+                <span>{{language === 'en' ? translation['sections']['3'].en : translation['sections']['3'].de}}</span>
             </li>
             <li>
                 <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
-                <span>Contact</span>
+                <span>{{language === 'en' ? translation['sections']['4'].en : translation['sections']['4'].de}}</span>
             </li>
         </ul>
         <div class="language_selection">
-            <button>
+            <button (click)="switchLanguage('de')">
                 <app-img-ellipse4 class="language_ellipse" [color]="'#262E34'" [width]="37" [height]="24"/>
                 <span>DE</span>
             </button>
-            <button>
+            <button (click)="switchLanguage('en')">
                 <app-img-ellipse4 class="language_ellipse" [color]="'#262E34'" [width]="37" [height]="24"/>
                 <span>EN</span>
             </button>
