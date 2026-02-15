@@ -1,4 +1,4 @@
 <section>
-    <h2>{{title}}</h2>
+    <h2>{{language === 'en' ? translation['sections'][key].en : translation['sections'][key].de}}</h2>
     <ng-content />
 </section>

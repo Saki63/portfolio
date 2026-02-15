@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { translation } from '../shared/translation';
 
 @Component({
   selector: 'app-section',
@@ -9,5 +10,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './section.component.scss'
 })
 export class SectionComponent {
-  @Input() title: string = "";
+  translation = translation;
+
+  @Input() key: 'why-me' | 'skills' | 'projects' | 'contact' = 'why-me';
+  @Input() language = 'en';
 }

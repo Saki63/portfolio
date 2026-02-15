@@ -9,20 +9,20 @@ export const translation = {
         de: "Frontend-Entwicklerin"
     },
     'sections': {
-        '1': {
+        'why-me': {
             en: "Why me",
             de: "Warum ich"
         },
-        '2': {
-            en: "Skills",
+        'skills': {
+            en: "My Skills",
             de: "Fähigkeiten"
         },
-        '3': {
-            en: "Projects",
+        'projects': {
+            en: "My Projects",
             de: "Projekte"
         },
-        '4': {
-            en: "Contact",
+        'contact': {
+            en: "Contact me",
             de: "Kontakt"
         }
     },
