@@ -6,7 +6,8 @@ section {
     max-width: 100%;
     background-color: $primary-dark-color;
     @include flex-box($fd: column, $g: 56px);
-    padding: 56px 0px;
+    padding: 104px 0px;
+    padding-bottom: 20px;
     color: $secondary-color;
     font-family: 'Josefin_Sans_Regular';
 }

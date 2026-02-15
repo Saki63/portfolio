@@ -3,20 +3,30 @@
         <app-logo [lan]="language" [color]="colorPalette.primaryDarkColor"></app-logo>
         <ul>
             <li>
-                <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
-                <span>{{language === 'en' ? translation['sections']['1'].en : translation['sections']['1'].de}}</span>
+                <a href="#why-me-section-id">
+                    <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
+                    <span>{{language === 'en' ? translation['sections']['1'].en : translation['sections']['1'].de}}</span>                    
+                </a>
+
             </li>
             <li>
-                <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
-                <span>{{language === 'en' ? translation['sections']['2'].en : translation['sections']['2'].de}}</span>
+                <a href="#my-skills-section-id">
+                    <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
+                    <span>{{language === 'en' ? translation['sections']['2'].en : translation['sections']['2'].de}}</span>
+                </a>
+
             </li>
             <li>
-                <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
-                <span>{{language === 'en' ? translation['sections']['3'].en : translation['sections']['3'].de}}</span>
+                <a href="#my-projects-section-id">
+                    <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
+                    <span>{{language === 'en' ? translation['sections']['3'].en : translation['sections']['3'].de}}</span>
+                </a>
             </li>
             <li>
-                <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
-                <span>{{language === 'en' ? translation['sections']['4'].en : translation['sections']['4'].de}}</span>
+                <a href="#contact-me-section-id">
+                    <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
+                    <span>{{language === 'en' ? translation['sections']['4'].en : translation['sections']['4'].de}}</span>
+                </a>
             </li>
         </ul>
         <div class="language_selection">

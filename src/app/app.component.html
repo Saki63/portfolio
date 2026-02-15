@@ -1,16 +1,16 @@
 <app-landingpage [language]="language"></app-landingpage>
 <app-navigation-bar [language]="language" (newLanguage)="switchLanguage($event)"></app-navigation-bar>
-<app-section [title]="'Why me'">
+<app-section id="why-me-section-id" [title]="'Why me'">
     <app-why-me></app-why-me>
 </app-section>
-<app-section [title]="'My Skills'">
+<app-section id="my-skills-section-id" [title]="'My Skills'">
    <app-my-skills></app-my-skills>
 </app-section>
-<app-section [title]="'My Projects'">
+<app-section id="my-projects-section-id" [title]="'My Projects'">
    <app-my-projects></app-my-projects>
 </app-section>
 <app-references></app-references>
-<app-section [title]="'Contact me'">
+<app-section id="contact-me-section-id" [title]="'Contact me'">
    <app-contact-me></app-contact-me>
 </app-section>
 <app-footer></app-footer>
