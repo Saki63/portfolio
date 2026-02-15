@@ -1,8 +1,8 @@
 import { colorPalette } from '../../../shared/color-palette';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { LogoComponent } from '../../logo/logo.component';
 import { SvgImageModule } from '../../svg-images/svg-images';
-import {translation, language, switchLanguage} from '../../translation';
+import {translation} from '../../translation';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -14,6 +14,10 @@ import {translation, language, switchLanguage} from '../../translation';
 export class NavigationBarComponent {  
   colorPalette = colorPalette;
   translation = translation;
-  language = language;
-  switchLanguage = switchLanguage;
+  @Input() language = 'de';
+  @Output() newLanguage = new EventEmitter<'de' | 'en'>();
+
+  switchLanguage(selected: 'de' | 'en') {
+    this.newLanguage.emit(selected);
+  }
 }

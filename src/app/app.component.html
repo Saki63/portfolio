@@ -1,5 +1,5 @@
-<app-landingpage></app-landingpage>
-<app-navigation-bar></app-navigation-bar>
+<app-landingpage [language]="language"></app-landingpage>
+<app-navigation-bar [language]="language" (newLanguage)="switchLanguage($event)"></app-navigation-bar>
 <app-section [title]="'Why me'">
     <app-why-me></app-why-me>
 </app-section>

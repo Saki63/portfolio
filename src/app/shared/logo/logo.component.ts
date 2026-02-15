@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 // import { NgClass } from "@angular/common/index";
 import { CommonModule } from '@angular/common';
 import { SvgImageModule } from '../svg-images/svg-images';
-import { translation, language } from '../translation'
+import { translation } from '../translation'
 
 @Component({
   selector: 'app-logo',
@@ -10,10 +10,15 @@ import { translation, language } from '../translation'
   templateUrl: './logo.component.html',
   styleUrl: './logo.component.scss',
   imports: [ CommonModule, SvgImageModule ]
-})
+})  
 export class LogoComponent {
   translation = translation;
-  language = language;
+  @Input() lan = 'de';
   @Input() color = "currentColor";
   @Input() animation = false;
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(this.color);  
+    console.log('lan:', changes['lan']);
+  }
 }

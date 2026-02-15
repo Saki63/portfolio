@@ -1,5 +1,5 @@
 <header class="header_resp">
-    <app-logo [color]="colorPalette.primaryColor"></app-logo>
+    <app-logo [lan]="language" [color]="colorPalette.primaryColor"></app-logo>
     <button class="burger" aria-label="Menu" style="padding: 8px">
         <app-img-burger-menu [size]="32"/>
     </button>
@@ -13,7 +13,7 @@
         <div class="introduction_content">
             <div class="logo_social_media_wrapper">
                 <div class="placeholder"></div>
-                <app-logo [color]="colorPalette.primaryColor" [animation]="true"></app-logo>
+                <app-logo [lan]="language" [color]="colorPalette.primaryColor" [animation]="true"></app-logo>
                 <ul class="social_media_links">
                     <li>
                         <app-icon-email [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>

@@ -1,11 +1,3 @@
-export let language: 'en' | 'de' = 'de';
-
-export function switchLanguage(selected: 'en' | 'de'){
-    console.log(language);
-    
-    language = selected;
-}
-
 
 export const translation = {
     'short-title': {

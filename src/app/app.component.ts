@@ -20,4 +20,10 @@ import { NavigationBarComponent } from "./shared/components/navigation-bar/navig
 })
 export class AppComponent {
   title = 'portfolio';
+
+  language: 'en' | 'de' = 'de';
+
+  switchLanguage(selected: 'en' | 'de'){
+      this.language = selected;
+  }
 }
