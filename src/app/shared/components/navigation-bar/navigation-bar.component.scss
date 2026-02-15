@@ -69,9 +69,9 @@ ul{
         border: none;
         padding: 0;
         position: relative;
+        cursor: pointer;
 
         &:hover *{
-            cursor: pointer;
             color: $secondary_color;
         }
 
@@ -79,6 +79,8 @@ ul{
             position: absolute;
             top: 50%;
             left: 50%;
+
+            cursor: pointer;
 
             opacity: 0;
             transform: translate(-50%, -50%);
