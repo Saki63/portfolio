@@ -7,7 +7,7 @@ import {translation} from '../../translation';
 @Component({
   selector: 'app-navigation-bar',
   standalone: true,
-  imports: [ LogoComponent, SvgImageModule ],
+  imports: [LogoComponent, SvgImageModule],
   templateUrl: './navigation-bar.component.html',
   styleUrl: './navigation-bar.component.scss'
 })
