@@ -26,14 +26,22 @@ export const translation = {
             de: "Kontakt"
         }
     },
-    'location': {
-        en: "I am located in Rosenheim",
-        de: "Ich wohne in Rosenheim"
+    'location1': {
+        en: "I am ",
+        de: "Ich "
+    },
+    'location2': {
+        en: "located in Rosenheim",
+        de: "befinde mich in Rosenheim"
     },
     'motivation': {
         en: "I love programming because it's like a puzzle that requires analytical thinking and the use of algorithms. Seeing concrete results is particularly motivating. I also appreciate the teamwork, the insight into different industries, and the opportunity to put myself in the user's shoes and support people through software.",
         de: "Programmieren begeistert mich, weil es für mich wie ein Rätsel ist, das analytisches Denken und den Umgang mit Algorithmen erfordert. Besonders motivierend ist es, ein konkretes Ergebnis zu sehen. Zudem schätze ich die Teamarbeit, den Einblick in verschiedene Branchen sowie die Möglichkeit, mich in Nutzer hineinzuversetzen und Menschen durch Software zu unterstützen."
     },
+    'talk-btn': {
+        en: "Let's talk",
+        de: "Jetzt kontaktieren"
+    }
     // 'long-title': {
     //     en: "frontend developer",
     //     de: "Frontend-Entwicklerin"

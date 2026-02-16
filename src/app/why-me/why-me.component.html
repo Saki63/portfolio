@@ -3,21 +3,19 @@
         <app-img-location class="default_location_img" [size]="75" [color]="colorPalette.primaryColor"/>
         <app-img-location1 class="resp_location_img" [size]="50" [color]="colorPalette.primaryColor"/>
         <p>
-            <span class="heighlight">I am</span> located in Rosenheim <span class="heighlight">...|</span>
+            <span class="heighlight">{{language === 'en' ? translation['location1'].en : translation['location1'].de}}</span>{{language === 'en' ? translation['location2'].en : translation['location2'].de}} <span class="heighlight">...|</span>
         </p>
-
     </div>
     <div class="content_right">
         <p>
             <span>
-                Why are you passionate about coding?
-            </span>
-            <span>
-                You can include some key traits like: analytical thinking, creativity, persistence and  collaboration.
-                A problem-solving mindset is always nice to have.
-            </span>
-
+                {{language === 'en' ? translation['motivation'].en : translation['motivation'].de}}
+            </span> 
         </p>
-        <button class="secondary resp_hide">Let's talk</button>
+        <a href="#contact-me-section-id">
+            <button class="secondary resp_hide">
+                {{language === 'en' ? translation['talk-btn'].en : translation['talk-btn'].de}}
+            </button>
+        </a>
     </div>
 </div>

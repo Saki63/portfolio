@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SvgImageModule } from '../shared/svg-images/svg-images';
 import { colorPalette } from '../shared/color-palette';
+import { translation } from '../shared/translation';
+
 
 @Component({
   selector: 'app-why-me',
@@ -11,5 +13,7 @@ import { colorPalette } from '../shared/color-palette';
 })
 export class WhyMeComponent {
   colorPalette = colorPalette;
+  translation = translation;
+  @Input() language = 'de';
 }
 
