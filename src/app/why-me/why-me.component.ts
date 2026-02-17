@@ -14,6 +14,6 @@ import { translation } from '../shared/translation';
 export class WhyMeComponent {
   colorPalette = colorPalette;
   translation = translation;
-  @Input() language = 'de';
+  @Input() language = 'en';
 }
 

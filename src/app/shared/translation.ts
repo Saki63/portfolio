@@ -53,6 +53,18 @@ export const translation = {
     'learning': {
         en: "I am highly motivated to continuously develop my skills and expand my expertise.",
         de: "Ich bin hoch motiviert, meine Fähigkeiten kontinuierlich weiterzuentwickeln und meine Expertise auszubauen."
+    },
+    'technologies': {
+        en: "Technologies",
+        de: "Technologien",
+    },
+    'project-link': {
+        en: "Live Test",
+        de: "Anzeige",
+    },
+    'img-placeholder': {
+        en: 'Comming soon...',
+        de: 'Kommt demnächst...',
     }
     // 'long-title': {
     //     en: "frontend developer",

@@ -4,7 +4,7 @@
         @for (project of projects; let idx = $index; track project.title){
             <button [ngClass]="getTabClass(idx)" (click)="changeTab(idx)">
                 @if (isSmallScreen) {
-                    {{getTabTitle(idx, "Project")}}
+                    {{language === 'en' ? getTabTitle(idx, "Project"):getTabTitle(idx, "Projekt") }}
                 }
                 @else{
                     {{getTabTitle(idx, project.title)}}
@@ -20,20 +20,20 @@
                         <app-img-bullet-point [width]="29" [height]="26" [color]="colorPalette.primaryColor"/>
                         <div class="description">
                             <div class="first_line">
-                                <h4>{{descriptionPoint.title}}</h4>
+                                <h4>{{language === 'en' ? descriptionPoint.title.en : descriptionPoint.title.de}}</h4>
                                 @if (idx === 0){
-                                    <span>{{getProjectDuration(projects[activeTabIdx].duration)}}</span>
+                                    <span>{{language === 'en' ? getProjectDuration(projects[activeTabIdx].duration.en) : getProjectDuration(projects[activeTabIdx].duration.de)}}</span>
                                 }
                             </div>
                             
-                            <p>{{descriptionPoint.text}}</p>
+                            <p>{{language === 'en' ? descriptionPoint.text.en : descriptionPoint.text.de}}</p>
                         </div>
                     </li>
                 }
             </ul>
             <div class="content_right">
                 <div class="technologies_wrapper">
-                    <h4>Technologies</h4>
+                    <h4>{{language === "en" ? translation['technologies'].en :translation['technologies'].de }}</h4>
                     <div class="technologies_box">
                         @for (tec of projects[activeTabIdx].technologies; track tec){
                             @switch (tec) {
@@ -74,9 +74,17 @@
                         }
                     </div>
                 </div>
-                <img src={{projects[activeTabIdx].picture}} alt="">
+                @if (projects[activeTabIdx].picture.length === 0){
+                    <div class="img_placeholder">
+                        <span>{{language === 'en' ? translation['img-placeholder'].en : translation['img-placeholder'].de}}</span>
+                    </div>
+                } 
+                @else {
+                    <img class="project_pic" src={{projects[activeTabIdx].picture}} alt="">
+                }
+                
                 <div class="button_wrapper">
-                    <button class="primary">Live Test</button>
+                    <button class="primary">{{language === "en" ? translation['project-link'].en : translation['project-link'].de }}</button>
                     <button class="secondary">GitHub</button>
                 </div>
             </div>            
@@ -88,26 +96,33 @@
                     {{getTechnologiesTitles()}}
                 </span>
                 <span>
-                    {{getProjectDuration(projects[activeTabIdx].duration)}}
+                    {{language === 'en' ? getProjectDuration(projects[activeTabIdx].duration.en) : getProjectDuration(projects[activeTabIdx].duration.de)}}
                 </span>
             </div>
             <div class="resp_img_wrapper">
-                <img src={{projects[activeTabIdx].picture}} alt="">
+                @if (projects[activeTabIdx].picture.length === 0){
+                    <div class="img_placeholder">
+                        <span>{{language === 'en' ? translation['img-placeholder'].en : translation['img-placeholder'].de}}</span>
+                    </div>
+                } 
+                @else {
+                    <img class="project_pic" src={{projects[activeTabIdx].picture}} alt="">
+                }
             </div>
             <ul class="resp_description_container">
                 @for (descriptionPoint of projects[activeTabIdx].description; let idx = $index; track descriptionPoint){
                     <li class="resp_description">
                         <div class="resp_first_line">
                             <app-img-bullet-point [width]="29" [height]="26" [color]="colorPalette.primaryColor"/>                            
-                            <h4>{{descriptionPoint.title}}</h4>
+                            <h4>{{language === 'en' ? descriptionPoint.title.en : descriptionPoint.title.de}}</h4>
                         </div>
                         
-                        <p>{{descriptionPoint.text}}</p>
+                        <p>{{language === 'en' ? descriptionPoint.text.en : descriptionPoint.text.de}}</p>
                     </li>
                 }
             </ul>   
             <div class="button_wrapper">
-                <button class="primary">Live Test</button>
+                <button class="primary">{{language === "en" ? translation['project-link'].en :translation['project-link'].de }}</button>
                 <button class="secondary">GitHub</button>
             </div>
         </div>

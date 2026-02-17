@@ -73,6 +73,25 @@
                     }
                 }
             }
+
+            .project_pic{
+                height: 312px;
+                width: 453px;
+                object-fit: cover;
+                border-radius: 30px;
+            }
+
+            .img_placeholder{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 312px;
+                width: 453px;
+                background-color: white;
+                color: $primary-color;
+                font-size: 30px;
+                border-radius: 30px;
+            }
         }
     }
 }
@@ -144,6 +163,24 @@
         .resp_img_wrapper{
             @include flex-box();
             width: 100%;   
+
+            .project_pic{
+                height: 312px;
+                width: 453px;
+                object-fit: cover;
+                border-radius: 30px;
+            }
+            .img_placeholder{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 312px;
+                width: 453px;
+                background-color: white;
+                color: $primary-color;
+                font-size: 30px;
+                border-radius: 30px;
+            }
         }
     }
 
