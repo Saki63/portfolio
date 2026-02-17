@@ -41,15 +41,19 @@ export const translation = {
     'talk-btn': {
         en: "Let's talk",
         de: "Jetzt kontaktieren"
+    },
+    'skills-title': {
+        en: "I am currently learning",
+        de: "Derzeit lerne ich"
+    },
+    'skills-resp-title': {
+        en: "What I am currently learning",
+        de: "Was ich derzeit lerne"
+    },
+    'learning': {
+        en: "I am highly motivated to continuously develop my skills and expand my expertise.",
+        de: "Ich bin hoch motiviert, meine Fähigkeiten kontinuierlich weiterzuentwickeln und meine Expertise auszubauen."
     }
-    // 'long-title': {
-    //     en: "frontend developer",
-    //     de: "Frontend-Entwicklerin"
-    // },
-    // 'long-title': {
-    //     en: "frontend developer",
-    //     de: "Frontend-Entwicklerin"
-    // },
     // 'long-title': {
     //     en: "frontend developer",
     //     de: "Frontend-Entwicklerin"

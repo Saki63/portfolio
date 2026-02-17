@@ -1,13 +1,6 @@
 <div class="content_limit content">
     <div class="content_left">
-        <div class="skill_box">
-            <app-icon-angular [color]="colorPalette.primaryColor" [size]="iconSize"></app-icon-angular>
-            <span>Angular</span>
-        </div>
-        <div class="skill_box">
-            <app-icon-typescript [color]="colorPalette.primaryColor" [size]="iconSize"></app-icon-typescript>
-            <span>TypeScript</span>    
-        </div>
+
         <div class="skill_box">
             <app-icon-html [color]="colorPalette.primaryColor" [size]="iconSize"></app-icon-html>
             <span>HTML</span>    
@@ -45,27 +38,32 @@
         <app-img-ellipse6 class="default_background" [color]="colorPalette.primaryColor" [size]="360"/>
         <div class="current_learning">
             <h3 class="title">
-                I am currently learning
+                {{language === 'en' ? translation['skills-title'].en : translation['skills-title'].de}}
             </h3>
             <h3 class="resp_title">
-                What I am currently learning
+                {{language === 'en' ? translation['skills-resp-title'].en : translation['skills-resp-title'].de}}
             </h3>
             <div class="current_learning_content">
                 <div class="resp_wrapper">
                     <app-img-ellipse5 [color]="colorPalette.primaryColor" [width]="114" [height]="97" class="resp_background"/>
                     <div class="current_skills">
                         <div class="skill_box skill_box_right">
+                            <app-icon-angular [color]="colorPalette.primaryColor" [size]="32"></app-icon-angular>
+                            <span>Angular</span>
+                        </div>
+                        <div class="skill_box skill_box_right">
+                            <app-icon-typescript [color]="colorPalette.primaryColor" [size]="32"></app-icon-typescript>
+                            <span>TypeScript</span>    
+                        </div>
+                        <div class="skill_box skill_box_right">
                             <app-icon-react [color]="colorPalette.primaryColor" [size]="32"></app-icon-react>
                             <span>React</span>
                         </div>
-                        <div class="skill_box skill_box_right">
-                            <app-icon-vue [color]="colorPalette.primaryColor" [size]="32"></app-icon-vue>
-                            <span>Vue:js</span>
-                        </div>
+
                     </div>                    
                 </div>
                 <p>
-                    Show that you are motivated to continually improve your skills, implement innovative solutions and stay abreast of new technologies
+                    {{language === 'en' ? translation['learning'].en : translation['learning'].de}}
                 </p>
             </div>
         </div>

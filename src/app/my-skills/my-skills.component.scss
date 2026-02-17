@@ -9,7 +9,7 @@
 
     .content_left{
         flex: 1;
-        @include flex-box($g: 40px, $jc: start);
+        @include flex-box($g: 36px, $jc: start);
         flex-wrap: wrap;
     }
 
@@ -55,7 +55,7 @@
 
 .skill_box{
     @include flex-box($fd: column, $g: 10px);
-    max-width: 80px;
+    width: 70px;
 
     span{
         @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $primary-color);
