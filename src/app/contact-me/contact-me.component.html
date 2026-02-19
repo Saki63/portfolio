@@ -1,44 +1,43 @@
 <div class="content">
     <div class="content_top">
         <p class="content_left">
-            Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.<br>
-            Example: Feel free to get in touch with job offers or opportunities such as: ...
+            {{language === "en" ? translation['contact-text'].en :translation['contact-text'].de }}
         </p>
         <div class="content_right">
             <a href="#" (mouseover)="hoverEmail = true" (mouseleave)="hoverEmail = false">
                 <app-icon-email1 [hoverInput]="hoverEmail" [size]="22"></app-icon-email1>
-                <span>E-mail: fohrer.developergmail.com</span>
+                <span>{{language === "en" ? translation['e-mail-label'].en :translation['e-mail-label'].de }}: an-sangmx.de</span>
             </a>
             <a href="#" (mouseover)="hoverPhone = true" (mouseleave)="hoverPhone = false">
                 <app-icon-phone [hoverInput]="hoverPhone" class="cursor_hover" [size]="22"></app-icon-phone>
-                <span>Tel: 0157 123 456 68</span>
+                <span>{{language === "en" ? translation['tel-label'].en :translation['tel-label'].de }}: 0177 9104981</span>
             </a>
         </div>        
     </div>
     <form action="submit">
-        <h4 class="resp_title">Let us work together!</h4>
+        <h4 class="resp_title">{{language === "en" ? translation['contact-resp-title'].en : translation['contact-resp-title'].de }}</h4>
         <div class="first_inputs">
             <div class="input_wrapper">
-                <label for="name">Your Name</label>
-                <input id="name" type="text" [placeholder]="isSmallScreen ? 'Your Name' : ''">                
+                <label for="name">{{language === "en" ? translation['input-name-label'].en : translation['input-name-label'].de }}</label>
+                <input id="name" type="text" [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-name-label'].en : translation['input-name-label'].de ) : ''">                
             </div>
             <div class="input_wrapper">
-                <label for="mail">Your E-mail</label>
-                <input id="mail" type="email" [placeholder]="isSmallScreen ? 'Your E-mail' : ''">                
+                <label for="mail">{{language === "en" ? translation['input-mail-label'].en :translation['input-mail-label'].de }}</label>
+                <input id="mail" type="email" [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-mail-label'].en : translation['input-mail-label'].de ) : ''">                
             </div>
 
         </div>
         <div class="input_wrapper">
-            <label for="message">Your Message</label>
-            <textarea name="" id="message" [placeholder]="isSmallScreen ? 'Your Message' : ''"></textarea>            
+            <label for="message">{{language === "en" ? translation['input-message-label'].en :translation['input-message-label'].de }}</label>
+            <textarea name="" id="message" [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-message-label'].en :translation['input-message-label'].de) : ''"></textarea>            
         </div>
 
         <div class="checkbox_wrapper">
             <app-img-checkbox [size]="24" (click)="checkboxEventHandler('click')" (mouseover)="checkboxEventHandler('over')" (mouseleave)="checkboxEventHandler('leave')" [state]="checkboxState" [color]="colorPalette.primaryColor"/>
-            <span>I've read the <a>privacy policy</a> and agree to the processing of my data as outlined.</span>
+            <span>{{language === "en" ? translation['privacy-text1'].en :translation['privacy-text1'].de }} <a>{{language === "en" ? translation['privacy-text2'].en :translation['privacy-text2'].de }}</a> {{language === "en" ? translation['privacy-text3'].en :translation['privacy-text3'].de }}</span>
         </div>
         <div class="send_btn_wrapper">
-            <button class="secondary" disabled>Send</button>
+            <button class="secondary" disabled>{{language === "en" ? translation['send-btn'].en :translation['send-btn'].de }}</button>
         </div>
         
     </form>

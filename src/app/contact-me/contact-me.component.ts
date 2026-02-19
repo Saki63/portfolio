@@ -1,6 +1,7 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { SvgImageModule } from '../shared/svg-images/svg-images';
 import { colorPalette } from '../shared/color-palette';
+import { translation } from '../shared/translation';
 
 @Component({
   selector: 'app-contact-me',
@@ -14,6 +15,9 @@ export class ContactMeComponent {
   hoverEmail = false;
   hoverPhone = false;
   checkboxState = 'default';
+
+  translation = translation;
+  @Input() language = 'en';
 
   isSmallScreen = window.innerWidth <= 480;
 

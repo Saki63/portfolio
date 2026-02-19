@@ -77,6 +77,50 @@ export const translation = {
     'reference-resp-subtitle': {
         en: "Here what my colleagues said about me",
         de: "Hier sind einige Kommentare meiner Kollegen über mich"
+    },
+    'contact-text': {
+        en: "You are welcome to contact me regarding opportunities as a Web Developer or UX Developer. I am especially interested in contributing to projects in the healthcare sector, while also being open to innovative roles and collaborations across a wide range of industries.",
+        de: "Sie können mich gerne bezüglich Stellenangeboten als Webentwickler oder UX-Entwickler kontaktieren. Ich bin besonders daran interessiert, an Projekten im Gesundheitswesen mitzuarbeiten, bin aber auch offen für innovative Aufgaben und Kooperationen in einer Vielzahl von Branchen.",
+    },
+    'e-mail-label': {
+        en: "E-mail",
+        de: "E-Mail"
+    },
+    'tel-label': {
+        en: "Tel",
+        de: "Tel."
+    },
+    'contact-resp-title': {
+        en: "Let us work together!",
+        de: "Lass uns zusammen arbeiten!"
+    },
+    'input-name-label': {
+        en: "Your Name",
+        de: "Name",
+    },
+    'input-mail-label': {
+        en: "Your E-mail",
+        de: "E-Mail-Adresse"
+    },
+    'input-message-label': {
+        en: "Your Message",
+        de: "Nachricht"
+    },
+    'privacy-text1': {
+        en: "I've read the ",
+        de: "Ich habe die "
+    },
+    'privacy-text2': {
+        en: "privacy policy",
+        de: "Datenschuterklärung"
+    },
+    'privacy-text3': {
+        en: "and agree to the processing of my data as outlined.",
+        de: "gelesen und stimme der Datenverarbeitung zu."
+    },
+    'send-btn': {
+        en: "Send",
+        de: "Abschicken"
     }
     // 'long-title': {
     //     en: "frontend developer",
