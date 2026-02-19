@@ -122,12 +122,4 @@ export const translation = {
         en: "Send",
         de: "Abschicken"
     }
-    // 'long-title': {
-    //     en: "frontend developer",
-    //     de: "Frontend-Entwicklerin"
-    // },
-    // 'long-title': {
-    //     en: "frontend developer",
-    //     de: "Frontend-Entwicklerin"
-    // }
 }
