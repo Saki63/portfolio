@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BubbleComponent } from "./bubble/bubble.component";
+import { translation } from '../shared/translation';
 
 @Component({
   selector: 'app-references',
@@ -9,5 +10,6 @@ import { BubbleComponent } from "./bubble/bubble.component";
   styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
-
+  translation = translation;
+  @Input() language = 'en';
 }

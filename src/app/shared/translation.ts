@@ -65,6 +65,18 @@ export const translation = {
     'img-placeholder': {
         en: 'Comming soon...',
         de: 'Kommt demnächst...',
+    },
+    'reference-title': {
+        en: "Need a teamplayer? Here what my colleagues said about me",
+        de: "Sie suchen einen Teamplayer? Hier sind einige Kommentare meiner Kollegen über mich"
+    },
+    'reference-resp-title': {
+        en: "Need a teamplayer?",
+        de: "Sie suchen einen Teamplayer?"
+    },
+    'reference-resp-subtitle': {
+        en: "Here what my colleagues said about me",
+        de: "Hier sind einige Kommentare meiner Kollegen über mich"
     }
     // 'long-title': {
     //     en: "frontend developer",
