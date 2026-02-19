@@ -65,6 +65,7 @@ form{
             cursor: text;
             color: $secondary-color;
             padding: 16px;
+            @include font($family: 'Josefin_Sans_Regular', $size: 18px, $color: $secondary-color);
 
             &:focus{
                 outline: $primary-color;
@@ -88,6 +89,7 @@ form{
         cursor: text;
         color: $secondary-color;
         padding: 16px;
+        @include font($family: 'Josefin_Sans_Regular', $size: 18px, $color: $secondary-color);
 
         &:focus{
             outline: $primary-color;
