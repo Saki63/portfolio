@@ -16,13 +16,19 @@
                 <app-logo [lan]="language" [color]="colorPalette.primaryColor" [animation]="true"></app-logo>
                 <ul class="social_media_right">
                     <li>
-                        <app-icon-email [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
+                        <a class="clean" href="https://github.com/Saki63" target="_blank">
+                            <app-icon-github [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
+                        </a>
                     </li>
                     <li class="space">
-                        <app-icon-github [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
+                        <a class="clean" href="#" target="_blank">
+                            <app-icon-email [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
+                        </a>
                     </li>
                     <li>
-                        <app-icon-linkedin [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
+                        <a class="clean" href="#" target="_blank">
+                            <app-icon-linkedin [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -32,7 +38,7 @@
                 <span>{{language === 'en' ? translation['long-title'].en : translation['long-title'].de}}</span>                
             </div>
             
-            <a class="secondary a_transposed" href="#why-me-section-id">
+            <a class="button secondary button_transposed" href="#why-me-section-id">
                 <app-img-arrow class="pointer" [height]="50" [width]="22" [color]="colorPalette.primaryColor"/>
             </a>
 

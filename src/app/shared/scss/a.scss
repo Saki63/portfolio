@@ -1,6 +1,6 @@
 @import '../../../styles.scss';
 
-a{
+.button {
     border: solid 1px $primary-color;
     border-radius: 30px;
     padding: 14px 26px;
@@ -11,11 +11,11 @@ a{
     text-decoration: none;
 }
 
-a * {
+.button * {
     cursor: pointer;
 }
 
-.a_transposed{
+.button_transposed{
     padding: 26px 14px !important;
 }
 
@@ -43,4 +43,8 @@ a * {
         cursor: default;
         opacity: 60%;
     }
+}
+
+.clean{
+    text-decoration: none;
 }
