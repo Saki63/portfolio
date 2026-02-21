@@ -14,11 +14,11 @@
             <div class="logo_social_media_wrapper">
                 <div class="placeholder"></div>
                 <app-logo [lan]="language" [color]="colorPalette.primaryColor" [animation]="true"></app-logo>
-                <ul class="social_media_links">
+                <ul class="social_media_right">
                     <li>
                         <app-icon-email [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
                     </li>
-                    <li>
+                    <li class="space">
                         <app-icon-github [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
                     </li>
                     <li>
@@ -32,13 +32,10 @@
                 <span>{{language === 'en' ? translation['long-title'].en : translation['long-title'].de}}</span>                
             </div>
             
-            <div class="button_wrapper">
-                <button class="secondary button_transposed">
-                    <a href="#why-me-section-id">
-                        <app-img-arrow class="pointer" [height]="50" [width]="22" [color]="colorPalette.primaryColor"/>
-                    </a>
-                </button>                
-            </div>
+            <a class="secondary a_transposed" href="#why-me-section-id">
+                <app-img-arrow class="pointer" [height]="50" [width]="22" [color]="colorPalette.primaryColor"/>
+            </a>
+
 
         </div>
     </div>    
