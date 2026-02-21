@@ -1,5 +1,5 @@
 @import '../shared/scss/fonts.scss';
-@import '../shared/scss/button.scss';
+@import '../shared/scss/a.scss';
 @import '../../styles.scss';
 
 .content_limit{
@@ -23,6 +23,8 @@
         padding: 26px;
 
         transition: color 0.35s ease-in-out;
+
+        cursor: pointer;
 
         &:hover{
             color: $secondary-color;

@@ -1,5 +1,5 @@
 @import '../shared/scss/fonts.scss';
-@import '../shared/scss/button.scss';
+@import '../shared/scss/a.scss';
 @import '../../styles.scss';
 
 .content{
@@ -40,11 +40,6 @@
             span{
                 line-height: 120%;
             }
-        }
-
-        a{
-            text-decoration: none;
-            color: inherit;
         }
     }
 }

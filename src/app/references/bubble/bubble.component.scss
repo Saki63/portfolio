@@ -6,7 +6,7 @@
     height: 400px;
     position: relative;
     @include flex-box($ai:start);
-    padding-top: 64px;
+    padding-top: 32px;
     
     .default_background{
         position: absolute;

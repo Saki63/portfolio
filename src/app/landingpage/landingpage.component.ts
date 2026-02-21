@@ -9,7 +9,7 @@ import { translation } from '../shared/translation';
   standalone: true,
   imports: [LogoComponent, SvgImageModule],
   templateUrl: './landingpage.component.html',
-  styleUrls: ['../../styles.scss', './landingpage.component.scss', '../shared/scss/button.scss', '../shared/scss/a.scss']
+  styleUrls: ['../../styles.scss', './landingpage.component.scss']
 })
 export class LandingpageComponent {
   colorPalette = colorPalette;
