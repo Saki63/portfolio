@@ -14,22 +14,77 @@
             </a>
         </div>        
     </div>
-    <form action="submit">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
         <h4 class="resp_title">{{language === "en" ? translation['contact-resp-title'].en : translation['contact-resp-title'].de }}</h4>
         <div class="first_inputs">
             <div class="input_wrapper">
-                <label for="name">{{language === "en" ? translation['input-name-label'].en : translation['input-name-label'].de }}</label>
-                <input id="name" type="text" [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-name-label'].en : translation['input-name-label'].de ) : ''">                
+                @if (name.invalid && name.touched) {
+                    @if (name.errors?.['required']){
+                        <label for="name" class="error_color">{{language === "en" ? "Your name is required" : "Der Name ist erforderlich" }}</label>
+                    }
+                    @else {
+                        <label for="name" class="error_color">{{language === "en" ? "Your name is invalid" : "Der Name ist ungültig" }}</label>
+                    }
+
+                }
+                @else{
+                    <label for="name">{{language === "en" ? translation['input-name-label'].en : translation['input-name-label'].de }}</label>
+                }
+                <input 
+                    id="name" 
+                    type="text"
+                    name="name"
+                    ngModel
+                    required
+                    minlength="3"
+                    #name="ngModel" 
+                    [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-name-label'].en : translation['input-name-label'].de ) : ''">                
             </div>
             <div class="input_wrapper">
-                <label for="mail">{{language === "en" ? translation['input-mail-label'].en :translation['input-mail-label'].de }}</label>
-                <input id="mail" type="email" [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-mail-label'].en : translation['input-mail-label'].de ) : ''">                
+                @if (email.invalid && email.touched) {
+                    @if (email.errors?.['required']){
+                        <label for="mail" class="error_color">{{language === "en" ? "Your e-mail is required" : "Die E-Mail ist erforderlich" }}</label>
+                    }
+                    @else {
+                        <label for="mail" class="error_color">{{language === "en" ? "Your e-mail is invalid" : "Die E-Mail ist ungültig" }}</label>
+                    }
+
+                }
+                @else{
+                    <label for="mail">{{language === "en" ? translation['input-mail-label'].en :translation['input-mail-label'].de }}</label>
+                }
+                <input 
+                    id="mail" 
+                    type="email" 
+                    name="email" 
+                    ngModel
+                    required 
+                    email
+                    #email="ngModel" 
+                    [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-mail-label'].en : translation['input-mail-label'].de ) : ''">             
             </div>
 
         </div>
         <div class="input_wrapper">
-            <label for="message">{{language === "en" ? translation['input-message-label'].en :translation['input-message-label'].de }}</label>
-            <textarea name="" id="message" [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-message-label'].en :translation['input-message-label'].de) : ''"></textarea>            
+            @if (message.invalid && message.touched) {
+                @if (message.errors?.['required']){
+                    <label for="message" class="error_color">{{language === "en" ? "Your message is required" : "Die Nachricht ist erforderlich" }}</label>
+                }
+                @else {
+                    <label for="message" class="error_color">{{language === "en" ? "Your message is invalid" : "Die Nachricht ist ungültig" }}</label>
+                }
+            }
+            @else{
+                <label for="message">{{language === "en" ? translation['input-message-label'].en :translation['input-message-label'].de }}</label>
+            }
+            <textarea 
+                id="message"
+                name="message" 
+                ngModel
+                required
+                minlength="10"
+                #message="ngModel" 
+                [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-message-label'].en :translation['input-message-label'].de) : ''"></textarea>            
         </div>
 
         <div class="checkbox_wrapper">
@@ -37,7 +92,10 @@
             <span>{{language === "en" ? translation['privacy-text1'].en :translation['privacy-text1'].de }} <a>{{language === "en" ? translation['privacy-text2'].en :translation['privacy-text2'].de }}</a> {{language === "en" ? translation['privacy-text3'].en :translation['privacy-text3'].de }}</span>
         </div>
         <div class="send_btn_wrapper">
-            <button class="secondary" disabled>{{language === "en" ? translation['send-btn'].en :translation['send-btn'].de }}</button>
+            <button 
+                class="secondary"
+                type="submit"
+                [disabled]="contactForm.invalid || !checkboxChecked">{{language === "en" ? translation['send-btn'].en :translation['send-btn'].de }}</button>
         </div>
         
     </form>

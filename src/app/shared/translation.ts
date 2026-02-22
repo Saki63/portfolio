@@ -112,7 +112,7 @@ export const translation = {
     },
     'privacy-text2': {
         en: "privacy policy",
-        de: "Datenschuterklärung"
+        de: "Datenschutzerklärung"
     },
     'privacy-text3': {
         en: "and agree to the processing of my data as outlined.",

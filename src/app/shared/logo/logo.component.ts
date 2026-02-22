@@ -17,8 +17,8 @@ export class LogoComponent {
   @Input() color = "currentColor";
   @Input() animation = false;
 
-  ngOnChanges(changes: SimpleChanges) {
-    console.log(this.color);  
-    console.log('lan:', changes['lan']);
-  }
+  // ngOnChanges(changes: SimpleChanges) {
+  //   console.log(this.color);  
+  //   console.log('lan:', changes['lan']);
+  // }
 }
