@@ -15,6 +15,7 @@ export class LandingpageComponent {
   colorPalette = colorPalette;
   translation = translation;
   @Input() language = 'de';
+  hoverPic = false;
 
   isSmallScreen = window.innerWidth <= 560 ? 'smallest' : (window.innerWidth <= 1050 ? 'small' : 'normal');
 

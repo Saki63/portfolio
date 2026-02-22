@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IconAngular, IconCSS, IconFirebase, IconGit, IconHTML, IconJavaScript, IconMaterialDesign, IconReact, IconRestApi, IconScrum, IconTypeScript, IconVue } from './technologies/technologies.component';
 import { IconEmail, IconEmailLight, IconGitHub, IconGitHubLight, IconLinkedIn, IconLinkedInLight } from './links/links.component';
-import { ImgEllipse1, ImgEllipse2, ImgEllipse3, ImgEllipse4, ImgEllipse5, ImgEllipse6, ImgEllipse7 } from './backgrounds/backgrounds.component';
+import { ImgEllipse1, ImgEllipse1Hover, ImgEllipse2, ImgEllipse2Hover, ImgEllipse3, ImgEllipse4, ImgEllipse5, ImgEllipse6, ImgEllipse7 } from './backgrounds/backgrounds.component';
 import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBulletPoint, ImgBurgerMenu, ImgCheckbox, ImgLocation, ImgLocation1 } from './other/other.component';
 
 @NgModule({
@@ -20,9 +20,11 @@ import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBulletPoint, ImgBurg
     IconGitHub,
     IconLinkedIn,
     ImgEllipse1,
+    ImgEllipse1Hover,
     ImgArrow,
     ImgBurgerMenu,
     ImgEllipse2,
+    ImgEllipse2Hover,
     IconPortfolio,
     IconEmail1,
     IconPhone,
@@ -57,9 +59,11 @@ import { IconEmail1, IconPhone, IconPortfolio, ImgArrow, ImgBulletPoint, ImgBurg
     IconGitHub,
     IconLinkedIn,
     ImgEllipse1,
+    ImgEllipse1Hover,
     ImgArrow,
     ImgBurgerMenu,
     ImgEllipse2,
+    ImgEllipse2Hover,
     IconPortfolio,
     IconEmail1,
     IconPhone,

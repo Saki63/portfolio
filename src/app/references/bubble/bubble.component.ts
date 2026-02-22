@@ -16,6 +16,8 @@ export class BubbleComponent {
   @Input() link: string = "";
   @Input() scrollbehavior: boolean = false;
 
+  hoverBubble = false;
+
   scrollable = true;
 
   @HostListener('scroll', ['$event'])

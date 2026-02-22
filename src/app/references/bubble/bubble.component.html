@@ -1,4 +1,4 @@
-<div class="bubble">
+<div class="bubble" (mouseover)="hoverBubble=true" (mouseleave)="hoverBubble=false">
     <div class="content">
         <div class="header">
             <h4>{{name}}</h4>
@@ -11,8 +11,14 @@
             }      
         </div>
 
-        <a href={{link}}>Linked in Profile</a>
+        <a href={{link}} target="_blank">Linked in Profile</a>
     </div>
-    <app-img-ellipse2 [size]="400" class="default_background"/>
+    @if (hoverBubble){
+        <app-img-ellipse2-hover [size]="400" class="default_background"/>
+    }
+    @else {
+        <app-img-ellipse2 [size]="400" class="default_background"/>
+    }
+    
     <app-img-ellipse7 [size]="290" class="resp_background"/>
 </div>

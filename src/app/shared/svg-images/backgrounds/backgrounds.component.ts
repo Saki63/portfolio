@@ -9,11 +9,25 @@ import { BaseImageComponent } from '../base-image.component';
 export class ImgEllipse1 extends BaseImageComponent {}
 
 @Component({
+  selector: 'app-img-ellipse1-hover',
+  templateUrl: './svgs/ellipse1-hover-img.component.html',
+  styleUrl: './backgrounds.component.scss'
+})
+export class ImgEllipse1Hover extends BaseImageComponent {}
+
+@Component({
   selector: 'app-img-ellipse2',
   templateUrl: './svgs/ellipse2-img.component.html',
   styleUrl: './backgrounds.component.scss'
 })
 export class ImgEllipse2 extends BaseImageComponent {}
+
+@Component({
+  selector: 'app-img-ellipse2-hover',
+  templateUrl: './svgs/ellipse2-hover-img.component.html',
+  styleUrl: './backgrounds.component.scss'
+})
+export class ImgEllipse2Hover extends BaseImageComponent {}
 
 @Component({
   selector: 'app-img-ellipse3',
