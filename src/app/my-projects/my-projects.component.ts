@@ -31,7 +31,10 @@ export class MyProjectsComponent {
   };
   activeTabIdx = 0;
   projects = [{
-    title: "El Pollo Loco",
+    title: {
+      en: "El Pollo Loco",
+      de: "El Pollo Loco",
+    },
     duration: {
       en: "5 weeks",
       de: "5 Wochen",
@@ -74,7 +77,10 @@ export class MyProjectsComponent {
     githubUrl: "https://github.com/Saki63/el_pollo_loco",
   },
   {
-    title: "Join",
+    title: {
+      en: "Join",
+      de: "Join",
+    },
     duration: {
       en: "2 month",
       de: "2 Monate",
@@ -117,7 +123,10 @@ export class MyProjectsComponent {
     githubUrl: "",
   },
   {
-    title: "Ongoing Project",
+    title: {
+      en: "Ongoing Project",
+      de: "Derzeitige Projekte",
+    },
     duration: {
       en: "?",
       de: "?",

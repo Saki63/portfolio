@@ -4,10 +4,10 @@
         @for (project of projects; let idx = $index; track project.title){
             <button [ngClass]="getTabClass(idx)" (click)="changeTab(idx)">
                 @if (isSmallScreen) {
-                    {{language === 'en' ? getTabTitle(idx, "Project"):getTabTitle(idx, "Projekt") }}
+                    {{language === 'en' ? getTabTitle(idx, "Project") : getTabTitle(idx, "Projekt") }}
                 }
                 @else{
-                    {{getTabTitle(idx, project.title)}}
+                    {{language === 'en' ? getTabTitle(idx, project.title.en): getTabTitle(idx, project.title.de)}}
                 }
             </button>
         }
