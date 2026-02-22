@@ -54,7 +54,7 @@
     @include font($family: 'Josefin_Sans_Regular', $size: 18px, $color: $secondary-color);
 
     .content_wrapper {
-        @include flex-box($g: 32px);
+        @include flex-box($g: 32px, $ai: start);
 
         .content_left{
             padding: 0;
@@ -164,11 +164,10 @@
 
         .resp_img_wrapper{
             @include flex-box();
-            width: 100%;   
 
             .project_pic{
-                height: 167px;
-                width: 269px;
+                height: 262px;
+                width: 380px;
                 object-fit: cover;
                 border-radius: 30px;
             }
@@ -176,8 +175,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 167px;
-                width: 269px;
+                height: 262px;
+                width: 380px;
                 background-color: white;
                 color: $primary-color;
                 font-size: 30px;
@@ -220,14 +219,6 @@
             font-size: 24px;
         }
     }
-
-    .resp_content_wrapper {
-        .resp_img_wrapper{
-            img{
-                width: 380px;
-            }            
-        }
-    }
 }
 
 @media (max-width: 480px){
@@ -257,9 +248,15 @@
         }
 
         .resp_img_wrapper{
-            img{
-                width: 270px;
-            }            
+
+            .project_pic{
+                height: 167px;
+                width: 269px;
+            }
+            .img_placeholder{
+                height: 167px;
+                width: 269px;
+            }    
         }
     }
 

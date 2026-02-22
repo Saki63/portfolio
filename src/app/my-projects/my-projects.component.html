@@ -90,7 +90,7 @@
             </div>            
         </div>
         <div class="resp_content_wrapper">
-            <h3>{{projects[activeTabIdx].title}}</h3>
+            <h3>{{language === 'en' ? projects[activeTabIdx].title.en : projects[activeTabIdx].title.de}}</h3>
             <div class="resp_project_info">
                 <span>
                     {{getTechnologiesTitles()}}
