@@ -4,7 +4,13 @@
             <h4>{{name}}</h4>
             <p>Project <span class="primary">{{project}}</span></p>
         </div>
-        <p>"{{quote}}"</p>
+        <div class="scroll_wrapper">
+            <p class="quote" (scroll)="onScroll($event)">"{{quote}}"</p>
+            @if (scrollbehavior){
+                <span [ngClass]="scrollable ? '' : 'hide'">...</span>      
+            }      
+        </div>
+
         <a href={{link}}>Linked in Profile</a>
     </div>
     <app-img-ellipse2 [size]="400" class="default_background"/>

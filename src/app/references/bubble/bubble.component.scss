@@ -6,7 +6,7 @@
     height: 400px;
     position: relative;
     @include flex-box($ai:start);
-    padding-top: 32px;
+    padding-top: 54px;
     
     .default_background{
         position: absolute;
@@ -45,6 +45,18 @@
         text-align: center;
     }
 
+    .scroll_wrapper{
+        @include flex-box($fd: column);
+        height: 124px;
+    }
+
+
+
+    .quote{
+        max-height: 124px;
+        overflow: scroll;
+    }
+
     a{
         @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $primary-color);
         text-align: center;
@@ -60,6 +72,14 @@
             color: $secondary-color;
         }
     }
+}
+
+.hide{
+    display: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 @media (max-width: 480px){
@@ -84,11 +104,7 @@
         align-items: start;
         gap: 8px;
         max-width: 216px;
-        margin-left: 16px;
-
-        // @include flex-box($fd: column, $g: 20px);
-        // max-width: 300px;
-        // z-index: 1;
+        margin-left: 18px;
 
         .header{
             h4{
@@ -106,9 +122,19 @@
             text-align: start;
         }
 
+
+        .scroll_wrapper{
+            @include flex-box($fd: column);
+            height: 113px;
+        }
+
+        .quote{
+            max-height: 113px;
+        }
+
         a{
             text-align: start;
-            margin-top: 10px;
+            margin-top: 4px;
         }
     }
 }
