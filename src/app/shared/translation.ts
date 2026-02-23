@@ -110,7 +110,7 @@ export const translation = {
         en: "I've read the ",
         de: "Ich habe die "
     },
-    'privacy-text2': {
+    'privacy-policy': {
         en: "privacy policy",
         de: "Datenschutzerklärung"
     },
@@ -121,5 +121,9 @@ export const translation = {
     'send-btn': {
         en: "Send",
         de: "Abschicken"
+    },
+    'legal-notice': {
+        en: "Legal notice",
+        de: "Rechtlicher Hinweis"
     }
 }

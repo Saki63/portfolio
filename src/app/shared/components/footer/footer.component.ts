@@ -1,7 +1,8 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { SvgImageModule } from "../../svg-images/svg-images";
 import { LogoComponent } from '../../logo/logo.component';
 import { colorPalette } from '../../color-palette';
+import { translation } from '../../translation';
 
 @Component({
   selector: 'app-footer',
@@ -12,6 +13,9 @@ import { colorPalette } from '../../color-palette';
 })
 export class FooterComponent {
   colorPalette = colorPalette;
+  
+  translation = translation;
+  @Input() language = 'en';
 
   isSmallScreen = window.innerWidth <= 480;
 

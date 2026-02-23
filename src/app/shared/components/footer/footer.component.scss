@@ -53,20 +53,29 @@ footer {
                 padding: 0;
                 list-style: none;
 
-                li{
+                .li_link{
                     opacity: 60%;
 
                     &:hover{
                         opacity: 1;
                     }
 
-                .default_icon{
-                    display: block !important;
+                    .default_icon{
+                        display: block !important;
+                    }
+
+                    .resp_icon{
+                        display: none !important;
+                    }
+
                 }
 
-                .resp_icon{
-                    display: none !important;
-                }
+                .placeholder_icon{
+                    opacity: 60%;
+                    height: 30px;
+                    width: 30px;
+                    background-color: $primary-dark-color;
+                    border-radius: 50%;
                 }
             }                  
         }
@@ -118,7 +127,7 @@ footer {
                     padding: 0;
                     list-style: none;
 
-                    li{
+                    .li_link{
                         opacity: 1;
 
                         &:hover{
@@ -132,6 +141,11 @@ footer {
                         .resp_icon{
                             display: block !important;
                         }
+                    }
+
+                    .placeholder_icon{
+                        opacity: 1;
+                        background-color: $secondary-color;
                     }
                 }                  
             }
