@@ -150,6 +150,50 @@ section{
         max-width: 100%;
     }
 
+    .menu_resp{
+        position: absolute;
+        right: 10px;
+        top: 100px;
+        z-index: 1000;
+
+        .menu_resp_wrapper{
+            position: relative;
+            height: 370px;
+            width: 353px;
+            @include flex-box();
+
+            .menu_content{
+                z-index: 1001;
+                list-style-type: none;
+                padding: 8px;
+
+                @include flex-box($fd: column, $g: 24px);
+
+                a {
+                    text-decoration: none;
+                    @include font($family: 'Josefin_Sans_Regular', $size: 22px, $color: $primary-dark-color);
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+
+                    * {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .background_img{
+                position: absolute;
+                top: 0;
+                left:0;
+            }
+
+
+        }
+    }
+
     .photo_content{
         margin-top: 94px;
     }
@@ -178,6 +222,11 @@ section{
     .burger {
         background: none;
         border: none;
+
+        * {
+            cursor: pointer;
+        }
+        
     }
 }
 

@@ -29,7 +29,8 @@
                 </a>
             </li>
         </ul>
-        <div class="language_selection">
+        <app-language-selection [language]="language" (newLanguage)="switchLanguage($event)"></app-language-selection>
+        <!-- <div class="language_selection">
             <button (click)="switchLanguage('de')">
                 <app-img-ellipse4 class="language_ellipse" [color]="'#262E34'" [width]="37" [height]="24"/>
                 <span>DE</span>
@@ -38,7 +39,7 @@
                 <app-img-ellipse4 class="language_ellipse" [color]="'#262E34'" [width]="37" [height]="24"/>
                 <span>EN</span>
             </button>
-        </div>        
+        </div>         -->
     </div>
 
 </nav>

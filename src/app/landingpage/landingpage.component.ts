@@ -1,13 +1,14 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { LogoComponent } from '../shared/logo/logo.component';
 import { SvgImageModule } from '../shared/svg-images/svg-images';
 import { colorPalette } from '../shared/color-palette';
 import { translation } from '../shared/translation';
+import { LanguageSelectionComponent } from "../shared/components/language-selection/language-selection.component";
 
 @Component({
   selector: 'app-landingpage',
   standalone: true,
-  imports: [LogoComponent, SvgImageModule],
+  imports: [LogoComponent, SvgImageModule, LanguageSelectionComponent],
   templateUrl: './landingpage.component.html',
   styleUrls: ['../../styles.scss', './landingpage.component.scss']
 })
@@ -15,6 +16,12 @@ export class LandingpageComponent {
   colorPalette = colorPalette;
   translation = translation;
   @Input() language = 'de';
+  @Output() newLanguage = new EventEmitter<'de' | 'en'>();
+
+  switchLanguage(selected: 'de' | 'en') {
+    this.newLanguage.emit(selected);
+  }
+  
   hoverPic = false;
 
   isSmallScreen = window.innerWidth <= 560 ? 'smallest' : (window.innerWidth <= 1050 ? 'small' : 'normal');

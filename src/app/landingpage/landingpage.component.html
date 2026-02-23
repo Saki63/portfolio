@@ -3,6 +3,39 @@
     <button class="burger" aria-label="Menu" style="padding: 8px">
         <app-img-burger-menu [size]="32"/>
     </button>
+    <div class="menu_resp">
+        <div class="menu_resp_wrapper">
+            <ul class="menu_content">
+                <li>
+                    <a href="#why-me-section-id">
+                        {{language === 'en' ? translation['sections']['why-me'].en : translation['sections']['why-me'].de}}                 
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#my-skills-section-id">
+                        {{language === 'en' ? translation['sections']['skills'].en : translation['sections']['skills'].de}}
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#my-projects-section-id">
+                        {{language === 'en' ? translation['sections']['projects'].en : translation['sections']['projects'].de}}
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact-me-section-id">
+                        {{language === 'en' ? translation['sections']['contact'].en : translation['sections']['contact'].de}}
+                    </a>
+                </li>
+                <li>
+                    <app-language-selection [language]="language" (newLanguage)="switchLanguage($event)"></app-language-selection>
+                </li>
+            </ul>
+            <app-img-ellipse8 class="background_img" [height]="370" [width]="353" [color]="colorPalette.primaryColor"></app-img-ellipse8>            
+        </div>
+
+    </div>
 </header>
 <section>
     <div class="content">

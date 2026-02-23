@@ -65,38 +65,6 @@ ul{
     }
 }
 
-.language_selection{
-    @include font($family: 'Josefin_Sans_Regular', $size: 18px);
-    @include flex-box($g: 24px);
-
-    button{
-        background-color: transparent;
-        border: none;
-        padding: 0;
-        position: relative;
-        cursor: pointer;
-
-        &:hover *{
-            color: $secondary_color;
-        }
-
-        .language_ellipse{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-
-            cursor: pointer;
-
-            opacity: 0;
-            transform: translate(-50%, -50%);
-        }
-
-        &:hover .language_ellipse{
-            opacity: 1;
-        }
-    }
-}
-
 @media (max-width: 950px){
     li {
         span{

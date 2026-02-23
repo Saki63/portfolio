@@ -1,20 +1,20 @@
 import { colorPalette } from '../../../shared/color-palette';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { LogoComponent } from '../../logo/logo.component';
 import { SvgImageModule } from '../../svg-images/svg-images';
 import {translation} from '../../translation';
-import { LanguageSelectionComponent } from "../language-selection/language-selection.component";
+import { NgClass } from "@angular/common";
 
 @Component({
-  selector: 'app-navigation-bar',
+  selector: 'app-language-selection',
   standalone: true,
-  imports: [LogoComponent, SvgImageModule, LanguageSelectionComponent],
-  templateUrl: './navigation-bar.component.html',
-  styleUrl: './navigation-bar.component.scss'
+  imports: [SvgImageModule, NgClass],
+  templateUrl: './language-selection.component.html',
+  styleUrl: './language-selection.component.scss'
 })
-export class NavigationBarComponent {  
+export class LanguageSelectionComponent {  
   colorPalette = colorPalette;
   translation = translation;
+
   @Input() language = 'de';
   @Output() newLanguage = new EventEmitter<'de' | 'en'>();
 

@@ -1,0 +1,45 @@
+@import '../../../shared/scss/fonts.scss';
+@import '../../../../styles.scss';
+
+.language_selection{
+    @include flex-box($g: 24px);
+
+    button{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        position: relative;
+        cursor: pointer;
+
+        span{
+            @include font($family: 'Josefin_Sans_Regular', $size: 18px);
+        }
+
+        .active{
+            color: $secondary-color !important;
+        }
+
+        .deactive{
+            color: $primary-dark-color !important;
+        }
+
+        &:hover *{
+            color: $secondary_color;
+        }
+
+        .language_ellipse{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            cursor: pointer;
+
+            opacity: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover .language_ellipse{
+            opacity: 1;
+        }
+    }
+}
