@@ -2,6 +2,7 @@
 
 # Files
 /src/assets/img/my-pictures
+/src/app/sendMail.php
 
 # Compiled output
 /dist

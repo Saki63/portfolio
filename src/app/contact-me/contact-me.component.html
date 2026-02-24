@@ -14,7 +14,7 @@
             </a>
         </div>        
     </div>
-    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <h4 class="resp_title">{{language === "en" ? translation['contact-resp-title'].en : translation['contact-resp-title'].de }}</h4>
         <div class="first_inputs">
             <div class="input_wrapper">
@@ -25,7 +25,6 @@
                     @else {
                         <label for="name" class="error_color">{{language === "en" ? "Your name is invalid" : "Der Name ist ungültig" }}</label>
                     }
-
                 }
                 @else{
                     <label for="name">{{language === "en" ? translation['input-name-label'].en : translation['input-name-label'].de }}</label>
@@ -34,33 +33,33 @@
                     id="name" 
                     type="text"
                     name="name"
-                    ngModel
+                    [(ngModel)]="contactData.name"
                     required
                     minlength="3"
-                    #name="ngModel" 
+                    #name="ngModel"
                     [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-name-label'].en : translation['input-name-label'].de ) : ''">                
             </div>
             <div class="input_wrapper">
                 @if (email.invalid && email.touched) {
                     @if (email.errors?.['required']){
-                        <label for="mail" class="error_color">{{language === "en" ? "Your e-mail is required" : "Die E-Mail ist erforderlich" }}</label>
+                        <label for="email" class="error_color">{{language === "en" ? "Your e-mail is required" : "Die E-Mail ist erforderlich" }}</label>
                     }
                     @else {
-                        <label for="mail" class="error_color">{{language === "en" ? "Your e-mail is invalid" : "Die E-Mail ist ungültig" }}</label>
+                        <label for="email" class="error_color">{{language === "en" ? "Your e-mail is invalid" : "Die E-Mail ist ungültig" }}</label>
                     }
 
                 }
                 @else{
-                    <label for="mail">{{language === "en" ? translation['input-mail-label'].en :translation['input-mail-label'].de }}</label>
+                    <label for="email">{{language === "en" ? translation['input-mail-label'].en :translation['input-mail-label'].de }}</label>
                 }
                 <input 
-                    id="mail" 
+                    id="email" 
                     type="email" 
                     name="email" 
-                    ngModel
-                    required 
-                    email
-                    #email="ngModel" 
+                    [(ngModel)]="contactData.email"
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                    required
+                    #email="ngModel"
                     [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-mail-label'].en : translation['input-mail-label'].de ) : ''">             
             </div>
 
@@ -80,10 +79,10 @@
             <textarea 
                 id="message"
                 name="message" 
-                ngModel
+                [(ngModel)]="contactData.message"
                 required
                 minlength="10"
-                #message="ngModel" 
+                #message="ngModel"
                 [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-message-label'].en :translation['input-message-label'].de) : ''"></textarea>            
         </div>
 
@@ -95,7 +94,10 @@
             <button 
                 class="secondary"
                 type="submit"
-                [disabled]="contactForm.invalid || !checkboxChecked">{{language === "en" ? translation['send-btn'].en :translation['send-btn'].de }}</button>
+                [disabled]="contactForm.invalid || !checkboxChecked">
+                
+                {{language === "en" ? translation['send-btn'].en :translation['send-btn'].de }}
+            </button>
         </div>
         
     </form>

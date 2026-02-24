@@ -1,8 +1,9 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input, inject } from '@angular/core';
 import { SvgImageModule } from '../shared/svg-images/svg-images';
 import { colorPalette } from '../shared/color-palette';
 import { translation } from '../shared/translation';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact-me',
@@ -16,6 +17,8 @@ export class ContactMeComponent {
   hoverEmail = false;
   hoverPhone = false;
   checkboxState = 'default';
+
+  http = inject(HttpClient);
 
   translation = translation;
   @Input() language = 'en';
@@ -34,7 +37,7 @@ export class ContactMeComponent {
       this.checkboxState = 'default';
     } else if (event === 'click'){
       this.checkboxChecked = !this.checkboxChecked;
-      this.checkboxState = this.checkboxState ==='checked' ? 'default' : 'checked';
+      this.checkboxState = this.checkboxState === 'checked' ? 'default' : 'checked';
     }
   }
 
@@ -46,9 +49,49 @@ export class ContactMeComponent {
   //   }
   // }
 
-  onSubmit(form: any) {
-    if (form.valid && this.checkboxChecked) {
-      console.log(form.value);
+  // onSubmit(form: any) {
+  //   if (form.valid && this.checkboxChecked) {
+  //     console.log(form.value);
+  //   }
+  // }
+
+  contactData = {
+    name: "",
+    email: "",
+    message: "",
+  }
+
+  mailTest = true; //nur zum Testen!!!!
+
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.checkboxState = 'default';
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { //nur zum Testen!!!
+      console.log(this.contactData);
+      this.checkboxState = 'default';
+      ngForm.resetForm();
     }
   }
 }
