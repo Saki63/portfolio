@@ -15,6 +15,10 @@
     display: none;
 }
 
+.menu_resp_wrapper{
+    display: none;
+}
+
 section{
     flex: 1;
     height: 100%;
@@ -113,7 +117,7 @@ section{
 @media (max-width: 1050px){
     .photo_content{
         .my_pic{
-            height: 534px;
+            height: 512px;
         }
     }
 }
@@ -148,50 +152,57 @@ section{
         left: 0;
         width: 100vw;
         max-width: 100%;
+
+        z-index: 1000;
     }
 
-    .menu_resp{
-        position: absolute;
-        right: 10px;
-        top: 100px;
-        z-index: 1000;
+    .content_wrapper{
+        position: relative;
+        height: 607px;
+    }
 
-        .menu_resp_wrapper{
-            position: relative;
-            height: 370px;
-            width: 353px;
-            @include flex-box();
+    .menu_resp_wrapper{
+        display: block;
+        position: relative;
+        // height: 370px;
+        width: 353px;
+        height: 526px;
+        @include flex-box();
+        margin-top: 94px;
 
-            .menu_content{
-                z-index: 1001;
-                list-style-type: none;
-                padding: 8px;
+        .menu_content{
+            z-index: 1001;
+            list-style-type: none;
+            padding: 8px;
 
-                @include flex-box($fd: column, $g: 24px);
+            @include flex-box($fd: column, $g: 24px);
 
-                a {
-                    text-decoration: none;
-                    @include font($family: 'Josefin_Sans_Regular', $size: 22px, $color: $primary-dark-color);
+            a {
+                text-decoration: none;
+                @include font($family: 'Josefin_Sans_Regular', $size: 22px, $color: $primary-dark-color);
+                cursor: pointer;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+
+                * {
                     cursor: pointer;
-
-                    &:hover {
-                        color: $secondary-color;
-                    }
-
-                    * {
-                        cursor: pointer;
-                    }
                 }
             }
-
-            .background_img{
-                position: absolute;
-                top: 0;
-                left:0;
-            }
-
-
         }
+
+        .background_img{
+            position: absolute;
+            top: 0;
+            left:0;
+            margin-top: 60px;
+        }
+    }
+
+
+    .menu_hide{
+        display: none !important;
     }
 
     .photo_content{
@@ -247,6 +258,23 @@ section{
         .my_pic{
             margin-top: 50px;
             height: 270px;
+        }
+    }
+
+    .content_wrapper{
+        height: 404px;
+    }
+
+    .menu_resp_wrapper{
+        height: 310px; //calc(404px - 94px);
+        width: 290px;
+
+        .background_img{
+            position: absolute;
+            top: 0;
+            left:0;
+            margin-top: 0px;
+            margin-left: 4px;
         }
     }
 }
