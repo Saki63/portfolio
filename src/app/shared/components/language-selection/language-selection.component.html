@@ -1,10 +1,10 @@
 <div class="language_selection">
     <button (click)="switchLanguage('de')">
-        <app-img-ellipse4 class="language_ellipse" [color]="'#262E34'" [width]="37" [height]="24"/>
+        <app-img-ellipse4 [ngClass]="language === 'en' ? 'deactive_language_ellipse' : 'active_language_ellipse'" class="language_ellipse" [color]="'#262E34'" [width]="37" [height]="24"/>
         <span [ngClass]="language === 'de' ? 'active' : 'deactive'">DE</span>
     </button>
     <button (click)="switchLanguage('en')">
-        <app-img-ellipse4 class="language_ellipse" [color]="'#262E34'" [width]="37" [height]="24"/>
+        <app-img-ellipse4 [ngClass]="language === 'en' ? 'active_language_ellipse' : 'deactive_language_ellipse'" class="language_ellipse" [color]="'#262E34'" [width]="37" [height]="24"/>
         <span [ngClass]="language === 'en' ? 'active' : 'deactive'">EN</span>
     </button>
 </div>  
