@@ -1,0 +1,52 @@
+@import '../shared/scss/fonts.scss';
+@import '../shared/scss/a.scss';
+@import '../../styles.scss';
+
+section{
+    width: 100vw;
+    max-width: 100%;
+    background-color: $primary-dark-color;
+    @include flex-box($ai: 'start');
+    padding: 64px 16px;
+}
+
+.limit{
+    max-width: $section-limit;    
+}
+
+h3{
+    @include font($family: 'Anta', $size: 54px, $color: $primary-color);
+    margin-bottom: 64px;
+    font-weight: 400;
+}
+
+h4{
+    @include font($family: 'Josefin_Sans_Bold', $size: 40px, $color: $primary-color);
+}
+
+h5{
+    @include font($family: 'Josefin_Sans_Regular', $size: 32px, $color: $primary-color);
+}
+
+h6{
+    @include font($family: 'Josefin_Sans_Bold', $size: 24px, $color: $primary-color);
+}
+
+// h4{
+//     @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $primary-color);
+// }
+
+li,
+p{
+    @include font($family: 'Josefin_Sans_Regular', $size: 19px, $color: $secondary-color);
+}
+
+a{
+    text-decoration: none;
+    color: $primary-color;
+}
+
+.paragraph{
+    margin-bottom: 32px;
+
+}
