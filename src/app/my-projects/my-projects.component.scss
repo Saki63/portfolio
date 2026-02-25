@@ -2,6 +2,10 @@
 @import '../shared/scss/a.scss';
 @import '../../styles.scss';
 
+:host{
+    width: 100%;
+}
+
 .content_limit{
     max-width: $content-limit;
 }

@@ -1,17 +1,2 @@
-<app-landingpage [language]="language" (newLanguage)="switchLanguage($event)" [language]="language"></app-landingpage>
-<app-navigation-bar [language]="language" (newLanguage)="switchLanguage($event)"></app-navigation-bar>
-<app-section [language]="language" id="why-me-section-id" [key]="'why-me'">
-    <app-why-me [language]="language"></app-why-me>
-</app-section>
-<app-section [language]="language" id="my-skills-section-id" [key]="'skills'">
-   <app-my-skills [language]="language"></app-my-skills>
-</app-section>
-<app-section [language]="language" id="my-projects-section-id" [key]="'projects'">
-   <app-my-projects [language]="language"></app-my-projects>
-</app-section>
-<app-references [language]="language"></app-references>
-<app-section [language]="language" id="contact-me-section-id" [key]="'contact'">
-   <app-contact-me [language]="language"></app-contact-me>
-</app-section>
-<app-footer [language]="language"></app-footer>
 <router-outlet></router-outlet>
+<app-footer [language]="language"></app-footer>
