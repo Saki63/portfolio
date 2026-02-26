@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NavigationBarComponent } from "../shared/components/navigation-bar/navigation-bar.component";
+import { translation } from '../shared/translation';
+import { LanguageService } from '../shared/language-service';
 
 @Component({
   selector: 'app-legal-notice',
@@ -9,10 +11,14 @@ import { NavigationBarComponent } from "../shared/components/navigation-bar/navi
   styleUrl: './legal-notice.component.scss'
 })
 export class LegalNoticeComponent {
-  @Input() language = 'de';
-  @Output() newLanguage = new EventEmitter<'de' | 'en'>();
+  language = 'de';
+  translation = translation;
 
-  switchLanguage(selected: 'de' | 'en') {
-    this.newLanguage.emit(selected);
+  constructor(private langService: LanguageService) {}
+
+  ngOnInit() {
+    this.langService.language$.subscribe(lang => {
+      this.language = lang;
+    });
   }
 }

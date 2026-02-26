@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NavigationBarComponent } from '../shared/components/navigation-bar/navigation-bar.component';
+import { LanguageService } from '../shared/language-service'
+import { translation } from '../shared/translation';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -9,10 +11,14 @@ import { NavigationBarComponent } from '../shared/components/navigation-bar/navi
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
-  @Input() language = 'de';
-  @Output() newLanguage = new EventEmitter<'de' | 'en'>();
+  language = 'de';
+  translation = translation;
 
-  switchLanguage(selected: 'de' | 'en') {
-    this.newLanguage.emit(selected);
+  constructor(private langService: LanguageService) {}
+
+  ngOnInit() {
+    this.langService.language$.subscribe(lang => {
+      this.language = lang;
+    });
   }
 }

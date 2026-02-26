@@ -3,6 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SvgImageModule } from '../../svg-images/svg-images';
 import {translation} from '../../translation';
 import { NgClass } from "@angular/common";
+import { LanguageService } from '../../language-service';
 
 @Component({
   selector: 'app-language-selection',
@@ -13,12 +14,19 @@ import { NgClass } from "@angular/common";
 })
 export class LanguageSelectionComponent {  
   colorPalette = colorPalette;
+  language = 'de';
   translation = translation;
 
-  @Input() language = 'de';
-  @Output() newLanguage = new EventEmitter<'de' | 'en'>();
+  constructor(private langService: LanguageService) {}
 
-  switchLanguage(selected: 'de' | 'en') {
-    this.newLanguage.emit(selected);
+  ngOnInit() {
+    this.langService.language$.subscribe(lang => {
+      this.language = lang;
+    });
+  }
+
+  switchLanguage() {
+    const newLang = this.language === 'de' ? 'en' : 'de';
+    this.langService.setLanguage(newLang);
   }
 }

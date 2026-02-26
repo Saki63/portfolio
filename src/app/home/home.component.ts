@@ -7,6 +7,7 @@ import { MySkillsComponent } from "../my-skills/my-skills.component";
 import { MyProjectsComponent } from "../my-projects/my-projects.component";
 import { ReferencesComponent } from "../references/references.component";
 import { ContactMeComponent } from "../contact-me/contact-me.component";
+import { LanguageService } from '../shared/language-service';
 
 @Component({
   selector: 'app-home',
@@ -16,11 +17,13 @@ import { ContactMeComponent } from "../contact-me/contact-me.component";
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  @Input() language = 'de';
-  @Output() newLanguage = new EventEmitter<'de' | 'en'>();
+  language = 'de';
 
-  switchLanguage(selected: 'de' | 'en') {
-    this.newLanguage.emit(selected);
+  constructor(private langService: LanguageService) {}
+
+  ngOnInit() {
+    this.langService.language$.subscribe(lang => {
+      this.language = lang;
+    });
   }
-
 }

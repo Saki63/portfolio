@@ -5,6 +5,7 @@ import { colorPalette } from '../shared/color-palette';
 import { translation } from '../shared/translation';
 import { LanguageSelectionComponent } from "../shared/components/language-selection/language-selection.component";
 import { NgClass } from "@angular/common";
+import { LanguageService } from '../shared/language-service';
 
 @Component({
   selector: 'app-landingpage',
@@ -15,13 +16,17 @@ import { NgClass } from "@angular/common";
 })
 export class LandingpageComponent {
   colorPalette = colorPalette;
+  language = 'de';
   translation = translation;
-  @Input() language = 'de';
-  @Output() newLanguage = new EventEmitter<'de' | 'en'>();
 
-  switchLanguage(selected: 'de' | 'en') {
-    this.newLanguage.emit(selected);
+  constructor(private langService: LanguageService) {}
+
+  ngOnInit() {
+    this.langService.language$.subscribe(lang => {
+      this.language = lang;
+    });
   }
+  
   
   hoverPic = false;
   isMenuHiding = true;

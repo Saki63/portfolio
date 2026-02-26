@@ -4,6 +4,7 @@ import { LogoComponent } from '../../logo/logo.component';
 import { SvgImageModule } from '../../svg-images/svg-images';
 import {translation} from '../../translation';
 import { LanguageSelectionComponent } from "../language-selection/language-selection.component";
+import { LanguageService } from '../../language-service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -14,11 +15,14 @@ import { LanguageSelectionComponent } from "../language-selection/language-selec
 })
 export class NavigationBarComponent {  
   colorPalette = colorPalette;
+  language = 'de';
   translation = translation;
-  @Input() language = 'de';
-  @Output() newLanguage = new EventEmitter<'de' | 'en'>();
 
-  switchLanguage(selected: 'de' | 'en') {
-    this.newLanguage.emit(selected);
+  constructor(private langService: LanguageService) {}
+
+  ngOnInit() {
+    this.langService.language$.subscribe(lang => {
+      this.language = lang;
+    });
   }
 }

@@ -22,19 +22,17 @@ h3{
 
 h4{
     @include font($family: 'Josefin_Sans_Bold', $size: 40px, $color: $primary-color);
+    margin-bottom: 32px;
 }
 
 h5{
     @include font($family: 'Josefin_Sans_Regular', $size: 32px, $color: $primary-color);
+    margin-bottom: 16px;
 }
 
 h6{
     @include font($family: 'Josefin_Sans_Bold', $size: 24px, $color: $primary-color);
 }
-
-// h4{
-//     @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $primary-color);
-// }
 
 li,
 p{
