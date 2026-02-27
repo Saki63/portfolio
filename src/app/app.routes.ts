@@ -5,7 +5,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 
 export const routes: Routes = [
     {
-        path: 'home',
+        path: '',
         component: HomeComponent,
     },
     {
@@ -13,7 +13,7 @@ export const routes: Routes = [
         component: LegalNoticeComponent,
     },
     {
-        path: '',
+        path: 'privacy-policy',
         component: PrivacyPolicyComponent,
     },
 ];
