@@ -88,7 +88,7 @@
 
         <div class="checkbox_wrapper">
             <app-img-checkbox [size]="24" (click)="checkboxEventHandler('click')" (mouseover)="checkboxEventHandler('over')" (mouseleave)="checkboxEventHandler('leave')" [state]="checkboxState" [color]="colorPalette.primaryColor"/>
-            <span>{{language === "en" ? translation['privacy-text1'].en :translation['privacy-text1'].de }} <a routerLink="/privacy-policy">{{language === "en" ? translation['privacy-policy'].en :translation['privacy-policy'].de }}</a> {{language === "en" ? translation['privacy-text3'].en :translation['privacy-text3'].de }}</span>
+            <span>{{language === "en" ? translation['privacy-text1'].en :translation['privacy-text1'].de }} <a routerLink="privacy-policy">{{language === "en" ? translation['privacy-policy'].en :translation['privacy-policy'].de }}</a> {{language === "en" ? translation['privacy-text3'].en :translation['privacy-text3'].de }}</span>
         </div>
         <div class="send_btn_wrapper">
             <button 
