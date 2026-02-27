@@ -450,7 +450,7 @@ export const translation = {
                     de: "Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an den oben genannten Verantwortlichen."
                 }
             },
-            'copyright-noticees': {
+            'copyright-notices': {
                 'title': {
                     en: "Copyright Notices",
                     de: "Urheberrechtliche Hinweise",

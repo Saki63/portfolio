@@ -12,7 +12,7 @@ import { translation } from '../shared/translation';
 })
 export class PrivacyPolicyComponent {
   language = 'de';
-  translation = translation;
+  translation = translation['page']['privacy-policy'];
 
   constructor(private langService: LanguageService) {}
 

@@ -3,7 +3,106 @@
     <div id='generator_results' class="limit">
         <div id='generator_results_content'>
 
-            <h3>Datenschutzhinweise</h3>
+        <h3>
+        {{ language === 'en' 
+            ? translation['title'].en 
+            : translation['title'].de 
+        }}
+        </h3>
+
+        <h4>
+            {{ language === 'en' 
+                ? translation['responsible-party']['title'].en 
+                : translation['responsible-party']['title'].de 
+            }}
+        </h4>
+        <div class="paragraph">    
+            <p>
+                {{ language === 'en' 
+                    ? translation['responsible-party']['text'].en 
+                    : translation['responsible-party']['text'].de 
+                }}
+            </p>
+            <p class="generator_user_input">Anne Sanewski</p>
+        </div>
+
+        <h4>
+            {{ language === 'en' 
+                ? translation['data-subject-rights']['title'].en 
+                : translation['data-subject-rights']['title'].de 
+            }}
+        </h4>
+        <div class="paragraph">
+            <p>
+                {{ language === 'en' 
+                    ? translation['data-subject-rights']['intro'].en 
+                    : translation['data-subject-rights']['intro'].de 
+                }}
+            </p>
+
+            <ul>
+                <li>
+                {{ language === 'en' 
+                    ? translation['data-subject-rights']['rights']['access'].en 
+                    : translation['data-subject-rights']['rights']['access'].de 
+                }}
+                </li>
+                <li>
+                {{ language === 'en' 
+                    ? translation['data-subject-rights']['rights']['rectification'].en 
+                    : translation['data-subject-rights']['rights']['rectification'].de 
+                }}
+                </li>
+                <li>
+                {{ language === 'en' 
+                    ? translation['data-subject-rights']['rights']['erasure'].en 
+                    : translation['data-subject-rights']['rights']['erasure'].de 
+                }}
+                </li>
+                <li>
+                {{ language === 'en' 
+                    ? translation['data-subject-rights']['rights']['restriction'].en 
+                    : translation['data-subject-rights']['rights']['restriction'].de 
+                }}
+                </li>
+                <li>
+                {{ language === 'en' 
+                    ? translation['data-subject-rights']['rights']['objection'].en 
+                    : translation['data-subject-rights']['rights']['objection'].de 
+                }}
+                </li>
+                <li>
+                {{ language === 'en' 
+                    ? translation['data-subject-rights']['rights']['portability'].en 
+                    : translation['data-subject-rights']['rights']['portability'].de 
+                }}
+                </li>
+            </ul>
+
+            <p>
+                {{ language === 'en' 
+                    ? translation['data-subject-rights']['withdrawal'].en 
+                    : translation['data-subject-rights']['withdrawal'].de 
+                }}
+            </p>
+
+            <p>
+                {{ language === 'en' 
+                    ? translation['data-subject-rights']['complaint'].en 
+                    : translation['data-subject-rights']['complaint'].de 
+                }}
+            </p>
+
+            <p>
+                {{ language === 'en' 
+                    ? translation['data-subject-rights']['authority-list'].en 
+                    : translation['data-subject-rights']['authority-list'].de 
+                }}
+                <a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>.
+            </p>
+            </div>
+
+            <!-- <h3>{{language === 'en' ? translation['title'].en : translation['title'].de}}</h3>
             
             <h4>Verantwortliche</h4>
             <div class="paragraph">    
@@ -25,9 +124,314 @@
                 <p>Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.</p>
                 <p>Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde.</p>
                 <p>Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter: <a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>.</p>
+            </div> -->
+
+            <h4>
+            {{ language === 'en'
+                ? translation['processing-activities']['title'].en
+                : translation['processing-activities']['title'].de
+            }}
+            </h4>
+
+            <div class="paragraph">
+
+            <h5>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['title'].en
+                    : translation['processing-activities']['general-collection']['title'].de
+                }}
+            </h5>
+
+            <h6>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['type-and-purpose']['title'].en
+                    : translation['processing-activities']['general-collection']['type-and-purpose']['title'].de
+                }}
+            </h6>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['type-and-purpose']['paragraph1'].en
+                    : translation['processing-activities']['general-collection']['type-and-purpose']['paragraph1'].de
+                }}
+            </p>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['type-and-purpose']['paragraph2'].en
+                    : translation['processing-activities']['general-collection']['type-and-purpose']['paragraph2'].de
+                }}
+            </p>
+
+            <ul>
+                <li>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['type-and-purpose']['purposes']['connection'].en
+                    : translation['processing-activities']['general-collection']['type-and-purpose']['purposes']['connection'].de
+                }}
+                </li>
+                <li>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['type-and-purpose']['purposes']['usability'].en
+                    : translation['processing-activities']['general-collection']['type-and-purpose']['purposes']['usability'].de
+                }}
+                </li>
+                <li>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['type-and-purpose']['purposes']['security'].en
+                    : translation['processing-activities']['general-collection']['type-and-purpose']['purposes']['security'].de
+                }}
+                </li>
+                <li>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['type-and-purpose']['purposes']['optimization'].en
+                    : translation['processing-activities']['general-collection']['type-and-purpose']['purposes']['optimization'].de
+                }}
+                </li>
+            </ul>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['type-and-purpose']['paragraph3'].en
+                    : translation['processing-activities']['general-collection']['type-and-purpose']['paragraph3'].de
+                }}
+            </p>
+
+            <br>
+
+            <h6>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['legal-basis']['title'].en
+                    : translation['processing-activities']['general-collection']['legal-basis']['title'].de
+                }}
+            </h6>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['legal-basis']['text'].en
+                    : translation['processing-activities']['general-collection']['legal-basis']['text'].de
+                }}
+            </p>
+
+            <br>
+
+            <h6>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['recipients']['title'].en
+                    : translation['processing-activities']['general-collection']['recipients']['title'].de
+                }}
+            </h6>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['recipients']['text'].en
+                    : translation['processing-activities']['general-collection']['recipients']['text'].de
+                }}
+            </p>
+
+            <br>
+
+            <h6>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['storage-period']['title'].en
+                    : translation['processing-activities']['general-collection']['storage-period']['title'].de
+                }}
+            </h6>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['storage-period']['paragraph1'].en
+                    : translation['processing-activities']['general-collection']['storage-period']['paragraph1'].de
+                }}
+            </p>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['storage-period']['paragraph2'].en
+                    : translation['processing-activities']['general-collection']['storage-period']['paragraph2'].de
+                }}
+            </p>
+
+            <br>
+
+            <h6>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['provision-required']['title'].en
+                    : translation['processing-activities']['general-collection']['provision-required']['title'].de
+                }}
+            </h6>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['provision-required']['text'].en
+                    : translation['processing-activities']['general-collection']['provision-required']['text'].de
+                }}
+            </p>
+
+            <br>
+
+            <h6>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['objection-reference']['title'].en
+                    : translation['processing-activities']['general-collection']['objection-reference']['title'].de
+                }}
+            </h6>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['objection-reference']['text'].en
+                    : translation['processing-activities']['general-collection']['objection-reference']['text'].de
+                }}
+            </p>
+
+            <br><br>
+
+            <h5>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['contact']['title'].en
+                    : translation['processing-activities']['general-collection']['contact']['title'].de
+                }}
+            </h5>
+
+            <h6>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['contact']['type-and-purpose']['title'].en
+                    : translation['processing-activities']['general-collection']['contact']['type-and-purpose']['title'].de
+                }}
+            </h6>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['contact']['type-and-purpose']['paragraph1'].en
+                    : translation['processing-activities']['general-collection']['contact']['type-and-purpose']['paragraph1'].de
+                }}
+            </p>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['contact']['type-and-purpose']['paragraph2'].en
+                    : translation['processing-activities']['general-collection']['contact']['type-and-purpose']['paragraph2'].de
+                }}
+            </p>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['contact']['type-and-purpose']['paragraph3'].en
+                    : translation['processing-activities']['general-collection']['contact']['type-and-purpose']['paragraph3'].de
+                }}
+            </p>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['processing-activities']['general-collection']['contact']['type-and-purpose']['paragraph4'].en
+                    : translation['processing-activities']['general-collection']['contact']['type-and-purpose']['paragraph4'].de
+                }}
+            </p>
+
+            <br>
+
+            <h6>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['legal-basis']['title'].en
+                : translation['processing-activities']['general-collection']['contact']['legal-basis']['title'].de
+            }}
+            </h6>
+
+            <p>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['legal-basis']['paragraph1'].en
+                : translation['processing-activities']['general-collection']['contact']['legal-basis']['paragraph1'].de
+            }}
+            </p>
+
+            <p>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['legal-basis']['paragraph2'].en
+                : translation['processing-activities']['general-collection']['contact']['legal-basis']['paragraph2'].de
+            }}
+            </p>
+
+            <p>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['legal-basis']['paragraph3'].en
+                : translation['processing-activities']['general-collection']['contact']['legal-basis']['paragraph3'].de
+            }}
+            </p>
+
+            <br>
+
+            <h6>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['recipients']['title'].en
+                : translation['processing-activities']['general-collection']['contact']['recipients']['title'].de
+            }}
+            </h6>
+
+            <p>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['recipients']['text'].en
+                : translation['processing-activities']['general-collection']['contact']['recipients']['text'].de
+            }}
+            </p>
+
+            <br>
+
+            <h6>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['storage-period']['title'].en
+                : translation['processing-activities']['general-collection']['contact']['storage-period']['title'].de
+            }}
+            </h6>
+
+            <p>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['storage-period']['paragraph1'].en
+                : translation['processing-activities']['general-collection']['contact']['storage-period']['paragraph1'].de
+            }}
+            </p>
+
+            <p>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['storage-period']['paragraph2'].en
+                : translation['processing-activities']['general-collection']['contact']['storage-period']['paragraph2'].de
+            }}
+            </p>
+
+            <br>
+
+            <h6>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['provision-required']['title'].en
+                : translation['processing-activities']['general-collection']['contact']['provision-required']['title'].de
+            }}
+            </h6>
+
+            <p>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['provision-required']['text'].en
+                : translation['processing-activities']['general-collection']['contact']['provision-required']['text'].de
+            }}
+            </p>
+
+            <br>
+
+            <h6>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['objection']['title'].en
+                : translation['processing-activities']['general-collection']['contact']['objection']['title'].de
+            }}
+            </h6>
+
+            <p>
+            {{ language === 'en'
+                ? translation['processing-activities']['general-collection']['contact']['objection']['text'].en
+                : translation['processing-activities']['general-collection']['contact']['objection']['text'].de
+            }}
+            </p>
+
             </div>
 
-            <h4>Verarbeitungstätigkeiten</h4>
+            <!-- <h4>Verarbeitungstätigkeiten</h4>
             <div class="paragraph">
                 <h5>Erfassung allgemeiner Informationen beim Besuch unserer Website</h5>
 
@@ -94,9 +498,84 @@
                 
                 <h6>Widerspruch</h6>
                 <p>Lesen Sie dazu die Informationen über Ihr Widerspruchsrecht nach Art. 21 DSGVO weiter unten.</p>
+            </div> -->
+
+            <h4>
+            {{ language === 'en'
+                ? translation['right-to-object-information']['title'].en
+                : translation['right-to-object-information']['title'].de
+            }}
+            </h4>
+
+            <div class="paragraph">
+
+            <h5>
+                {{ language === 'en'
+                    ? translation['right-to-object-information']['case-specific-objection']['title'].en
+                    : translation['right-to-object-information']['case-specific-objection']['title'].de
+                }}
+            </h5>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['right-to-object-information']['case-specific-objection']['paragraph1'].en
+                    : translation['right-to-object-information']['case-specific-objection']['paragraph1'].de
+                }}
+            </p>
+
+            <p>
+                {{ language === 'en'
+                    ? translation['right-to-object-information']['case-specific-objection']['paragraph2'].en
+                    : translation['right-to-object-information']['case-specific-objection']['paragraph2'].de
+                }}
+            </p>
+
+            <br>
+
+            <h5>
+                {{ language === 'en'
+                    ? translation['right-to-object-information']['objection-recipient']['title'].en
+                    : translation['right-to-object-information']['objection-recipient']['title'].de
+                }}
+            </h5>
+
+            <p>Anne Sanewski, Asternweg 3, 83022 Rosenheim</p>
+
             </div>
 
-            <h4>Information über Ihr Widerspruchsrecht nach Art. 21 DSGVO</h4>
+            <h4>
+            {{ language === 'en'
+                ? translation['privacy-policy-changes']['title'].en
+                : translation['privacy-policy-changes']['title'].de
+            }}
+            </h4>
+
+            <div class="paragraph">
+            <p>
+                {{ language === 'en'
+                    ? translation['privacy-policy-changes']['text'].en
+                    : translation['privacy-policy-changes']['text'].de
+                }}
+            </p>
+            </div>
+
+            <h4>
+            {{ language === 'en'
+                ? translation['privacy-questions']['title'].en
+                : translation['privacy-questions']['title'].de
+            }}
+            </h4>
+
+            <div class="paragraph">
+            <p>
+                {{ language === 'en'
+                    ? translation['privacy-questions']['text'].en
+                    : translation['privacy-questions']['text'].de
+                }}
+            </p>
+            </div>
+
+            <!-- <h4>Information über Ihr Widerspruchsrecht nach Art. 21 DSGVO</h4>
             <div class="paragraph">         
                 <h5>Einzelfallbezogenes Widerspruchsrecht</h5>
                 <p>Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Sie betreffender personenbezogener Daten, die aufgrund Art. 6 Abs. 1 lit. f DSGVO (Datenverarbeitung auf der Grundlage einer Interessenabwägung) erfolgt, Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmung gestütztes Profiling im Sinne von Art. 4 Nr. 4 DSGVO.</p>
@@ -104,7 +583,6 @@
                 <br>
                 
                 <h5>Empfänger eines Widerspruchs</h5>
-                <p class='generator_user_input'>Anne Sanewski, Asternweg 3, 83022 Rosenheim</p>
             </div>
 
             <h4>Änderung unserer Datenschutzerklärung</h4>
@@ -115,12 +593,33 @@
             <h4>Fragen zum Datenschutz</h4>
             <div class="paragraph">
                 <p>Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an den oben genannten Verantwortlichen.</p>
-            </div>
+            </div> -->
+            <h4>
+            {{ language === 'en'
+                ? translation['copyright-notices']['title'].en
+                : translation['copyright-notices']['title'].de
+            }}
+            </h4>
 
-            <h4>Urheberrechtliche Hinweise</h4>
             <div class="paragraph">
-                <p><em>Diese Datenschutzerklärung wurde mit Hilfe der activeMind AG erstellt – den Experten für <a href="https://www.activemind.de/datenschutz/datenschutzbeauftragter/" target="_blank" rel="noopener dofollow">externe Datenschutzbeauftragte</a> (Version #2024-10-25).</em></p>
+            <p>
+                {{ language === 'en'
+                    ? translation['copyright-notices']['text-part1'].en
+                    : translation['copyright-notices']['text-part1'].de
+                }}
+                <a href="https://www.activemind.de/datenschutz/datenschutzbeauftragter/" target="_blank" rel="noopener dofollow">
+                {{ language === 'en'
+                    ? translation['copyright-notices']['text-part2'].en
+                    : translation['copyright-notices']['text-part2'].de
+                }}
+                </a>
+                 (Version #2024-10-25)
+            </p>
             </div>
+            <!-- <h4>Urheberrechtliche Hinweise</h4>
+            <div class="paragraph">
+                <p><em>Diese Datenschutzerklärung wurde mit Hilfe der activeMind AG erstellt - den Experten für <a href="https://www.activemind.de/datenschutz/datenschutzbeauftragter/" target="_blank" rel="noopener dofollow">externe Datenschutzbeauftragte</a> (Version #2024-10-25).</em></p>
+            </div> -->
         </div>
     </div>
 </section>
