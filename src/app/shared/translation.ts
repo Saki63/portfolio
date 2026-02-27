@@ -148,7 +148,7 @@ export const translation = {
         'privacy-policy': {
             'title': {
                 en: "Privacy Policy",
-                de: "Datenschutzhinweise"
+                de: "Datenschutz"
             },
             'responsible-party': {
                 'title': {
@@ -215,7 +215,7 @@ export const translation = {
             'processing-activities': {
                 'title': {
                     en: "Processing Activities",
-                    de: "Verarbeitungstätigkeiten"
+                    de: "Verarbeitung"
                 },
                 'general-collection': {
                     'title': {

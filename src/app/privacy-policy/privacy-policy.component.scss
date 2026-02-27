@@ -2,6 +2,10 @@
 @import '../shared/scss/a.scss';
 @import '../../styles.scss';
 
+:host{
+    position: relative;
+}
+
 section{
     width: 100vw;
     max-width: 100%;
@@ -14,32 +18,31 @@ section{
     max-width: $section-limit;    
 }
 
-h3{
+h3{ //origin
     @include font($family: 'Anta', $size: 54px, $color: $primary-color);
     margin-bottom: 64px;
     font-weight: 400;
 }
 
 h4{
-    @include font($family: 'Josefin_Sans_Bold', $size: 40px, $color: $primary-color);
+    @include font($family: 'Josefin_Sans_Bold', $size: 32px, $color: $primary-color);
     margin-bottom: 32px;
 }
 
-h5{
-    @include font($family: 'Josefin_Sans_Regular', $size: 32px, $color: $primary-color);
-    margin-bottom: 16px;
-}
-
-h6{
+h5{ //origin
     @include font($family: 'Josefin_Sans_Bold', $size: 24px, $color: $primary-color);
 }
 
-li,
-p{
-    @include font($family: 'Josefin_Sans_Regular', $size: 19px, $color: $secondary-color);
+h6{ //origin
+    @include font($family: 'Josefin_Sans_Bold', $size: 19px, $color: $primary-color);
 }
 
-a{
+.li_text, //origin
+p{
+    @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
+}
+
+.a-text{
     text-decoration: none;
     color: $primary-color;
 }
@@ -47,4 +50,145 @@ a{
 .paragraph{
     margin-bottom: 32px;
 
+}
+
+.header_resp{
+    display: none;
+}
+
+.menu_resp_wrapper{
+    display: none;
+}
+
+@media (max-width: 850px){
+    section{
+        padding: 80px 16px;
+        padding-top: 140px;
+    }
+
+    h3{ //origin
+        @include font($family: 'Anta', $size: 32px, $color: $primary-color);
+        margin-bottom: 32px;
+        overflow-wrap: break-word;
+        hyphens: manual;
+    }
+
+    h4{
+        @include font($family: 'Josefin_Sans_Bold', $size: 27px, $color: $primary-color);
+        margin-bottom: 18px;
+    }
+
+    h5{ //origin
+        @include font($family: 'Josefin_Sans_Bold', $size: 23px, $color: $primary-color);
+    }
+
+    h6{ //origin
+        @include font($family: 'Josefin_Sans_Bold', $size: 19px, $color: $primary-color);
+    }
+
+    .li_text, //origin
+    p{
+        @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
+    }
+
+    .paragraph{
+        margin-bottom: 32px;
+
+    }
+
+
+    .header_resp{
+        display: flex;
+        padding: 24px;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        max-width: 100%;
+
+        z-index: 1000;
+    }
+
+    .menu_resp_wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        max-width: 100%;
+        margin-top: 50px;
+
+        @include flex-box();
+
+        .menu_resp_center{
+            position: relative;
+
+            .menu_content{
+                z-index: 1001;
+                list-style-type: none;
+                padding: 8px;
+                position: relative;
+                margin-top: 118px;   
+
+                @include flex-box($fd: column, $g: 24px);
+
+                a {
+                    
+                    text-decoration: none;
+                    @include font($family: 'Josefin_Sans_Regular', $size: 22px, $color: $primary-dark-color);
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+
+                    * {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .background_img{
+                position: absolute;
+                top: 0;
+                left: calc(50% - 174px);
+                margin-top: 60px;
+            }            
+        }
+
+    }
+
+
+    .menu_hide{
+        display: none !important;
+    }
+
+    .burger {
+        background: none;
+        border: none;
+
+        * {
+            cursor: pointer;
+        }
+        
+    }
+}
+
+
+@media (max-width: 560px){
+    .menu_resp_wrapper{
+
+        .menu_resp_center{
+
+            .menu_content{
+                margin-top: 98px;   
+            }
+
+            .background_img{
+                left: calc(50% - 144px);
+            }            
+        }
+
+    }
 }
