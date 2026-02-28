@@ -20,7 +20,7 @@
 }
 
 section{
-    flex: 1;
+    width: 100%;
     height: 100%;
 
     @include flex-box($fd: column, $ai: center);
@@ -31,7 +31,6 @@ section{
     @include flex-box($g: 16px);
     max-width: $content-limit;
     width: 100%;
-    flex: 1;
     padding: 8px;
     padding-bottom: 0px;
 }
@@ -48,7 +47,7 @@ section{
 }
 
 .introduction_content{
-    flex: 1;
+    // flex: 1;
     @include flex-box($fd: column, $g: 24px);
     margin-bottom: 10px;
 
@@ -105,24 +104,35 @@ section{
     }
 }
 
-@media ((max-height: 750px)){
-    :host {
-        display: flex;
-        align-items: start;
-        height: fit-content;
-        max-height: fit-content;
-    }
+.resp_button{
+    display: none;
 }
 
-@media (max-width: 1050px){
+
+@media (max-width: 1050px) or (max-height: 750px){
     .photo_content{
         .my_pic{
             height: 512px;
         }
     }
+
+    .introduction_content{
+        gap: 0px;
+    }
 }
 
-@media (max-width: 950px){
+@media (min-width: 1050px) and (max-height: 750px){
+    .introduction_content{
+        gap: 0px;
+    }
+
+}
+
+
+@media (max-width: 950px) or ((min-width: 950px) and (max-height: 650px)){
+    .introduction_content{
+        gap: 16px;
+    }
 
     .introduction_content{
         .title_wrapper{
@@ -137,9 +147,140 @@ section{
     }
 }
 
-@media (max-width: 850px){
+
+
+@media (max-width: 850px) and (min-height: 870px){
     :host {
         height: 100vh;
+    }
+
+    .hide{
+        display: none !important;
+    }
+
+    .resp_button{
+        display: block;
+        margin-bottom: 16px;
+    }
+
+
+
+    .header_resp{
+        display: flex;
+        padding: 24px;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        max-width: 100%;
+
+        z-index: 1000;
+    }
+
+    .content_wrapper{
+        position: relative;
+        height: 607px;
+    }
+
+    .menu_resp_wrapper{
+        display: block;
+        position: relative;
+        width: 353px;
+        height: 526px;
+        @include flex-box();
+        margin-top: 94px;
+
+        .menu_content{
+            z-index: 1001;
+            list-style-type: none;
+            padding: 8px;
+
+            @include flex-box($fd: column, $g: 24px);
+
+            a {
+                text-decoration: none;
+                @include font($family: 'Josefin_Sans_Regular', $size: 22px, $color: $primary-dark-color);
+                cursor: pointer;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+
+                * {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .background_img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 60px;
+        }
+    }
+
+
+    .menu_hide{
+        display: none !important;
+    }
+
+    .photo_content{
+        margin-top: 100px;
+    }
+
+    .content{
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .introduction_content {
+        align-items: space-around;
+
+        .logo_social_media_wrapper{
+            display: none;
+        }        
+
+        .title_wrapper{
+            margin-bottom: 0;
+            margin-top: 0px;
+        }
+
+        .button_wrapper{
+            margin-bottom: 16px;
+        }
+    }
+
+    .burger {
+        background: none;
+        border: none;
+
+        * {
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 850px) and (max-height: 870px){
+    :host {
+        height: unset;
+    }
+
+    .content{
+        height: 100vh;
+        max-height: 100%;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .hide{
+        display: none !important;
+    }
+
+    .resp_button{
+        display: block;
+        margin-bottom: 16px;
     }
 
     .header_resp{
@@ -204,13 +345,13 @@ section{
     }
 
     .photo_content{
-        margin-top: 94px;
+        margin-top: 60px;
     }
 
-    .content{
-        flex-direction: column;
-        height: fit-content;
-    }
+    // .content{
+    //     flex-direction: column;
+    //     height: fit-content;
+    // }
 
     .introduction_content {
         align-items: space-around;
@@ -221,6 +362,7 @@ section{
 
         .title_wrapper{
             margin-bottom: 0;
+            margin-top: 0px;
         }
 
         .button_wrapper{
@@ -238,27 +380,18 @@ section{
     }
 }
 
-@media ((max-width: 850px) and (max-height: 960px)){
-    :host {
-        height: fit-content !important;
-        min-height: 100vh;
-    }
-
-    section{
-        height: unset;
-    }
-}
-
 @media (max-width: 560px){
 
-    .photo_content{
-        .my_pic{
-            margin-top: 50px;
-            height: 270px;
-        }
-    }
     .content{
-        padding: 4px;
+        gap: 0px;
+    }
+
+    .photo_content{
+        margin-top: 100px;
+        .my_pic{
+            margin-top: 10px;
+            height: 300px;
+        }
     }
 
     .content_wrapper{
@@ -278,3 +411,26 @@ section{
         }
     }
 }
+
+
+// @media (max-width: 400px) and (max-height: 750px){  
+//     section {
+//         height: 100vh;
+//     }
+//     .introduction_content{
+//         .title_wrapper{
+//             margin-top: 0px;
+//             h1{
+//                 font-size: 50px;
+//             }
+//         }
+//     }
+// }
+
+// @media ((max-width: 400px) and (max-height: 700px)){  
+//     .content{
+//         height: 100vh;
+//         max-height: 100%;
+//         flex: none;
+//     }
+// }

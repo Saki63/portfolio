@@ -21,8 +21,8 @@ export class LandingpageComponent {
   hoverPic = false;
   isMenuHiding = true;
   isSmallScreen = window.innerWidth <= 560 ? 'smallest' : (window.innerWidth <= 1050 ? 'small' : 'normal');
-  ellipse1Height = this.isSmallScreen === 'smallest' ? 320 : (this.isSmallScreen === 'small' ? 513 : 641);
-  ellipse1Width = this.isSmallScreen === 'smallest' ? 290 : (this.isSmallScreen === 'small' ? 464 : 580);
+  ellipse1Height = this.isSmallScreen === 'smallest' ? 290 : (this.isSmallScreen === 'small' ? 513 : 641);
+  ellipse1Width = this.isSmallScreen === 'smallest' ? 270 : (this.isSmallScreen === 'small' ? 464 : 580);
   ellipse2Height = this.isSmallScreen === 'smallest' ? 320 : 370;
   ellipse2Width = this.isSmallScreen === 'smallest' ? 290 : 353;
 
@@ -38,8 +38,8 @@ export class LandingpageComponent {
   onResize() {
     this.isSmallScreen = window.innerWidth <= 560 ? 'smallest' : (window.innerWidth <= 1050 ? 'small' : 'normal');
 
-    this.ellipse1Height = this.isSmallScreen === 'smallest' ? 310 : (this.isSmallScreen === 'small' ? 513 : 641);
-    this.ellipse1Width = this.isSmallScreen === 'smallest' ? 280 : (this.isSmallScreen === 'small' ? 464 : 580);
+    this.ellipse1Height = this.isSmallScreen === 'smallest' ? 290 : (this.isSmallScreen === 'small' ? 513 : 641);
+    this.ellipse1Width = this.isSmallScreen === 'smallest' ? 270 : (this.isSmallScreen === 'small' ? 464 : 580);
 
     this.ellipse2Height = this.isSmallScreen === 'smallest' ? 320 : 370;
     this.ellipse2Width = this.isSmallScreen === 'smallest' ? 290 : 353;
