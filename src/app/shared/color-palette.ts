@@ -8,9 +8,9 @@ type ColorPalette = {
 
 const colorPaletteOp1: ColorPalette = {
     primaryDarkColor: "#262E34",
-    primaryColor: "#89BCD9", //rgba(137, 188, 217, 1)
+    primaryColor: "#89BCD9",
     secondaryColor: "#F8F5EC",
-    ellipse1Color: "#6CA6C7", //rgba(108, 166, 199, 1)
+    ellipse1Color: "#6CA6C7",
 }
 
 const colorPaletteOp2: ColorPalette = {

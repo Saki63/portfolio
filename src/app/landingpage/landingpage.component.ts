@@ -18,6 +18,13 @@ export class LandingpageComponent {
   colorPalette = colorPalette;
   language = 'de';
   translation = translation;
+  hoverPic = false;
+  isMenuHiding = true;
+  isSmallScreen = window.innerWidth <= 560 ? 'smallest' : (window.innerWidth <= 1050 ? 'small' : 'normal');
+  ellipse1Height = this.isSmallScreen === 'smallest' ? 320 : (this.isSmallScreen === 'small' ? 513 : 641);
+  ellipse1Width = this.isSmallScreen === 'smallest' ? 290 : (this.isSmallScreen === 'small' ? 464 : 580);
+  ellipse2Height = this.isSmallScreen === 'smallest' ? 320 : 370;
+  ellipse2Width = this.isSmallScreen === 'smallest' ? 290 : 353;
 
   constructor(private langService: LanguageService) {}
 
@@ -26,18 +33,6 @@ export class LandingpageComponent {
       this.language = lang;
     });
   }
-  
-  
-  hoverPic = false;
-  isMenuHiding = true;
-
-  isSmallScreen = window.innerWidth <= 560 ? 'smallest' : (window.innerWidth <= 1050 ? 'small' : 'normal');
-
-  ellipse1Height = this.isSmallScreen === 'smallest' ? 320 : (this.isSmallScreen === 'small' ? 513 : 641);
-  ellipse1Width = this.isSmallScreen === 'smallest' ? 290 : (this.isSmallScreen === 'small' ? 464 : 580);
-  
-  ellipse2Height = this.isSmallScreen === 'smallest' ? 320 : 370;
-  ellipse2Width = this.isSmallScreen === 'smallest' ? 290 : 353;
 
   @HostListener('window:resize')
   onResize() {

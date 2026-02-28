@@ -14,17 +14,36 @@ import { RouterLink } from "@angular/router";
   styleUrls: ['./contact-me.component.scss', '../shared/scss/button.scss']
 })
 export class ContactMeComponent {
+
+  @Input() language = 'en';
+  
+  http = inject(HttpClient);
+
   colorPalette = colorPalette;
   hoverEmail = false;
   hoverPhone = false;
   checkboxState = 'default';
-
-  http = inject(HttpClient);
-
   translation = translation;
-  @Input() language = 'en';
-
   isSmallScreen = window.innerWidth <= 480;
+  checkboxChecked = false;
+  mailTest = true; //nur zum Testen!!!!
+
+  contactData = {
+    name: "",
+    email: "",
+    message: "",
+  }
+
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
 
   @HostListener('window:resize')
   onResize() {
@@ -41,39 +60,6 @@ export class ContactMeComponent {
       this.checkboxState = this.checkboxState === 'checked' ? 'error' : 'checked';
     }
   }
-
-  checkboxChecked = false;
-
-  // checkboxEventHandler(type: string) {
-  //   if (type === 'click') {
-  //     this.checkboxChecked = !this.checkboxChecked;
-  //   }
-  // }
-
-  // onSubmit(form: any) {
-  //   if (form.valid && this.checkboxChecked) {
-  //     console.log(form.value);
-  //   }
-  // }
-
-  contactData = {
-    name: "",
-    email: "",
-    message: "",
-  }
-
-  mailTest = true; //nur zum Testen!!!!
-
-  post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
-  };
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {

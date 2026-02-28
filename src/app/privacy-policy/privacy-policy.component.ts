@@ -17,12 +17,15 @@ import { RouterLink } from "@angular/router";
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
+
   colorPalette = colorPalette;
   language = 'de';
   translation = translation['page']['privacy-policy'];
   translationMenu = translation;
-
   isMenuHiding = true;
+  isSmallScreen = window.innerWidth <= 560 ? 'smallest' : (window.innerWidth <= 1050 ? 'small' : 'normal');
+  ellipse2Height = this.isSmallScreen === 'smallest' ? 320 : 370;
+  ellipse2Width = this.isSmallScreen === 'smallest' ? 290 : 353;
 
   constructor(private langService: LanguageService) {}
 
@@ -35,12 +38,6 @@ export class PrivacyPolicyComponent {
   toggleMenu(){
     this.isMenuHiding = this.isMenuHiding ? false : true;
   }
-
-  isSmallScreen = window.innerWidth <= 560 ? 'smallest' : (window.innerWidth <= 1050 ? 'small' : 'normal');
-
-
-  ellipse2Height = this.isSmallScreen === 'smallest' ? 320 : 370;
-  ellipse2Width = this.isSmallScreen === 'smallest' ? 290 : 353;
 
   @HostListener('window:resize')
   onResize() {

@@ -195,14 +195,12 @@ form{
 @media (max-width: 480px){
 
     .content_top{
-
         .content_left{
             text-align:left;
         }
     }  
 
     form{
-
         .resp_title{
             @include font($family: 'Josefin_Sans_Regular', $size: 20px, $color: $primary-color);
             display: inline;

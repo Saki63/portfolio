@@ -10,8 +10,8 @@ import { translation } from '../shared/translation';
   styleUrl: './section.component.scss'
 })
 export class SectionComponent {
-  translation = translation;
-
   @Input() key: 'why-me' | 'skills' | 'projects' | 'contact' = 'why-me';
   @Input() language = 'en';
+
+  translation = translation;
 }

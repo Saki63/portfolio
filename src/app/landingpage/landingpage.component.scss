@@ -135,7 +135,6 @@ section{
             }
         }
     }
-
 }
 
 @media (max-width: 850px){
@@ -164,7 +163,6 @@ section{
     .menu_resp_wrapper{
         display: block;
         position: relative;
-        // height: 370px;
         width: 353px;
         height: 526px;
         @include flex-box();
@@ -237,7 +235,6 @@ section{
         * {
             cursor: pointer;
         }
-        
     }
 }
 
@@ -269,7 +266,7 @@ section{
     }
 
     .menu_resp_wrapper{
-        height: 310px; //calc(404px - 94px);
+        height: 310px;
         width: 290px;
 
         .background_img{
@@ -281,147 +278,3 @@ section{
         }
     }
 }
-
-
-
-// @media (max-width: 1000px){
-
-//     .photo_content{
-//         .my_pic{
-//             height: 534px;
-//         }
-//     }
-
-//     .introduction_content{
-//         .title_wrapper{
-//             h1{
-//                 font-size: 60px;
-//             }
-
-//             span{
-//                 font-size: 26px;
-//             }
-//         }
-//     }
-// }
-
-// @media (max-width: 850px){
-//     :host{
-//         height: fit-content;
-//     }
-
-//     section{
-//         height: fit-content;
-//     }
-
-//     .header_resp{
-//         display: flex;
-//         padding: 24px;
-//         justify-content: space-between;
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100vw;
-//         max-width: 100%;
-//     }
-
-//     .photo_content{
-//         margin-top: 94px;
-//     }
-
-//     .content{
-//         flex-direction: column;
-//         height: fit-content;
-//     }
-
-//     .introduction_content {
-//         align-items: space-around;
-//         .logo_social_media_wrapper{
-//             display: none;
-//         }        
-
-//         .title_wrapper{
-//             margin-bottom: 0;
-//         }
-
-//         .button_wrapper{
-//             margin-bottom: 16px;
-//         }
-//     }
-
-//     .burger {
-//         background: none;
-//         border: none;
-//     }
-// }
-
-
-
-// @media (max-width: 480px){
-
-//     .photo_content{
-//         .my_pic{
-//             height: 330px;
-//         }
-//     }
-
-//     .content{
-//         padding: 0px;
-//     }
-// }
-
-// @media ((max-height: 700px) and (max-width: 480px)){
-//     section{
-//         justify-content: start;
-//         height: 100%;
-//         min-height: 100vh;
-//     }
-// }
-
-// @media ((max-height: 920px) and (min-width: 480px) and (max-width: 850px)){
-//     section{
-//         justify-content: start;
-//         height: 100%;
-//         min-height: 100vh;
-//     }
-// }
-
-// @media ((max-height: 740px) and (min-width: 850px) and (max-width: 1000px)){
-//     section{
-//         justify-content: start;
-//         height: 100%;
-//         min-height: 100vh;
-//     }
-// }
-
-// @media ((max-height: 710px) and (min-width: 850px)){
-//     :host {
-//         height: calc(860px - 104px); /* oder z. B. 80vh */
-//     }
-
-//     section{
-//         height: calc(860px - 104px);
-//     }
-
-//     .introduction_content {
-//         .title_wrapper{
-//             margin-bottom: 0px;
-//         }
-//     }
-// }
-
-// @media ((max-height: 790px) and (min-width: 850px)){
-//     .introduction_content {
-//         .title_wrapper{
-//             margin-bottom: 0px;
-//         }
-//     }
-// }
-
-// @media ((max-height: 890px) and (min-width: 1000px)){
-//     section{
-//         justify-content: start;
-//         height: 100%;
-//         min-height: 100vh;
-//     }
-// }

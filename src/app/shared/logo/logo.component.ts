@@ -12,8 +12,10 @@ import { translation } from '../translation'
   imports: [ CommonModule, SvgImageModule ]
 })  
 export class LogoComponent {
-  translation = translation;
+
   @Input() lan = 'de';
   @Input() color = "currentColor";
   @Input() animation = false;
+  
+  translation = translation;
 }

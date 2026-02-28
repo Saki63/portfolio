@@ -66,7 +66,6 @@
                     autocomplete="off"
                     [placeholder]="isSmallScreen ? (message.errors?.['required'] ? (language === 'en' ? 'Your email is required' : 'Die E-Mail-Adresse ist erforderlich' ) : (language === 'en' ? translation['input-mail-label'].en :translation['input-mail-label'].de)) : ''">
             </div>
-
         </div>
         <div class="input_wrapper">
             @if (message.invalid && message.touched) {
@@ -91,7 +90,6 @@
                 [placeholder]="isSmallScreen ? (message.errors?.['required'] ? (language === 'en' ? 'Your message is required' : 'Die Nachricht ist erforderlich' ) : (language === 'en' ? translation['input-message-label'].en :translation['input-message-label'].de)) : ''">
             </textarea>            
         </div>
-
         <div class="privacy-policy-wrapper">
             <div class="checkbox_wrapper">
                 <app-img-checkbox [size]="24" (click)="checkboxEventHandler('click')" (mouseover)="checkboxEventHandler('over')" (mouseleave)="checkboxEventHandler('leave')" [state]="checkboxState" [color]="colorPalette.primaryColor"/>
@@ -103,7 +101,6 @@
                     <p class="error_color checkbox_error">{{language === "en" ? translation['missing-privacy-policy'].en :translation['missing-privacy-policy'].de }}</p>
                 }                    
         </div>
-
         <div class="send_btn_wrapper">
             <button 
                 class="secondary"
@@ -113,7 +110,6 @@
                 {{language === "en" ? translation['send-btn'].en :translation['send-btn'].de }}
             </button>
         </div>
-        
     </form>
     <div class="resp_arrow_to_top_wrapper">
         <a class="resp_arrow_to_top button secondary button_transposed" href="#landingpage">

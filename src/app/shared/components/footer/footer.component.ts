@@ -13,13 +13,8 @@ import { LanguageService } from '../../language-service';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+
   isSmallScreen = window.innerWidth <= 480;
-
-  @HostListener('window:resize')
-  onResize() {
-    this.isSmallScreen = window.innerWidth <= 480;
-  }
-
   colorPalette = colorPalette;
   language = 'de';
   translation = translation;
@@ -30,5 +25,10 @@ export class FooterComponent {
     this.langService.language$.subscribe(lang => {
       this.language = lang;
     });
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.isSmallScreen = window.innerWidth <= 480;
   }
 }

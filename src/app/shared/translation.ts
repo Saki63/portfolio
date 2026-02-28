@@ -130,24 +130,6 @@ export const translation = {
         en: "Please accept the privacy policy.",
         de: "Bitte akzeptieren."
     },
-    // 'page': {
-    //     'privacy-policy': {
-    //         'title': {
-    //             en: "Privacy Policy",
-    //             de: "Datenschutzhinweise"
-    //         },
-    //         'responsible-party': {
-    //             'title': {
-    //                 en: "Responsible Party",
-    //                 de: "Verantwortliche",
-    //             },
-    //             'text': {
-    //                 en: "The responsible party within the meaning of data protection laws, in particular the EU General Data Protection Regulation (GDPR), is:",
-    //                 de: "Verantwortliche im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutz-Grundverordnung (DSGVO), ist:",
-    //             }
-    //         },
-    //     }
-    // },
     'page': {
         'privacy-policy': {
             'title': {
@@ -471,67 +453,4 @@ export const translation = {
             
         }
     }
-
-    // 'page': {
-    //     'privacy-policy': {
-    //         'title': {
-    //             en: "Privacy Policy",
-    //             de: "Datenschutzhinweise"
-    //         },
-    //         'responsible-party': {
-    //             'title': {
-    //                 en: "Responsible Party",
-    //                 de: "Verantwortliche",
-    //             },
-    //             'text': {
-    //                 en: "The responsible party within the meaning of data protection laws, in particular the EU General Data Protection Regulation (GDPR), is:",
-    //                 de: "Verantwortliche im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutz-Grundverordnung (DSGVO), ist:",
-    //             }
-    //         },
-    //         'rights': {
-    //             'title': {
-    //                 en: "Your rights as a data subject",
-    //                 de: "Ihre Betroffenenrechte",
-    //             },
-    //             'text1': {
-    //                 en: "Unter den angegebenen Kontaktdaten können Sie gemäß EU-Datenschutz-Grundverordnung (DSGVO) jederzeit folgende Rechte ausüben:",
-    //                 de: "You can exercise the following rights at any time in accordance with the EU General Data Protection Regulation (GDPR) using the contact details provided:",
-    //             },
-    //             '': {
-    //                 en: "",
-    //                 de: "",
-    //             },
-    //             '': {
-    //                 en: "",
-    //                 de: "",
-    //             },
-    //             '': {
-    //                 en: "",
-    //                 de: "",
-    //             }
-    //         },
-    //         'test2': {
-    //             'title': {
-    //                 en: "Responsible Party",
-    //                 de: "Verantwortliche",
-    //             },
-    //             '': {
-    //                 en: "",
-    //                 de: "",
-    //             },
-    //             '': {
-    //                 en: "",
-    //                 de: "",
-    //             },
-    //             '': {
-    //                 en: "",
-    //                 de: "",
-    //             },
-    //             '': {
-    //                 en: "",
-    //                 de: "",
-    //             }
-    //         }
-    //     }
-    // }
 }
