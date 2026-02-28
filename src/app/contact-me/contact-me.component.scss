@@ -1,4 +1,5 @@
 @import '../shared/scss/fonts.scss';
+@import '../shared/scss/a.scss';
 @import '../shared/scss/button.scss';
 @import '../../styles.scss';
 
@@ -7,6 +8,20 @@
     @include flex-box($fd: column, $ai: start, $g: 32px);
     max-width: $section-limit;
     padding: 0 16px;
+    position: relative;
+}
+
+.arrow_to_top{
+    position: absolute;
+    right: 0;
+    top: -100px;
+
+    transform: rotate(180deg);
+    margin-right: 16px;
+}
+
+.resp_arrow_to_top_wrapper{
+    display: none;
 }
 
 .content_top{
@@ -156,6 +171,24 @@ form{
     .content_top{
         flex-direction: column-reverse;
         gap: 24px;
+    }
+
+    .arrow_to_top{
+        display: none;
+    }
+
+    .resp_arrow_to_top_wrapper{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 50px 0px;
+    }
+
+    .resp_arrow_to_top{
+        right: 0;
+        top: -100px;
+
+        transform: rotate(180deg); 
     }
 }
 

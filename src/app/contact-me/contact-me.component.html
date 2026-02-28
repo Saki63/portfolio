@@ -1,4 +1,7 @@
 <div class="content">
+    <a class="arrow_to_top button secondary button_transposed" href="#landingpage">
+        <app-img-arrow [height]="50" [width]="22" [color]="colorPalette.primaryColor"/>
+    </a>
     <div class="content_top">
         <p class="content_left">
             {{language === "en" ? translation['contact-text'].en :translation['contact-text'].de }}
@@ -112,5 +115,10 @@
         </div>
         
     </form>
+    <div class="resp_arrow_to_top_wrapper">
+        <a class="resp_arrow_to_top button secondary button_transposed" href="#landingpage">
+            <app-img-arrow [height]="50" [width]="22" [color]="colorPalette.primaryColor"/>
+        </a>        
+    </div>
 
 </div>
