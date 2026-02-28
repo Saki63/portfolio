@@ -47,7 +47,6 @@ section{
 }
 
 .introduction_content{
-    // flex: 1;
     @include flex-box($fd: column, $g: 24px);
     margin-bottom: 10px;
 
@@ -348,11 +347,6 @@ section{
         margin-top: 60px;
     }
 
-    // .content{
-    //     flex-direction: column;
-    //     height: fit-content;
-    // }
-
     .introduction_content {
         align-items: space-around;
 
@@ -412,25 +406,3 @@ section{
     }
 }
 
-
-// @media (max-width: 400px) and (max-height: 750px){  
-//     section {
-//         height: 100vh;
-//     }
-//     .introduction_content{
-//         .title_wrapper{
-//             margin-top: 0px;
-//             h1{
-//                 font-size: 50px;
-//             }
-//         }
-//     }
-// }
-
-// @media ((max-width: 400px) and (max-height: 700px)){  
-//     .content{
-//         height: 100vh;
-//         max-height: 100%;
-//         flex: none;
-//     }
-// }
