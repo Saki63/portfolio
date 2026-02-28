@@ -120,7 +120,7 @@ export class MyProjectsComponent {
     picture: "../../assets/img/join.png",
     technologies: ['javascript', 'git', 'firebase'],
     serverUrl: "",
-    githubUrl: "",
+    githubUrl: "https://github.com/Saki63/join",
   },
   {
     title: {
