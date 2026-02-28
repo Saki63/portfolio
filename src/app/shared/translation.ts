@@ -312,6 +312,24 @@ export const translation = {
                                 en: "A contact form is available on our website which can be used for electronic contact. If a user makes use of this option, the data entered in the input form will be transmitted to us and stored.",
                                 de: "Auf unserer Website ist ein Kontaktformular vorhanden, welches für die elektronische Kontaktaufnahme genutzt werden kann. Nimmt ein Nutzer diese Möglichkeit wahr, so werden die in der Eingabemaske eingegeben Daten an uns übermittelt und gespeichert."
                             },
+                            'paragraph1-1': {
+                                en: "The following data is also stored when the message is sent:",
+                                de: "Zum Zeitpunkt der Absendung der Nachricht werden zudem folgende Daten gespeichert:",
+                            },
+                            'paragraph1-1-list': {
+                                '1': {
+                                    en: "IP address of the requesting device",
+                                    de: "IP-Adresse des anfragenden Geräts",
+                                },
+                                '2': {
+                                    en: "Date and time of the request",
+                                    de: "Datum und Uhrzeit der Anfrage",
+                                },
+                                '3': {
+                                    en: "URL from which the request originated",
+                                    de: "URL, von der die Anfrage erfolgte",
+                                },
+                            },
                             'paragraph2': {
                                 en: "It is also possible to contact us via the provided email addresses. In this case, the personal data transmitted with the email will be stored. This includes the date and time the email was sent, email address, IP addresses, and information about the servers involved in the email communication.",
                                 de: "Eine Kontaktaufnahme ist über die bereitgestellten E-Mail-Adressen möglich. In diesem Fall werden die mit der E-Mail übermittelten personenbezogenen Daten des Nutzers gespeichert. Hierzu zählen Datum und Uhrzeit des E-Mailversands, E-Mailadresse, IP-Adressen sowie Informationen zu den an der E-Mail-Kommunikation beteiligten Servern."
