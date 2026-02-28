@@ -195,7 +195,7 @@ section{
         .background_img{
             position: absolute;
             top: 0;
-            left:0;
+            left: 0;
             margin-top: 60px;
         }
     }
@@ -260,6 +260,9 @@ section{
             height: 270px;
         }
     }
+    .content{
+        padding: 4px;
+    }
 
     .content_wrapper{
         height: 404px;
@@ -274,7 +277,7 @@ section{
             top: 0;
             left:0;
             margin-top: 0px;
-            margin-left: 4px;
+            margin-left: 0px;
         }
     }
 }
