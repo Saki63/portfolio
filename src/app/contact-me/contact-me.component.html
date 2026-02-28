@@ -102,6 +102,14 @@
                 }                    
         </div>
         <div class="send_btn_wrapper">
+            <div class="spacer"></div>
+            @if (isSend){
+                <span class="success_message">{{language === "en" ? "The message was sent successfully!" : "Die Nachricht wurde erfolgreich versendet!" }}</span>
+            }
+            @else if (isError){
+                <span class="error_message">{{language === "en" ? "The message could not be sent!" : "Die Nachricht konnte nicht versendet werden!" }}</span>
+            }
+
             <button 
                 class="secondary"
                 type="submit"
@@ -110,11 +118,12 @@
                 {{language === "en" ? translation['send-btn'].en :translation['send-btn'].de }}
             </button>
         </div>
+        
     </form>
     <div class="resp_arrow_to_top_wrapper">
         <a class="resp_arrow_to_top button secondary button_transposed" href="#landingpage">
             <app-img-arrow [height]="50" [width]="22" [color]="colorPalette.primaryColor"/>
         </a>        
     </div>
-
 </div>
+

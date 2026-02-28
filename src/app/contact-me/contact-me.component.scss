@@ -160,8 +160,16 @@ form{
     }
 
     .send_btn_wrapper{
-        @include flex-box($jc: end);
+        @include flex-box($jc: space-between, $g: 16px);
         width: 100%;
+
+        .spacer{
+            width: 94px;
+        }
+
+        .success_message{
+            @include font($family: 'Josefin_Sans_Regular', $size: 14px, $color: $done);
+        }
     }
 
 }
@@ -230,6 +238,12 @@ form{
 
         .checkbox_wrapper{
             align-items: start;
+        }
+
+        .send_btn_wrapper{
+            .spacer{
+                display: none;
+            }
         }
     }
 }
