@@ -126,6 +126,10 @@ export const translation = {
         en: "Legal notice",
         de: "Rechtlicher Hinweis"
     },
+    'missing-privacy-policy': {
+        en: "Please accept the privacy policy.",
+        de: "Bitte akzeptieren."
+    },
     // 'page': {
     //     'privacy-policy': {
     //         'title': {

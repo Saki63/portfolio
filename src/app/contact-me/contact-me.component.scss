@@ -115,19 +115,33 @@ form{
         width: 100%;
     } 
 
+    .privacy-policy-wrapper{
+        width: 100%;
+        padding-bottom: 20px;
+        position: relative;
+    }
+
     .checkbox_wrapper{
         @include flex-box($jc: start, $g: 8px);
-        width: 100%;
+        
         @include font($family: 'Josefin_Sans_Regular', $size: 14px, $color: $secondary-color);
 
         a{
             color: $primary-color;
             cursor: pointer;
+            text-decoration: none;
 
             &:hover{
                 color: $secondary-color;    
             }
         }
+    }
+
+    .checkbox_error{
+        font-size: 14px;
+        margin-left: 32px;
+        position: absolute;
+        bottom: 0;
     }
 
     .send_btn_wrapper{

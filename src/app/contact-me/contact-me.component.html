@@ -4,11 +4,11 @@
             {{language === "en" ? translation['contact-text'].en :translation['contact-text'].de }}
         </p>
         <div class="content_right">
-            <a href="#" (mouseover)="hoverEmail = true" (mouseleave)="hoverEmail = false">
+            <a href="mailto:an-san@gmx.de" (mouseover)="hoverEmail = true" (mouseleave)="hoverEmail = false">
                 <app-icon-email1 [hoverInput]="hoverEmail" [size]="22"></app-icon-email1>
                 <span>{{language === "en" ? translation['e-mail-label'].en :translation['e-mail-label'].de }}: an-san&#64;gmx.de</span>
             </a>
-            <a href="#" (mouseover)="hoverPhone = true" (mouseleave)="hoverPhone = false">
+            <a href="tel:01779104981" (mouseover)="hoverPhone = true" (mouseleave)="hoverPhone = false">
                 <app-icon-phone [hoverInput]="hoverPhone" class="cursor_hover" [size]="22"></app-icon-phone>
                 <span>{{language === "en" ? translation['tel-label'].en :translation['tel-label'].de }}: 0177 9104981</span>
             </a>
@@ -37,7 +37,8 @@
                     required
                     minlength="3"
                     #name="ngModel"
-                    [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-name-label'].en : translation['input-name-label'].de ) : ''">                
+                    autocomplete="off"
+                    [placeholder]="isSmallScreen ? (message.errors?.['required'] ? (language === 'en' ? 'Your name is required' : 'Der Name ist erforderlich' ) : (language === 'en' ? translation['input-name-label'].en :translation['input-name-label'].de)) : ''">
             </div>
             <div class="input_wrapper">
                 @if (email.invalid && email.touched) {
@@ -47,7 +48,6 @@
                     @else {
                         <label for="email" class="error_color">{{language === "en" ? "Your e-mail is invalid" : "Die E-Mail ist ungültig" }}</label>
                     }
-
                 }
                 @else{
                     <label for="email">{{language === "en" ? translation['input-mail-label'].en :translation['input-mail-label'].de }}</label>
@@ -60,7 +60,8 @@
                     pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                     required
                     #email="ngModel"
-                    [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-mail-label'].en : translation['input-mail-label'].de ) : ''">             
+                    autocomplete="off"
+                    [placeholder]="isSmallScreen ? (message.errors?.['required'] ? (language === 'en' ? 'Your email is required' : 'Die E-Mail-Adresse ist erforderlich' ) : (language === 'en' ? translation['input-mail-label'].en :translation['input-mail-label'].de)) : ''">
             </div>
 
         </div>
@@ -83,13 +84,23 @@
                 required
                 minlength="10"
                 #message="ngModel"
-                [placeholder]="isSmallScreen ? (language === 'en' ? translation['input-message-label'].en :translation['input-message-label'].de) : ''"></textarea>            
+                autocomplete="off"
+                [placeholder]="isSmallScreen ? (message.errors?.['required'] ? (language === 'en' ? 'Your message is required' : 'Die Nachricht ist erforderlich' ) : (language === 'en' ? translation['input-message-label'].en :translation['input-message-label'].de)) : ''">
+            </textarea>            
         </div>
 
-        <div class="checkbox_wrapper">
-            <app-img-checkbox [size]="24" (click)="checkboxEventHandler('click')" (mouseover)="checkboxEventHandler('over')" (mouseleave)="checkboxEventHandler('leave')" [state]="checkboxState" [color]="colorPalette.primaryColor"/>
-            <span>{{language === "en" ? translation['privacy-text1'].en :translation['privacy-text1'].de }} <a routerLink="privacy-policy">{{language === "en" ? translation['privacy-policy'].en :translation['privacy-policy'].de }}</a> {{language === "en" ? translation['privacy-text3'].en :translation['privacy-text3'].de }}</span>
+        <div class="privacy-policy-wrapper">
+            <div class="checkbox_wrapper">
+                <app-img-checkbox [size]="24" (click)="checkboxEventHandler('click')" (mouseover)="checkboxEventHandler('over')" (mouseleave)="checkboxEventHandler('leave')" [state]="checkboxState" [color]="colorPalette.primaryColor"/>
+                <span>{{language === "en" ? translation['privacy-text1'].en :translation['privacy-text1'].de }} <a routerLink="privacy-policy">{{language === "en" ? translation['privacy-policy'].en :translation['privacy-policy'].de }}</a> {{language === "en" ? translation['privacy-text3'].en :translation['privacy-text3'].de }}</span>
+
+                
+            </div>
+                @if (checkboxState === "error"){
+                    <p class="error_color checkbox_error">{{language === "en" ? translation['missing-privacy-policy'].en :translation['missing-privacy-policy'].de }}</p>
+                }                    
         </div>
+
         <div class="send_btn_wrapper">
             <button 
                 class="secondary"

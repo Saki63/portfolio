@@ -38,7 +38,7 @@ export class ContactMeComponent {
       this.checkboxState = 'default';
     } else if (event === 'click'){
       this.checkboxChecked = !this.checkboxChecked;
-      this.checkboxState = this.checkboxState === 'checked' ? 'default' : 'checked';
+      this.checkboxState = this.checkboxState === 'checked' ? 'error' : 'checked';
     }
   }
 
