@@ -71,7 +71,7 @@ export class MyProjectsComponent {
         },
       }
     ],
-    picture: "../../assets/img/el_pollo_loco_2.png",
+    picture: "assets/img/el_pollo_loco_2.png",
     technologies: ['html', 'javascript', 'css'],
     serverUrl: "https://anne-sanewski.developerakademie.net/el_pollo_loco/index.html",
     githubUrl: "https://github.com/Saki63/el_pollo_loco",
@@ -117,7 +117,7 @@ export class MyProjectsComponent {
         },
       }
     ],
-    picture: "../../assets/img/join.png",
+    picture: "assets/img/join.png",
     technologies: ['javascript', 'git', 'firebase'],
     serverUrl: "",
     githubUrl: "https://github.com/Saki63/join",
