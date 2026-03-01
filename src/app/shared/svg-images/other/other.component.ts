@@ -13,7 +13,9 @@ export class ImgArrow extends BaseImageComponent {}
   templateUrl: './svgs/burger-menu-img.component.html',
   styleUrl: './other.component.scss'
 })
-export class ImgBurgerMenu extends BaseImageComponent {}
+export class ImgBurgerMenu extends BaseImageComponent {
+  @Input() isOpen = false;
+}
 
 @Component({
   selector: 'app-img-logo',

@@ -43,4 +43,7 @@ export class ResponsiveHeaderComponent {
     this.ellipse2Height = this.isSmallScreen === 'smallest' ? 320 : 370;
     this.ellipse2Width = this.isSmallScreen === 'smallest' ? 290 : 353;
   }
+
+  isOpen = false;
+
 }

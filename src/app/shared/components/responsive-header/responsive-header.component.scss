@@ -45,6 +45,8 @@
         max-width: 100%;
         margin-top: 50px;
 
+        z-index: 1;
+
         @include flex-box();
 
         .menu_resp_center{

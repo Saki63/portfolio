@@ -1,6 +1,9 @@
 <app-navigation-bar></app-navigation-bar>
 <app-responsive-header></app-responsive-header>
 <section>
+    <a class="arrow" routerLink="" fragment="landingpage">
+        <app-img-arrow class="back_to_link" [color]="colorPalette.primaryColor"></app-img-arrow>  
+    </a>
     <div class="limit">
         <h3>{{language === 'en' ? legalNoticeTranslation['title'].en : legalNoticeTranslation['title'].de}}</h3>
         <h4>{{language === 'en' ? legalNoticeTranslation['imprint']['title'].en : legalNoticeTranslation['imprint']['title'].de}}</h4>
@@ -61,7 +64,7 @@
         
         <p>{{language === 'en' ? legalNoticeTranslation['imprint']['privacy-policy'].en : legalNoticeTranslation['imprint']['privacy-policy'].de}}</p>
         <p>
-            {{language === 'en' ? legalNoticeTranslation['imprint']['privacy-policy-link-text'].en : legalNoticeTranslation['imprint']['privacy-policy-link-text'].de}} <a class="a-text" routerLink="privacy-policy">{{language === 'en' ? legalNoticeTranslation['imprint']['privacy-policy-link'].en : legalNoticeTranslation['imprint']['privacy-policy-link'].de}}</a>.
+            {{language === 'en' ? legalNoticeTranslation['imprint']['privacy-policy-link-text'].en : legalNoticeTranslation['imprint']['privacy-policy-link-text'].de}} <a class="a-text" routerLink="/privacy-policy">{{language === 'en' ? legalNoticeTranslation['imprint']['privacy-policy-link'].en : legalNoticeTranslation['imprint']['privacy-policy-link'].de}}</a>.
         </p>    
 
 

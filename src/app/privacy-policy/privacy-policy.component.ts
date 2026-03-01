@@ -5,11 +5,12 @@ import { translation } from '../shared/translation';
 import { colorPalette } from '../shared/color-palette';
 import { SvgImageModule } from '../shared/svg-images/svg-images';
 import { ResponsiveHeaderComponent } from "../shared/components/responsive-header/responsive-header.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-privacy-policy',
   standalone: true,
-  imports: [NavigationBarComponent, SvgImageModule, ResponsiveHeaderComponent],
+  imports: [NavigationBarComponent, SvgImageModule, ResponsiveHeaderComponent, RouterLink],
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })

@@ -12,6 +12,11 @@ section{
     background-color: $primary-dark-color;
     @include flex-box($ai: 'start');
     padding: 64px 16px;
+    position: relative;
+}
+
+.arrow {
+    display: none;
 }
 
 .limit{
@@ -50,9 +55,27 @@ p{
 
 .paragraph{
     margin-bottom: 32px;
+
 }
 
 @media (max-width: 850px){
+
+    .arrow {
+        display: block;
+        top: 120px;
+        left: 20px;
+        position: absolute;
+        cursor: pointer;
+
+        *{
+            cursor: pointer;
+        }
+    }
+
+    .back_to_link{
+        transform: rotate(90deg);
+    }
+
     section{
         padding: 80px 16px;
         padding-top: 160px;
@@ -82,4 +105,9 @@ p{
     p{
         @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
     }
+
+    .paragraph{
+        margin-bottom: 32px;
+    }
 }
+

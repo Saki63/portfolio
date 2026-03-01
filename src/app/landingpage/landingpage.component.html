@@ -1,7 +1,7 @@
 <header class="header_resp">
     <app-logo [lan]="language" [color]="colorPalette.primaryColor"></app-logo>
     <button class="burger" aria-label="Menu" style="padding: 8px" (click)="toggleMenu()">
-        <app-img-burger-menu [size]="32"/>
+        <app-img-burger-menu [isOpen]="!isMenuHiding" [size]="32"/>
     </button>
 </header>
 <section>
