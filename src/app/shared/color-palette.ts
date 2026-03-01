@@ -27,4 +27,4 @@ const colorPaletteOp3: ColorPalette = {
     ellipse1Color: "rgb(234, 184, 83)",
 }
 
-export const colorPalette: ColorPalette = colorPaletteOp1;
+export const colorPalette: ColorPalette = colorPaletteOp2;
