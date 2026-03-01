@@ -270,8 +270,8 @@ export const translation = {
                             de: "Speicherdauer"
                         },
                         'paragraph1': {
-                            en: "Data is stored in server log files in a form that permits identification of the data subject for a maximum of [please provide information]; unless a security-relevant event occurs (e.g., a DDoS attack).",
-                            de: "Daten werden in Server-Log-Dateien in einer Form, die die Identifizierung der betroffenen Personen ermöglicht, maximal für [Bitte Informationen ergänzen] gespeichert; es sei denn, dass ein sicherheitsrelevantes Ereignis auftritt (z.B. ein DDoS-Angriff)."
+                            en: "Data is stored in server log files in a form that permits identification of the data subject for a maximum of 6 months; unless a security-relevant event occurs (e.g., a DDoS attack).",
+                            de: "Daten werden in Server-Log-Dateien in einer Form, die die Identifizierung der betroffenen Personen ermöglicht, maximal für 6 Monate gespeichert; es sei denn, dass ein sicherheitsrelevantes Ereignis auftritt (z.B. ein DDoS-Angriff)."
                         },
                         'paragraph2': {
                             en: "In the event of such an occurrence, server log files will be stored until the security-relevant incident has been eliminated and fully clarified.",
@@ -377,8 +377,8 @@ export const translation = {
                                 de: "Speicherdauer"
                             },
                             'paragraph1': {
-                                en: "Data will be deleted no later than [please provide information] after the contact request has been processed.",
-                                de: "Daten werden spätestens [Bitte Informationen ergänzen] nach Bearbeitung der Kontaktaufnahme gelöscht."
+                                en: "Data will be deleted no later than 6 month after the contact request has been processed.",
+                                de: "Daten werden spätestens 6 Monate nach Bearbeitung der Kontaktaufnahme gelöscht."
                             },
                             'paragraph2': {
                                 en: "If a contractual relationship is established, we are subject to statutory retention periods. These generally amount to 6 or 10 years due to proper accounting and tax law requirements.",
