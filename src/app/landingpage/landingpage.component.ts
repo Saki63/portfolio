@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { LogoComponent } from '../shared/logo/logo.component';
 import { SvgImageModule } from '../shared/svg-images/svg-images';
 import { colorPalette } from '../shared/color-palette';
@@ -7,12 +7,13 @@ import { LanguageSelectionComponent } from "../shared/components/language-select
 import { NgClass } from "@angular/common";
 import { LanguageService } from '../shared/language-service';
 
+
 @Component({
   selector: 'app-landingpage',
   standalone: true,
   imports: [LogoComponent, SvgImageModule, LanguageSelectionComponent, NgClass],
   templateUrl: './landingpage.component.html',
-  styleUrls: ['../../styles.scss', './landingpage.component.scss']
+  styleUrls: ['./landingpage.component.scss']
 })
 export class LandingpageComponent {
   colorPalette = colorPalette;

@@ -26,7 +26,7 @@ export class ContactMeComponent {
   translation = translation;
   isSmallScreen = window.innerWidth <= 480;
   checkboxChecked = false;
-  mailTest = true; //nur zum Testen!!!!
+  mailTest = false; //nur zum Testen!!!!
   isSend = false;
   isError = false;
 
