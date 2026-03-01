@@ -26,7 +26,6 @@ export class ContactMeComponent {
   translation = translation;
   isSmallScreen = window.innerWidth <= 480;
   checkboxChecked = false;
-  mailTest = false; //nur zum Testen!!!!
   isSend = false;
   isError = false;
 
@@ -64,7 +63,7 @@ export class ContactMeComponent {
   }
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.checkboxState = 'default';
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -80,12 +79,6 @@ export class ContactMeComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { //nur zum Testen!!!
-      console.log(this.contactData);
-      this.checkboxState = 'default';
-      this.isError = false;
-      this.isSend = true;
-      ngForm.resetForm();
     }
   }
 }
