@@ -23,7 +23,7 @@ section{
     max-width: $section-limit;    
 }
 
-h3{ //origin
+h3{ 
     @include font($family: 'Anta', $size: 54px, $color: $primary-color);
     margin-bottom: 64px;
     font-weight: 400;
@@ -34,15 +34,15 @@ h4{
     margin-bottom: 32px;
 }
 
-h5{ //origin
+h5{ 
     @include font($family: 'Josefin_Sans_Bold', $size: 24px, $color: $primary-color);
 }
 
-h6{ //origin
+h6{
     @include font($family: 'Josefin_Sans_Bold', $size: 19px, $color: $primary-color);
 }
 
-.li_text, //origin
+.li_text,
 p{
     @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
 }
@@ -81,7 +81,7 @@ p{
         padding-top: 160px;
     }
 
-    h3{ //origin
+    h3{
         @include font($family: 'Anta', $size: 32px, $color: $primary-color);
         margin-bottom: 32px;
         overflow-wrap: break-word;
@@ -93,15 +93,15 @@ p{
         margin-bottom: 18px;
     }
 
-    h5{ //origin
+    h5{
         @include font($family: 'Josefin_Sans_Bold', $size: 23px, $color: $primary-color);
     }
 
-    h6{ //origin
+    h6{
         @include font($family: 'Josefin_Sans_Bold', $size: 19px, $color: $primary-color);
     }
 
-    .li_text, //origin
+    .li_text,
     p{
         @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
     }
