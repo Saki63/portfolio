@@ -1,47 +1,5 @@
 <app-navigation-bar></app-navigation-bar>
-<header class="header_resp">
-    <div class="headline_resp">
-        <app-logo [lan]="language" [color]="colorPalette.primaryColor"></app-logo>
-        <button class="burger" aria-label="Menu" style="padding: 8px" (click)="toggleMenu()">
-            <app-img-burger-menu [size]="32"/>
-        </button>        
-    </div>
-    <a routerLink="">
-        <app-img-arrow class="back_to_link" [color]="colorPalette.primaryColor"></app-img-arrow>  
-    </a>
-</header>
-<div [ngClass]="isMenuHiding ? 'menu_hide' : ''" class="menu_resp_wrapper">
-    <div class="menu_resp_center">
-        <ul class="menu_content">
-            <li>
-                <a routerLink="/home" fragment="why-me-section-id" (click)="toggleMenu()">
-                    {{language === 'en' ? translationMenu['sections']['why-me'].en : translationMenu['sections']['why-me'].de}}                 
-                </a>
-    
-            </li>
-            <li>
-                <a routerLink="/home" fragment="my-skills-section-id" (click)="toggleMenu()">
-                    {{language === 'en' ? translationMenu['sections']['skills'].en : translationMenu['sections']['skills'].de}}
-                </a>
-    
-            </li>
-            <li>
-                <a routerLink="/home" fragment="my-projects-section-id" (click)="toggleMenu()">
-                    {{language === 'en' ? translationMenu['sections']['projects'].en : translationMenu['sections']['projects'].de}}
-                </a>
-            </li>
-            <li>
-                <a routerLink="/home" fragment="contact-me-section-id" (click)="toggleMenu()">
-                    {{language === 'en' ? translationMenu['sections']['contact'].en : translationMenu['sections']['contact'].de}}
-                </a>
-            </li>
-            <li>
-                <app-language-selection></app-language-selection>
-            </li>
-        </ul>
-        <app-img-ellipse8 class="background_img" [height]="ellipse2Height" [width]="ellipse2Width" [color]="colorPalette.primaryColor"></app-img-ellipse8>            
-    </div>
-</div>
+<app-responsive-header></app-responsive-header>
 <section>
     <div class="limit">
         <h3>{{language === 'en' ? legalNoticeTranslation['title'].en : legalNoticeTranslation['title'].de}}</h3>

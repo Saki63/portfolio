@@ -1,0 +1,115 @@
+@import '../../../shared/scss/fonts.scss';
+@import '../../../shared/scss/a.scss';
+@import '../../../../styles.scss';
+
+.header_resp{
+    display: none;
+}
+
+.menu_resp_wrapper{
+    display: none;
+}
+
+@media (max-width: 850px){
+
+    .header_resp{
+        @include flex-box($fd: column, $g: 16px, $ai: start);
+        padding: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        max-width: 100%;
+        z-index: 1000;
+
+        .headline_resp{
+            @include flex-box($jc: space-between);
+            width: 100%;
+        }
+
+        a *{
+            cursor: pointer;
+        }
+
+        .back_to_link{
+            transform: rotate(90deg);
+        }
+    }
+
+    .menu_resp_wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        max-width: 100%;
+        margin-top: 50px;
+
+        @include flex-box();
+
+        .menu_resp_center{
+            position: relative;
+
+            .menu_content{
+                z-index: 1001;
+                list-style-type: none;
+                padding: 8px;
+                position: relative;
+                margin-top: 118px;   
+
+                @include flex-box($fd: column, $g: 24px);
+
+                a {
+                    
+                    text-decoration: none;
+                    @include font($family: 'Josefin_Sans_Regular', $size: 22px, $color: $primary-dark-color);
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+
+                    * {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .background_img{
+                position: absolute;
+                top: 0;
+                left: calc(50% - 174px);
+                margin-top: 60px;
+            }            
+        }
+    }
+
+
+    .menu_hide{
+        display: none !important;
+    }
+
+    .burger {
+        background: none;
+        border: none;
+
+        * {
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 560px){
+
+    .menu_resp_wrapper{
+        .menu_resp_center{
+            .menu_content{
+                margin-top: 98px;   
+            }
+
+            .background_img{
+                left: calc(50% - 144px);
+            }            
+        }
+    }
+}

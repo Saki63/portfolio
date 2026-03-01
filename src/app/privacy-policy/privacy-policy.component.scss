@@ -52,18 +52,10 @@ p{
     margin-bottom: 32px;
 }
 
-.header_resp{
-    display: none;
-}
-
-.menu_resp_wrapper{
-    display: none;
-}
-
 @media (max-width: 850px){
     section{
         padding: 80px 16px;
-        padding-top: 140px;
+        padding-top: 160px;
     }
 
     h3{ //origin
@@ -89,95 +81,5 @@ p{
     .li_text, //origin
     p{
         @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
-    }
-
-    .paragraph{
-        margin-bottom: 32px;
-    }
-
-
-    .header_resp{
-        display: flex;
-        padding: 24px;
-        justify-content: space-between;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        max-width: 100%;
-        z-index: 1000;
-    }
-
-    .menu_resp_wrapper{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        max-width: 100%;
-        margin-top: 50px;
-        @include flex-box();
-
-        .menu_resp_center{
-            position: relative;
-
-            .menu_content{
-                z-index: 1001;
-                list-style-type: none;
-                padding: 8px;
-                position: relative;
-                margin-top: 118px;   
-                @include flex-box($fd: column, $g: 24px);
-
-                a {
-                    text-decoration: none;
-                    @include font($family: 'Josefin_Sans_Regular', $size: 22px, $color: $primary-dark-color);
-                    cursor: pointer;
-
-                    &:hover {
-                        color: $secondary-color;
-                    }
-
-                    * {
-                        cursor: pointer;
-                    }
-                }
-            }
-
-            .background_img{
-                position: absolute;
-                top: 0;
-                left: calc(50% - 174px);
-                margin-top: 60px;
-            }            
-        }
-    }
-
-
-    .menu_hide{
-        display: none !important;
-    }
-
-    .burger {
-        background: none;
-        border: none;
-
-        * {
-            cursor: pointer;
-        }
-    }
-}
-
-
-@media (max-width: 560px){
-    .menu_resp_wrapper{
-        .menu_resp_center{
-            .menu_content{
-                margin-top: 98px;   
-            }
-
-            .background_img{
-                left: calc(50% - 144px);
-            }            
-        }
     }
 }

@@ -4,11 +4,12 @@ import { LogoComponent } from '../../logo/logo.component';
 import { colorPalette } from '../../color-palette';
 import { translation } from '../../translation';
 import { LanguageService } from '../../language-service';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [SvgImageModule, LogoComponent],
+  imports: [SvgImageModule, LogoComponent, RouterLink],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
