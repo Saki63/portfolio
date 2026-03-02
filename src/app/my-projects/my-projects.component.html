@@ -84,8 +84,8 @@
                 }
                 
                 <div class="button_wrapper">
-                    <a class="button primary">{{language === "en" ? translation['project-link'].en : translation['project-link'].de }}</a>
-                    <a class="button secondary">GitHub</a>
+                    <a href={{projects[activeTabIdx].serverUrl}} class="button primary" target="_blank">{{language === "en" ? translation['project-link'].en : translation['project-link'].de }}</a>
+                    <a href={{projects[activeTabIdx].githubUrl}} class="button secondary" target="_blank">GitHub</a>
                 </div>
             </div>            
         </div>
@@ -122,8 +122,8 @@
                 }
             </ul>   
             <div class="button_wrapper">
-                <a class="button primary">{{language === "en" ? translation['project-link'].en :translation['project-link'].de }}</a>
-                <a class="button secondary">GitHub</a>
+                <a href={{projects[activeTabIdx].serverUrl}} class="button primary" target="_blank">{{language === "en" ? translation['project-link'].en :translation['project-link'].de }}</a>
+                <a href={{projects[activeTabIdx].githubUrl}} class="button secondary" target="_blank">GitHub</a>
             </div>
         </div>
     </div>
