@@ -121,33 +121,6 @@ export class MyProjectsComponent {
     technologies: ['javascript', 'git', 'firebase'],
     serverUrl: "http://www.join.anne-sanewski.de/",
     githubUrl: "https://github.com/Saki63/join",
-  },
-  {
-    title: {
-      en: "Ongoing Project",
-      de: "Derzeitige Projekte",
-    },
-    duration: {
-      en: "?",
-      de: "?",
-    },
-    description: [
-      {
-        title: {
-          en: "About the project",
-          de: "Worum geht es",
-        },
-        text: {
-          en: "I am currently working on my portfolio, which I am implementing with Angular. The goal is to clearly present my skills and knowledge and give potential employers or clients a clear insight into my work.",
-          de: "Derzeit arbeite ich an meinem Portfolio, das ich mit Angular umsetze. Ziel ist es, meine Fähigkeiten und Kenntnisse anschaulich zu präsentieren und potenziellen Arbeitgebern oder Kunden einen klaren Einblick in meine Arbeit zu geben.",
-        },
-      }
-
-    ],
-    picture: "",
-    technologies: ['angular', 'typescript', 'firebase'],
-    serverUrl: "",
-    githubUrl: "",
   }];
 
   colorPalette = colorPalette;
