@@ -2,6 +2,9 @@ div {
     display: flex;
 }
 
-div * {
+.hover_icon {
     cursor: pointer;
+    * {
+        cursor: pointer;
+    }
 }

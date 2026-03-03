@@ -67,6 +67,18 @@ footer {
                     }
                 }
 
+                .li_link_deactive{
+                    opacity: 60%;
+
+                    .default_icon{
+                        display: block !important;
+                    }
+
+                    .resp_icon{
+                        display: none !important;
+                    }
+                }
+
                 .placeholder_icon{
                     opacity: 60%;
                     height: 30px;
@@ -128,6 +140,18 @@ footer {
                         &:hover{
                             opacity: 1;
                         }
+
+                        .default_icon{
+                            display: none !important;
+                        }
+
+                        .resp_icon{
+                            display: block !important;
+                        }
+                    }
+
+                    .li_link_deactive{
+                        opacity: 1;
 
                         .default_icon{
                             display: none !important;
