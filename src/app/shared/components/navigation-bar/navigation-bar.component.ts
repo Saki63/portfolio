@@ -1,5 +1,5 @@
 import { colorPalette } from '../../../shared/color-palette';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { LogoComponent } from '../../logo/logo.component';
 import { SvgImageModule } from '../../svg-images/svg-images';
 import {translation} from '../../translation';
