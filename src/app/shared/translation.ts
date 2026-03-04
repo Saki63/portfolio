@@ -87,7 +87,7 @@ export const translation = {
         de: "E-Mail"
     },
     'tel-label': {
-        en: "Tel",
+        en: "Tel.",
         de: "Tel."
     },
     'contact-resp-title': {
