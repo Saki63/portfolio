@@ -5,11 +5,12 @@ import { SvgImageModule } from '../../svg-images/svg-images';
 import {translation} from '../../translation';
 import { LanguageSelectionComponent } from "../language-selection/language-selection.component";
 import { LanguageService } from '../../language-service';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-navigation-bar',
   standalone: true,
-  imports: [LogoComponent, SvgImageModule, LanguageSelectionComponent],
+  imports: [LogoComponent, SvgImageModule, LanguageSelectionComponent, RouterLink],
   templateUrl: './navigation-bar.component.html',
   styleUrl: './navigation-bar.component.scss'
 })

@@ -3,27 +3,27 @@
         <app-logo [lan]="language" [color]="colorPalette.primaryDarkColor"></app-logo>
         <ul>
             <li>
-                <a href="#why-me-section-id">
+                <a routerLink="" fragment="why-me-section-id">
                     <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
                     <span>{{language === 'en' ? translation['sections']['why-me'].en : translation['sections']['why-me'].de}}</span>                    
                 </a>
 
             </li>
             <li>
-                <a href="#my-skills-section-id">
+                <a routerLink="" fragment="my-skills-section-id">
                     <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
                     <span>{{language === 'en' ? translation['sections']['skills'].en : translation['sections']['skills'].de}}</span>
                 </a>
 
             </li>
             <li>
-                <a href="#my-projects-section-id">
+                <a routerLink="" fragment="my-projects-section-id">
                     <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
                     <span>{{language === 'en' ? translation['sections']['projects'].en : translation['sections']['projects'].de}}</span>
                 </a>
             </li>
             <li>
-                <a href="#contact-me-section-id">
+                <a routerLink="" fragment="contact-me-section-id">
                     <app-img-ellipse3 class="ellipse" [color]="'#262E34'" [width]="85" [height]="56"/>
                     <span>{{language === 'en' ? translation['sections']['contact'].en : translation['sections']['contact'].de}}</span>
                 </a>
