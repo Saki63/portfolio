@@ -4,7 +4,7 @@
         <h3>{{language === "en" ? translation['reference-resp-title'].en :translation['reference-resp-title'].de }}</h3>
         <p>{{language === "en" ? translation['reference-resp-subtitle'].en :translation['reference-resp-subtitle'].de }}</p>
     </div>
-    <div class="scroll_wrapper">
+    <div data-aos="fade-left" class="scroll_wrapper">
         <div class="bubble_wrapper" (scroll)="onScroll($event)">
             <app-bubble
                 [name]="'Eugen Liske'"

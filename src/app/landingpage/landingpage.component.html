@@ -49,30 +49,48 @@
         <div class="introduction_content">
             <div class="logo_social_media_wrapper">
                 <div class="placeholder"></div>
-                <app-logo [lan]="language" [color]="colorPalette.primaryColor" [animation]="true"></app-logo>
+                <app-logo 
+                    [lan]="language" 
+                    [color]="colorPalette.primaryColor" 
+                    [animation]="true"
+                    data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000"
+                ></app-logo>
                 <ul class="social_media_right">
-                    <li>
+                    <li data-aos="fade-left">
                         <a class="clean" href="https://github.com/Saki63" target="_blank">
                             <app-icon-github [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
                         </a>
                     </li>
-                    <li class="space">
+                    <li class="space" data-aos="fade-left" data-aos-delay="300">
                         <a class="clean" href="mailto:an-san@gmx.de" target="_blank">
                             <app-icon-email [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
                         </a>
                     </li>
-                    <li>
+                    <li data-aos="fade-left" data-aos-delay="600">
                         <a class="clean">
                             <app-icon-linkedin [size]="30" [color]="colorPalette.primaryColor" [hoverColor]="colorPalette.primaryColor"/>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="title_wrapper">
+            <div 
+                class="title_wrapper"
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+            >
                 <h1>Anne Sanewski</h1>
                 <span>{{language === 'en' ? translation['long-title'].en : translation['long-title'].de}}</span>                
             </div>
-            <a class="hide button secondary button_transposed" href="#why-me-section-id">
+            <a 
+                class="hide button secondary button_transposed" 
+                href="#why-me-section-id"
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+            >
                 <app-img-arrow [height]="50" [width]="22" [color]="colorPalette.primaryColor"/>
             </a> 
         </div>

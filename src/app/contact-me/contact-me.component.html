@@ -3,10 +3,10 @@
         <app-img-arrow [height]="50" [width]="22" [color]="colorPalette.primaryColor"/>
     </a>
     <div class="content_top">
-        <p class="content_left">
+        <p data-aos="fade-right" class="content_left">
             {{language === "en" ? translation['contact-text'].en :translation['contact-text'].de }}
         </p>
-        <div class="content_right">
+        <div data-aos="fade-left" class="content_right">
             <a href="mailto:an-san@gmx.de" (mouseover)="hoverEmail = true" (mouseleave)="hoverEmail = false">
                 <app-icon-email1 [hoverInput]="hoverEmail" [size]="22"></app-icon-email1>
                 <span>{{language === "en" ? translation['e-mail-label'].en :translation['e-mail-label'].de }}: an-san&#64;gmx.de</span>
@@ -17,7 +17,7 @@
             </a>
         </div>        
     </div>
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <form data-aos="fade-left" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <h4 class="resp_title">{{language === "en" ? translation['contact-resp-title'].en : translation['contact-resp-title'].de }}</h4>
         <div class="first_inputs">
             <div class="input_wrapper">

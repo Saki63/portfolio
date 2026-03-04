@@ -5,6 +5,10 @@
     cursor: default;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 
 @mixin flex-box($fd: row, $ai: center, $jc: center, $g: 0px){
     display: flex;
