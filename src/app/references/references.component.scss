@@ -11,6 +11,33 @@ section {
     font-family: 'Josefin_Sans_Regular';
 }
 
+.scroll_wrapper{
+    @include flex-box($jc: start, $g: 30px);
+    height: 400px;
+    max-width: 100vw;
+    position: relative;
+    width: 100%;
+    padding: 0 16px;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.scroll_info_box{
+    background-color: $primary-color;
+    z-index: 1;
+    padding: 0px 22px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+}
+
+.scroll_info_right {
+    transform: rotate(-90deg);
+}
+
 .bubble_wrapper{
     @include flex-box($jc: start, $g: 30px);
     height: 400px;

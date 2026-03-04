@@ -4,20 +4,28 @@
         <h3>{{language === "en" ? translation['reference-resp-title'].en :translation['reference-resp-title'].de }}</h3>
         <p>{{language === "en" ? translation['reference-resp-subtitle'].en :translation['reference-resp-subtitle'].de }}</p>
     </div>
-    <div class="bubble_wrapper">
-        <app-bubble
-            [name]="'Eugen Liske'"
-            [project]="'Join'"
-            [quote]="'Während unserer Join-Gruppenarbeit ist Anne insbesondere durch ihre stetige Zuverlässigkeit, ihr kontinuierliches Engagement und ihr Fachwissen aufgefallen. Auch wenn unser Team unerwarteten Problemen gegenüberstand, hat sie immer die Zeit gefunden den Teamkollegen zu helfen, um das Problem gemeinsam zu lösen. Ihre freundliche und hilfsbereite Art haben ihre Professionalität perferkt abgerundet.'"
-            [link]="'https://github.com/EugenLiske'"
-            [scrollbehavior]="true"
-        ></app-bubble>
-        <app-bubble 
-            [name]="'Lucas Graf'"
-            [project]="'Kochwelt'"
-            [quote]="'Anne war ein zuverlässiges und strukturiertes Teammitglied. Die ihr zugeordneten Aufgaben erfüllte sie stets zur Zufriedenheit der Gruppe. Besonders positiv war ihre gute Kommunikation innerhalb unserer Meetings, wodurch eine effiziente Arbeitseinteilung und -atmosphäre entstand. Mich hat es gefreut mit Anne zusammenzuarbeiten.'"
-            [link]="'https://github.com/lucasxgraf'"
-            [scrollbehavior]="true"
+    <div class="scroll_wrapper">
+        <div class="bubble_wrapper" (scroll)="onScroll($event)">
+            <app-bubble
+                [name]="'Eugen Liske'"
+                [project]="'Join'"
+                [quote]="'Während unserer Join-Gruppenarbeit ist Anne insbesondere durch ihre stetige Zuverlässigkeit, ihr kontinuierliches Engagement und ihr Fachwissen aufgefallen. Auch wenn unser Team unerwarteten Problemen gegenüberstand, hat sie immer die Zeit gefunden den Teamkollegen zu helfen, um das Problem gemeinsam zu lösen. Ihre freundliche und hilfsbereite Art haben ihre Professionalität perferkt abgerundet.'"
+                [link]="'https://github.com/EugenLiske'"
+                [scrollbehavior]="true"
             ></app-bubble>
+            <app-bubble 
+                [name]="'Lucas Graf'"
+                [project]="'Kochwelt'"
+                [quote]="'Anne war ein zuverlässiges und strukturiertes Teammitglied. Die ihr zugeordneten Aufgaben erfüllte sie stets zur Zufriedenheit der Gruppe. Besonders positiv war ihre gute Kommunikation innerhalb unserer Meetings, wodurch eine effiziente Arbeitseinteilung und -atmosphäre entstand. Mich hat es gefreut mit Anne zusammenzuarbeiten.'"
+                [link]="'https://github.com/lucasxgraf'"
+                [scrollbehavior]="true"
+                ></app-bubble>
+        </div>
+        @if (scrollbehavior && scrollable){
+            <div class="scroll_info_box">
+                <app-img-arrow [width]="10" class="scroll_info_right"></app-img-arrow>
+            </div>                
+        }
     </div>
+
 </section>
