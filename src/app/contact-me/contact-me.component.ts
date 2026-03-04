@@ -36,7 +36,7 @@ export class ContactMeComponent {
   }
 
   post = {
-    endPoint: 'http://anne-sanewski.de/sendMail.php',
+    endPoint: 'https://anne-sanewski.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
