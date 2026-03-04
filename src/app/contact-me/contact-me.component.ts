@@ -75,9 +75,8 @@ export class ContactMeComponent {
           error: (error) => {
             this.isSend = false;
             this.isError = true;
-            console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {},
         });
     }
   }
