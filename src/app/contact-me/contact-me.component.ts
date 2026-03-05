@@ -2,14 +2,15 @@ import { Component, HostListener, Input, inject } from '@angular/core';
 import { SvgImageModule } from '../shared/svg-images/svg-images';
 import { colorPalette } from '../shared/color-palette';
 import { translation } from '../shared/translation';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink } from "@angular/router";
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [SvgImageModule, FormsModule, RouterLink],
+  imports: [SvgImageModule, FormsModule, RouterLink, NgClass],
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss', '../shared/scss/button.scss']
 })

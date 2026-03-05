@@ -97,6 +97,9 @@ form{
     label {
         @include font($family: 'Josefin_Sans_Regular', $size: 14px, $color: $primary-color);
         padding-left: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
     
     .error_color{
@@ -128,6 +131,8 @@ form{
     .input_wrapper{
         @include flex-box($fd: column, $ai: start);
         width: 100%;
+        position: relative;
+        padding-top: 25px;
     } 
 
     .privacy-policy-wrapper{
@@ -216,17 +221,25 @@ form{
 
         .first_inputs{
             flex-direction: column;
-
-            input{
-                &::placeholder{
-                    @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
-                    opacity: 40%;
-                }
+        }
+        
+        .default_placeholder{
+            &::placeholder{
+                @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
+                opacity: 40%;
             }
         }
 
-        label{
+        .default_label{
             display: none;
+        }
+
+        .error_placeholder{
+            &::placeholder{
+                @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
+                opacity: 1;
+                color: $error;                
+            }
         }
 
         textarea{

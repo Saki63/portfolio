@@ -23,14 +23,14 @@
             <div class="input_wrapper">
                 @if (name.invalid && name.touched) {
                     @if (name.errors?.['required']){
-                        <label for="name" class="error_color">{{language === "en" ? "Your name is required" : "Der Name ist erforderlich" }}</label>
+                        <label for="name" class="error_color">{{isSmallScreen ? "" : (language === "en" ? "Your name is required" : "Der Name ist erforderlich") }}</label>
                     }
                     @else {
                         <label for="name" class="error_color">{{language === "en" ? "Your name is invalid" : "Der Name ist ungültig" }}</label>
                     }
                 }
                 @else{
-                    <label for="name">{{language === "en" ? translation['input-name-label'].en : translation['input-name-label'].de }}</label>
+                    <label class="default_label" for="name">{{language === "en" ? translation['input-name-label'].en : translation['input-name-label'].de }}</label>
                 }
                 <input 
                     id="name" 
@@ -41,19 +41,20 @@
                     minlength="3"
                     #name="ngModel"
                     autocomplete="off"
-                    [placeholder]="isSmallScreen ? (message.errors?.['required'] ? (language === 'en' ? 'Your name is required' : 'Der Name ist erforderlich' ) : (language === 'en' ? translation['input-name-label'].en :translation['input-name-label'].de)) : ''">
+                    [ngClass]="isSmallScreen ? ((name.errors?.['required'] && name.touched)  ? 'error_placeholder' : 'default_placeholder') : 'default_placeholder'"
+                    [placeholder]="isSmallScreen ? ((name.errors?.['required'] && name.touched)  ? (language === 'en' ? 'Your name is required' : 'Der Name ist erforderlich' ) : (language === 'en' ? translation['input-name-label'].en :translation['input-name-label'].de)) : ''">
             </div>
             <div class="input_wrapper">
                 @if (email.invalid && email.touched) {
                     @if (email.errors?.['required']){
-                        <label for="email" class="error_color">{{language === "en" ? "Your e-mail is required" : "Die E-Mail ist erforderlich" }}</label>
+                        <label for="email" class="error_color">{{isSmallScreen ? "" : (language === "en" ? "Your e-mail is required" : "Die E-Mail ist erforderlich") }}</label>
                     }
                     @else {
                         <label for="email" class="error_color">{{language === "en" ? "Your e-mail is invalid" : "Die E-Mail ist ungültig" }}</label>
                     }
                 }
                 @else{
-                    <label for="email">{{language === "en" ? translation['input-mail-label'].en :translation['input-mail-label'].de }}</label>
+                    <label class="default_label" for="email">{{language === "en" ? translation['input-mail-label'].en :translation['input-mail-label'].de}}</label>
                 }
                 <input 
                     id="email" 
@@ -64,20 +65,21 @@
                     required
                     #email="ngModel"
                     autocomplete="off"
-                    [placeholder]="isSmallScreen ? (message.errors?.['required'] ? (language === 'en' ? 'Your email is required' : 'Die E-Mail-Adresse ist erforderlich' ) : (language === 'en' ? translation['input-mail-label'].en :translation['input-mail-label'].de)) : ''">
+                    [ngClass]="isSmallScreen ? ((email.errors?.['required'] && email.touched)  ? 'error_placeholder' : 'default_placeholder') : 'default_placeholder'"
+                    [placeholder]="isSmallScreen ? ((email.errors?.['required'] && email.touched)  ? (language === 'en' ? 'Your email is required' : 'Die E-Mail-Adresse ist erforderlich' ) : (language === 'en' ? translation['input-mail-label'].en :translation['input-mail-label'].de)) : ''">
             </div>
         </div>
         <div class="input_wrapper">
             @if (message.invalid && message.touched) {
                 @if (message.errors?.['required']){
-                    <label for="message" class="error_color">{{language === "en" ? "Your message is required" : "Die Nachricht ist erforderlich" }}</label>
+                    <label for="message" class="error_color">{{isSmallScreen ? "" : (language === "en" ? "Your message is required" : "Die Nachricht ist erforderlich") }}</label>
                 }
                 @else {
                     <label for="message" class="error_color">{{language === "en" ? "Your message is invalid (at least 10 characters)" : "Die Nachricht ist ungültig (mind. 10 Zeichen)" }}</label>
                 }
             }
             @else{
-                <label for="message">{{language === "en" ? translation['input-message-label'].en :translation['input-message-label'].de }}</label>
+                <label class="default_label" for="message">{{language === "en" ? translation['input-message-label'].en :translation['input-message-label'].de }}</label>
             }
             <textarea 
                 id="message"
@@ -87,15 +89,14 @@
                 minlength="10"
                 #message="ngModel"
                 autocomplete="off"
-                [placeholder]="isSmallScreen ? (message.errors?.['required'] ? (language === 'en' ? 'Your message is required' : 'Die Nachricht ist erforderlich' ) : (language === 'en' ? translation['input-message-label'].en :translation['input-message-label'].de)) : ''">
+                [ngClass]="isSmallScreen ? ((message.errors?.['required'] && message.touched)  ? 'error_placeholder' : 'default_placeholder') : 'default_placeholder'"
+                [placeholder]="isSmallScreen ? ((message.errors?.['required'] && message.touched) ? (language === 'en' ? 'Your message is required' : 'Die Nachricht ist erforderlich' ) : (language === 'en' ? translation['input-message-label'].en :translation['input-message-label'].de)) : ''">
             </textarea>            
         </div>
         <div class="privacy-policy-wrapper">
             <div class="checkbox_wrapper">
                 <app-img-checkbox [size]="24" (click)="checkboxEventHandler('click')" (mouseover)="checkboxEventHandler('over')" (mouseleave)="checkboxEventHandler('leave')" [state]="checkboxState" [color]="colorPalette.primaryColor"/>
                 <span>{{language === "en" ? translation['privacy-text1'].en :translation['privacy-text1'].de }} <a routerLink="privacy-policy">{{language === "en" ? translation['privacy-policy'].en :translation['privacy-policy'].de }}</a> {{language === "en" ? translation['privacy-text3'].en :translation['privacy-text3'].de }}</span>
-
-                
             </div>
                 @if (checkboxState === "error"){
                     <p class="error_color checkbox_error">{{language === "en" ? translation['missing-privacy-policy'].en :translation['missing-privacy-policy'].de }}</p>

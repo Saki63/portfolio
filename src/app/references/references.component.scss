@@ -32,6 +32,13 @@ section {
     border-radius: 50%;
     position: absolute;
     right: 10px;
+
+    cursor: pointer;
+    
+    *{
+        cursor: pointer;
+        color: $secondary-color;
+    }
 }
 
 .scroll_info_right {
