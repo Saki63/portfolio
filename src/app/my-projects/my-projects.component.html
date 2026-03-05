@@ -14,7 +14,7 @@
     </menu>
     <div class="tab_content">
         <div class="content_wrapper content_limit">
-            <ul data-aos="fade-right" class="content_left">
+            <ul data-aos="zoom-in" class="content_left">
                 @for (descriptionPoint of projects[activeTabIdx].description; let idx = $index; track descriptionPoint){
                     <li class="description_container">
                         <app-img-bullet-point [width]="29" [height]="26" [color]="colorPalette.primaryColor"/>
@@ -31,7 +31,7 @@
                     </li>
                 }
             </ul>
-            <div data-aos="fade-left" class="content_right">
+            <div data-aos="zoom-in" class="content_right">
                 <div class="technologies_wrapper">
                     <h4>{{language === "en" ? translation['technologies'].en :translation['technologies'].de }}</h4>
                     <div class="technologies_box">
@@ -99,7 +99,7 @@
                     {{language === 'en' ? getProjectDuration(projects[activeTabIdx].duration.en) : getProjectDuration(projects[activeTabIdx].duration.de)}}
                 </span>
             </div>
-            <div class="resp_img_wrapper">
+            <div data-aos="zoom-in" class="resp_img_wrapper">
                 @if (projects[activeTabIdx].picture.length === 0){
                     <div class="img_placeholder">
                         <span>{{language === 'en' ? translation['img-placeholder'].en : translation['img-placeholder'].de}}</span>
@@ -109,7 +109,7 @@
                     <img class="project_pic" src={{projects[activeTabIdx].picture}} alt="">
                 }
             </div>
-            <ul class="resp_description_container">
+            <ul data-aos="zoom-in" class="resp_description_container">
                 @for (descriptionPoint of projects[activeTabIdx].description; let idx = $index; track descriptionPoint){
                     <li class="resp_description">
                         <div class="resp_first_line">
@@ -121,7 +121,7 @@
                     </li>
                 }
             </ul>   
-            <div class="button_wrapper">
+            <div data-aos="zoom-in" class="button_wrapper">
                 <a href={{projects[activeTabIdx].serverUrl}} class="button primary" target="_blank">{{language === "en" ? translation['project-link'].en :translation['project-link'].de }}</a>
                 <a href={{projects[activeTabIdx].githubUrl}} class="button secondary" target="_blank">GitHub</a>
             </div>

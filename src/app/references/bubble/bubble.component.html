@@ -6,9 +6,6 @@
         </div>
         <div class="scroll_wrapper">
             <p class="quote" (scroll)="onScroll($event)">"{{quote}}"</p>
-            @if (scrollbehavior){
-                <span [ngClass]="scrollable ? '' : 'hide'">...</span>      
-            }      
         </div>
         <a href={{link}} target="_blank">GitHub</a>
     </div>

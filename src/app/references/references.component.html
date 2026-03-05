@@ -4,7 +4,7 @@
         <h3>{{language === "en" ? translation['reference-resp-title'].en :translation['reference-resp-title'].de }}</h3>
         <p>{{language === "en" ? translation['reference-resp-subtitle'].en :translation['reference-resp-subtitle'].de }}</p>
     </div>
-    <div data-aos="fade-left" class="scroll_wrapper">
+    <div class="scroll_wrapper" data-aos="fade-up">
         <div class="bubble_wrapper" (scroll)="onScroll($event)">
             <app-bubble
                 [name]="'Eugen Liske'"
@@ -13,7 +13,7 @@
                 [link]="'https://github.com/EugenLiske'"
                 [scrollbehavior]="true"
             ></app-bubble>
-            <app-bubble 
+            <app-bubble
                 [name]="'Lucas Graf'"
                 [project]="'Kochwelt'"
                 [quote]="'Anne war ein zuverlässiges und strukturiertes Teammitglied. Die ihr zugeordneten Aufgaben erfüllte sie stets zur Zufriedenheit der Gruppe. Besonders positiv war ihre gute Kommunikation innerhalb unserer Meetings, wodurch eine effiziente Arbeitseinteilung und -atmosphäre entstand. Mich hat es gefreut mit Anne zusammenzuarbeiten.'"
@@ -22,10 +22,5 @@
                 id="end"
                 ></app-bubble>
         </div>
-        @if (scrollbehavior && scrollable){
-            <a class="scroll_info_box" href="#end">
-                <app-img-arrow [width]="10" class="scroll_info_right"></app-img-arrow>
-            </a>                
-        }
     </div>
 </section>

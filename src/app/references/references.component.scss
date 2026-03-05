@@ -13,7 +13,7 @@ section {
 
 .scroll_wrapper{
     @include flex-box($jc: start, $g: 30px);
-    height: 400px;
+    height: 440px;
     max-width: 100vw;
     position: relative;
     width: 100%;
@@ -47,15 +47,27 @@ section {
 
 .bubble_wrapper{
     @include flex-box($jc: start, $g: 30px);
-    height: 400px;
+    height: 440px;
     max-width: 100vw;
     width: 100%;
     padding: 0 16px;
-    overflow-x: scroll;
+    overflow-x: auto;
+
     &::-webkit-scrollbar {
-        display: none;
+        height: 6px;
     }
-}
+
+    &::-webkit-scrollbar-track {
+        background: $primary-color-opacity;
+        height: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $primary-color;
+        border-radius: 40%;
+        height: 4px;
+    }
+    }
 
 .title{
     @include font($family: 'Josefin_Sans_Regular', $size: 32px, $color: $primary-color);
@@ -78,6 +90,10 @@ section {
 
     section {
         gap: 30px;
+    }
+
+    .scroll_wrapper{
+        height: 316px;
     }
 
     .bubble_wrapper{

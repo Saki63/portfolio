@@ -5,14 +5,6 @@
     cursor: default;
 }
 
-html,
-body{
-    width: 100vw;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-
 @mixin flex-box($fd: row, $ai: center, $jc: center, $g: 0px){
     display: flex;
     flex-direction: $fd;
