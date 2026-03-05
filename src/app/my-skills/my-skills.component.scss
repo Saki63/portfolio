@@ -66,7 +66,7 @@
 .skill_box_right{
     span{
         color: $secondary-color;
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -112,10 +112,12 @@
                 .current_learning_content {
                     
                     flex-direction: row-reverse;
+                    gap: 6px;
 
                     .resp_wrapper{
                        position: relative; 
                        @include flex-box();
+                       padding: 16px;
                     }
                     
                     .resp_background{
@@ -124,6 +126,7 @@
 
                     .current_skills{
                         position: absolute;
+                        gap: 30px;
                     }
 
                     p {

@@ -95,7 +95,7 @@ form{
     }
         
     label {
-        @include font($family: 'Josefin_Sans_Regular', $size: 14px, $color: $primary-color);
+        @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $primary-color);
         padding-left: 30px;
         position: absolute;
         top: 0;
@@ -144,7 +144,7 @@ form{
     .checkbox_wrapper{
         @include flex-box($jc: start, $g: 8px);
         
-        @include font($family: 'Josefin_Sans_Regular', $size: 14px, $color: $secondary-color);
+        @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
 
         a{
             color: $primary-color;
@@ -158,7 +158,7 @@ form{
     }
 
     .checkbox_error{
-        font-size: 14px;
+        font-size: 16px;
         margin-left: 32px;
         position: absolute;
         bottom: 0;
@@ -173,10 +173,10 @@ form{
         }
 
         .success_message{
-            @include font($family: 'Josefin_Sans_Regular', $size: 14px, $color: $done);
+            @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $done);
         }
         .error_message{
-            @include font($family: 'Josefin_Sans_Regular', $size: 14px, $color: $error);
+            @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $error);
         }
     }
 
