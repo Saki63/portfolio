@@ -175,6 +175,9 @@ form{
         .success_message{
             @include font($family: 'Josefin_Sans_Regular', $size: 14px, $color: $done);
         }
+        .error_message{
+            @include font($family: 'Josefin_Sans_Regular', $size: 14px, $color: $error);
+        }
     }
 
 }
@@ -222,7 +225,7 @@ form{
         .first_inputs{
             flex-direction: column;
         }
-        
+
         .default_placeholder{
             &::placeholder{
                 @include font($family: 'Josefin_Sans_Regular', $size: 16px, $color: $secondary-color);
